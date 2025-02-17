@@ -15,12 +15,14 @@ using Wego.Service;
 namespace Wego.API
 {
     public class Program
-    {
+    {  
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
             var configuration = builder.Configuration;
        
+              
+
 
             // Context
             builder.Services.AddDbContext<ApplicationDbContext>(op =>
