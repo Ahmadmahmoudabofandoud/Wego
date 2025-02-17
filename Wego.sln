@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wego.API", "API\Wego.API.csproj", "{9CEAC3BC-03BB-4A45-8ACD-4BA92E11A68A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wego.Core", "Wego.Core\Wego.Core.csproj", "{0F387772-BD07-4B8F-8980-1D2B8459AA75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wego.Repository", "Wego.Repository\Wego.Repository.csproj", "{08275A1F-D558-4391-A91B-A0E4DC67AD29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wego.Service", "Wego.Service\Wego.Service.csproj", "{C17FD6AE-1250-45A3-A734-290AD60D2EEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CEAC3BC-03BB-4A45-8ACD-4BA92E11A68A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CEAC3BC-03BB-4A45-8ACD-4BA92E11A68A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CEAC3BC-03BB-4A45-8ACD-4BA92E11A68A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CEAC3BC-03BB-4A45-8ACD-4BA92E11A68A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F387772-BD07-4B8F-8980-1D2B8459AA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F387772-BD07-4B8F-8980-1D2B8459AA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F387772-BD07-4B8F-8980-1D2B8459AA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F387772-BD07-4B8F-8980-1D2B8459AA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08275A1F-D558-4391-A91B-A0E4DC67AD29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08275A1F-D558-4391-A91B-A0E4DC67AD29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08275A1F-D558-4391-A91B-A0E4DC67AD29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08275A1F-D558-4391-A91B-A0E4DC67AD29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C17FD6AE-1250-45A3-A734-290AD60D2EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C17FD6AE-1250-45A3-A734-290AD60D2EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C17FD6AE-1250-45A3-A734-290AD60D2EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C17FD6AE-1250-45A3-A734-290AD60D2EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36B0BFB6-BA8C-47D7-8CEF-291AA5FCF188}
+	EndGlobalSection
+EndGlobal
