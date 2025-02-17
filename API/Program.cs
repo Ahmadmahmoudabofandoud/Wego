@@ -18,13 +18,12 @@ namespace Wego.API
     {  
         public static void Main(string[] args)
         {
+            Console.WriteLine("Ahmed");
             var builder = WebApplication.CreateBuilder(args);
             var configuration = builder.Configuration;
        
-              
-
-
-            // Context
+             
+            // Context---------
             builder.Services.AddDbContext<ApplicationDbContext>(op =>
                 op.UseLazyLoadingProxies()
                 .UseSqlServer(builder.Configuration.GetConnectionString("wego1"))
