@@ -16,7 +16,6 @@ namespace Wego.Core.Models.Hotels
         public virtual Location? Location { get; set; }
         public virtual ICollection<Image> Images { get; set; } = new HashSet<Image>();
         public virtual ICollection<Room> Rooms { get; set; } = new HashSet<Room>();
-        public virtual ICollection<HotelAmenity> HotelAmenities { get; set; } = new HashSet<HotelAmenity>();
 
     }
 }

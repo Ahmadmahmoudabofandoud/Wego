@@ -433,24 +433,6 @@ namespace Wego.Repository.Migrations
                     b.ToTable("SeatReservations");
                 });
 
-            modelBuilder.Entity("Wego.Core.Models.Hotels.Amenity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Amenities");
-                });
-
             modelBuilder.Entity("Wego.Core.Models.Hotels.Hotel", b =>
                 {
                     b.Property<int>("Id")
@@ -475,24 +457,6 @@ namespace Wego.Repository.Migrations
                     b.HasIndex("LocationId");
 
                     b.ToTable("Hotels");
-                });
-
-            modelBuilder.Entity("Wego.Core.Models.Hotels.HotelAmenity", b =>
-                {
-                    b.Property<int>("HotelId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("AmenityId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
-                    b.HasKey("HotelId", "AmenityId");
-
-                    b.HasIndex("AmenityId");
-
-                    b.ToTable("HotelAmenities");
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Hotels.Room", b =>
@@ -539,21 +503,6 @@ namespace Wego.Repository.Migrations
                     b.HasIndex("HotelId");
 
                     b.ToTable("Rooms");
-                });
-
-            modelBuilder.Entity("Wego.Core.Models.Hotels.RoomAmenity", b =>
-                {
-                    b.Property<int?>("AmenityId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("RoomId")
-                        .HasColumnType("int");
-
-                    b.HasIndex("AmenityId");
-
-                    b.HasIndex("RoomId");
-
-                    b.ToTable("RoomAmenities");
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Identity.AppUser", b =>
@@ -904,25 +853,6 @@ namespace Wego.Repository.Migrations
                     b.Navigation("Location");
                 });
 
-            modelBuilder.Entity("Wego.Core.Models.Hotels.HotelAmenity", b =>
-                {
-                    b.HasOne("Wego.Core.Models.Hotels.Amenity", "Amenity")
-                        .WithMany("HotelAmenities")
-                        .HasForeignKey("AmenityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Wego.Core.Models.Hotels.Hotel", "Hotel")
-                        .WithMany("HotelAmenities")
-                        .HasForeignKey("HotelId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Amenity");
-
-                    b.Navigation("Hotel");
-                });
-
             modelBuilder.Entity("Wego.Core.Models.Hotels.Room", b =>
                 {
                     b.HasOne("Wego.Core.Models.Hotels.Hotel", "Hotel")
@@ -930,21 +860,6 @@ namespace Wego.Repository.Migrations
                         .HasForeignKey("HotelId");
 
                     b.Navigation("Hotel");
-                });
-
-            modelBuilder.Entity("Wego.Core.Models.Hotels.RoomAmenity", b =>
-                {
-                    b.HasOne("Wego.Core.Models.Hotels.Amenity", "Amenity")
-                        .WithMany()
-                        .HasForeignKey("AmenityId");
-
-                    b.HasOne("Wego.Core.Models.Hotels.Room", "Room")
-                        .WithMany()
-                        .HasForeignKey("RoomId");
-
-                    b.Navigation("Amenity");
-
-                    b.Navigation("Room");
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Image", b =>
@@ -1029,15 +944,8 @@ namespace Wego.Repository.Migrations
                     b.Navigation("FlightBookings");
                 });
 
-            modelBuilder.Entity("Wego.Core.Models.Hotels.Amenity", b =>
-                {
-                    b.Navigation("HotelAmenities");
-                });
-
             modelBuilder.Entity("Wego.Core.Models.Hotels.Hotel", b =>
                 {
-                    b.Navigation("HotelAmenities");
-
                     b.Navigation("Images");
 
                     b.Navigation("Rooms");

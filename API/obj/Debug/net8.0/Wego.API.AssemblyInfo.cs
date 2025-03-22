@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wego.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4d67ae3a8394e713a0b66feb02890eb25cb0384")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61fa0fd3d246aa82c626f4405e30d9ea528a1958")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wego.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wego.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -72,15 +72,7 @@ public class MappingProfile : Profile
             .ForMember(dest => dest.Images, opt => opt.Ignore()); // الصور سيتم تعديلها يدويًا أثناء التحديث
 
         #endregion
-        // Mapping for Amenity
-        CreateMap<Amenity, AmenityDto>();
-        CreateMap<AmenityPostDto, Amenity>();
 
-        // HotelAmenity Mapping
-        CreateMap<HotelAmenity, HotelAmenityDto>()
-            .ForMember(dest => dest.AmenityName, opt => opt.MapFrom(src => src.Amenity != null ? src.Amenity.Name : string.Empty));
-
-        CreateMap<HotelAmenityPostDto, HotelAmenity>();
 
         CreateMap<AppUser, ProfileDto>()
             .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.LockoutEnd == null)) // Status يعتمد على حالة القفل

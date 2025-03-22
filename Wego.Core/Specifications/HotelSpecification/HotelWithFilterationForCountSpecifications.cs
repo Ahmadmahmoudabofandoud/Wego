@@ -15,8 +15,7 @@ namespace Wego.Core.Specifications.HotelSpecification
                      H.Name.ToLower().Contains(specParams.Search) ||
                      H.Location.City.ToLower().Contains(specParams.Search) ||
                      H.Location.Country.ToLower().Contains(specParams.Search) ||
-                     H.Rooms.Any(r => r.RoomTitle.ToLower().Contains(specParams.Search)) ||
-                     H.HotelAmenities.Any(ha => ha.Amenity.Name.ToLower().Contains(specParams.Search)) 
+                     H.Rooms.Any(r => r.RoomTitle.ToLower().Contains(specParams.Search))
                     )
             )
         {
