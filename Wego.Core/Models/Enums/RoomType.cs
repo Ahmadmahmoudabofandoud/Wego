@@ -8,10 +8,10 @@ namespace Wego.Core.Models.Enums
 {
     public enum RoomType
     {
-        Single,
-        Double,
-        Triple,
-        Quadruple,
-        Quintuple
+        Single = 0,
+        Double = 1,
+        Triple = 2,
+        Quadruple = 3,
+        Quintuple =4
     }
 }

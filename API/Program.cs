@@ -1,12 +1,15 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Stripe;
 using System.Text;
+using Wego.API.Extensions;
+using Wego.API.Middlewares;
 using Wego.Core;
 using Wego.Core.Models.Identity;
+using Wego.Core.Repositories.Contract;
 using Wego.Core.Services.Contract;
 using Wego.Repository;
 using Wego.Repository.Data;
@@ -15,142 +18,242 @@ using Wego.Service;
 namespace Wego.API
 {
     public class Program
-    {  
-        public static void Main(string[] args)
+    {
+        public static async Task Main(string[] args)
         {
-            Console.WriteLine("Ahmed");
             var builder = WebApplication.CreateBuilder(args);
             var configuration = builder.Configuration;
-       
-             
-            // Context---------
-            builder.Services.AddDbContext<ApplicationDbContext>(op =>
-                op.UseLazyLoadingProxies()
-                .UseSqlServer(builder.Configuration.GetConnectionString("wego1"))
-            );
 
-            builder.Services.AddIdentity<AppUser, IdentityRole>()
-               .AddEntityFrameworkStores<ApplicationDbContext>();
-            builder.Services.AddScoped(typeof(IAuthService), typeof(AuthService));
+            #region Dependancy Injection 
 
-            builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-           .AddJwtBearer(options =>
-           {
-               // Configure Authentication Handler
-               options.TokenValidationParameters = new TokenValidationParameters()
-               {
-                   ValidateAudience = true,
-                   ValidAudience = configuration["JWT:ValidAudience"],
-                   ValidateIssuer = true,
-                   ValidIssuer = configuration["JWT:ValidIssuer"],
-                   ValidateIssuerSigningKey = true,
-                   IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:SecretKey"])),
-                   ValidateLifetime = true,
-                   ClockSkew = TimeSpan.FromDays(double.Parse(configuration["JWT:DurationInDays"]))
+            builder.Services.AddDatabaseConfiguration(configuration);
 
-               };
-           });
-            builder.Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
-        
-
-            // Add DI services.
-            #region Service/Repor (DI)
-            // Service / unit
-            //builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-            //builder.Services.AddScoped<IAirlineService, AirlineService>();
-            //builder.Services.AddScoped<IAirplaneService, AirplaneService>();
-            //builder.Services.AddScoped<IPaymentService, PaymentService>();
-            //builder.Services.AddScoped<IFlightBookingService, FlightBookingService>();
-            //builder.Services.AddScoped<IRoomRepository, RoomsRepository>();
-            //builder.Services.AddScoped<IBookingRepositroy, BookingRepositroy>();
-            //builder.Services.AddScoped<IRoomDetailsRepository, RoomDetailsRepository>();
-            //builder.Services.AddSingleton<IEmailService, EmailService>();
-            //builder.Services.AddSingleton<IMapper, Mapper.Mapper>();
-            //builder.Services.AddAutoMapper(typeof(Program));
-            #endregion
-
-            #region Stripe
-            //var stripeSettings = builder.Configuration.GetSection("Stripe");
-            //StripeConfiguration.ApiKey = stripeSettings["SecretKey"];
-            //builder.Services.Configure<StripeSettings>(stripeSettings);
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddAutoMapper(typeof(MappingProfile));
+            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddSingleton<IEmailService, EmailService>();
+            builder.Services.AddIdentityConfiguration();
+            builder.Services.AddJwtAuthentication(configuration);
+            builder.Services.AddCorsPolicy();
+            builder.Services.AddSwaggerDocumentation(); 
 
             #endregion
 
 
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            // Swagger
-            #region SwaggerConfiguration
-            builder.Services.AddSwaggerGen(c =>
+            builder.Services.AddControllers().AddJsonOptions(options =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Title = "Booking Api",
-                    Version = "v1",
-                    Description = "This is a booking API developed by Ahmed Mahmoud Abo Fandoud.",
-                    Contact = new OpenApiContact
-                    {
-                        Name = "Ahmed Mahmoud Abo Fandoud",
-                        Email = "ahmedfandoud077@gmail.com",
-                        Url = new Uri("https://www.linkedin.com/in/ahmed-fandoud-a334b7230/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BFbcTsJnJTN6EOHekgKR1tA%3D%3D")
-                    }
-                });
-
-                // Configure Swagger to use the Authorization header for JWT
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    Name = "Authorization",
-                    Type = SecuritySchemeType.Http,
-                    Scheme = "Bearer",
-                    BearerFormat = "JWT",
-                    In = ParameterLocation.Header,
-                    Description = "Enter 'Bearer' [space] and then your valid JWT token.",
-                });
-
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
-                    {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference
-                            {
-                                Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
-                            }
-                        },
-                        new string[] {}
-                    }
-                });
+                options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+                options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
             });
-            #endregion
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            using var scope = app.Services.CreateScope();
+            var services = scope.ServiceProvider;
+            try
+            {
+                var dbContext = services.GetRequiredService<ApplicationDbContext>();
+                await dbContext.Database.MigrateAsync(); 
+
+                ////await WegoContextSeed.SeedAsync(dbContext);
+            }
+            catch (Exception ex)
+            {
+                var logger = services.GetRequiredService<ILogger<Program>>();
+                logger.LogError(ex, "An error occurred while migrating or seeding the database.");
+            }
+
+
+            // 🔹 استخدام Exception Middleware المخصص
+            app.ConfigureExceptionHandler(app.Services.GetRequiredService<ILoggerFactory>());
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
             app.UseHttpsRedirection();
-
             app.UseStaticFiles();
-
-            app.UseCors("AllowSpecificOrigin");
-            app.MapControllers();
-
+            app.UseCors("AllowAllOrigins");
+            app.UseRouting();
             app.UseAuthentication();
-
             app.UseAuthorization();
-
+            app.MapControllers();
             app.Run();
+
+
+            #region Demo 
+            //var builder = WebApplication.CreateBuilder(args);
+            //var configuration = builder.Configuration;
+
+            //#region Database Configuration
+            //builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseLazyLoadingProxies()
+            //           .UseSqlServer(configuration.GetConnectionString("wego1"))
+            //);
+            //#endregion
+
+            //#region Identity Configuration
+            //builder.Services.AddIdentity<AppUser, IdentityRole>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>()
+            //    .AddDefaultTokenProviders();
+            //#endregion
+
+            //#region Dependency Injection (Services & Repositories)
+            //builder.Services.AddScoped<IAuthService, AuthService>();
+
+            //builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            //builder.Services.AddScoped<IEmailService, EmailService>();
+            //builder.Services.AddAutoMapper(typeof(MappingProfile));
+            //#endregion
+
+            //#region JWT Authentication
+            //builder.Services.AddAuthentication(options =>
+            //{
+            //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            //    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            //})
+            //.AddJwtBearer(options =>
+            //{
+            //    options.TokenValidationParameters = new TokenValidationParameters
+            //    {
+            //        ValidateAudience = true,
+            //        ValidAudience = configuration["JWT:ValidAudience"],
+            //        ValidateIssuer = true,
+            //        ValidIssuer = configuration["JWT:ValidIssuer"],
+            //        ValidateIssuerSigningKey = true,
+            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:SecretKey"])),
+            //        ValidateLifetime = true,
+            //        ClockSkew = TimeSpan.FromMinutes(20) 
+            //    };
+            //});
+            //#endregion
+
+            //#region CORS Configuration
+            //builder.Services.AddCors(options =>
+            //{
+            //    options.AddPolicy("AllowAllOrigins", policy =>
+            //    {
+            //        policy.AllowAnyOrigin()
+            //              .AllowAnyMethod()
+            //              .AllowAnyHeader();
+            //    });
+            //});
+
+            //#endregion
+
+            //#region Controllers Configuration
+            //builder.Services.AddControllers()
+            //    .AddJsonOptions(options =>
+            //    {
+            //        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+            //        options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+            //    });
+            //#endregion
+
+            //#region Swagger Configuration
+            //builder.Services.AddEndpointsApiExplorer();
+            //builder.Services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new OpenApiInfo
+            //    {
+            //        Title = "Booking API",
+            //        Version = "v1",
+            //        Description = "This is a booking API developed by Ahmed Mahmoud Abo Fandoud.",
+            //        Contact = new OpenApiContact
+            //        {
+            //            Name = "Ahmed Mahmoud Abo Fandoud",
+            //            Email = "ahmedfandoud077@gmail.com",
+            //            Url = new Uri("https://www.linkedin.com/in/ahmed-fandoud-a334b7230")
+            //        }
+            //    });
+
+            //    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+            //    {
+            //        Name = "Authorization",
+            //        Type = SecuritySchemeType.Http,
+            //        Scheme = "Bearer",
+            //        BearerFormat = "JWT",
+            //        In = ParameterLocation.Header,
+            //        Description = "Enter 'Bearer' [space] and then your valid JWT token."
+            //    });
+
+            //    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+            //    {
+            //        {
+            //            new OpenApiSecurityScheme
+            //            {
+            //                Reference = new OpenApiReference
+            //                {
+            //                    Type = ReferenceType.SecurityScheme,
+            //                    Id = "Bearer"
+            //                }
+            //            },
+            //            new string[] {}
+            //        }
+            //    });
+            //});
+            //#endregion
+
+            //var app = builder.Build();
+            //#region Update Database
+            //// Using => to Make Dispose()
+            //using var scope = app.Services.CreateScope();
+
+            //var services = scope.ServiceProvider;
+
+            //var loggerFactory = services.GetRequiredService<ILoggerFactory>(); // make error shown in Kestrel Screen
+
+            //try
+            //{
+            //    var dbContext = services.GetRequiredService<ِApplicationDbContext>(); // Ask Explicity CLR to Make Object from StoreContext
+
+            //    await dbContext.Database.MigrateAsync(); // Apply Migration
+
+            //    // Calling Seeds
+            //    await StoreContextSeed.SeedAsync(dbContext);
+
+            //    // Update DataBase for IdentityUser
+            //    var identityContext = services.GetRequiredService<AppIdentityDbContext>();
+            //    await identityContext.Database.MigrateAsync();
+
+            //    // Call Seeding of UserIdentity
+            //    var userManager = services.GetRequiredService<UserManager<AppUser>>();
+            //    await AppIdentityDbContextSeed.SeedUsersAsync(userManager);
+
+            //    // Update Migration for OrderModule
+
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    var logger = loggerFactory.CreateLogger<Program>();
+            //    logger.LogError(ex, " An Error Occured During Applying Migrations !");
+            //}
+
+            //#endregion
+            //#region Middleware Configuration
+            //if (app.Environment.IsDevelopment())
+            //{
+            //    app.UseSwagger();
+            //    app.UseSwaggerUI();
+            //}
+
+            //app.UseExceptionHandler("/error"); // ✅ أفضل لمعالجة الأخطاء
+            //app.UseHttpsRedirection();
+            //app.UseStaticFiles();
+            //app.UseCors("AllowAllOrigins");
+
+            //app.UseRouting();
+            //app.UseAuthentication();
+            //app.UseAuthorization();
+
+            //app.MapControllers();
+            //#endregion
+
+            //app.Run(); 
+            #endregion
         }
     }
 }

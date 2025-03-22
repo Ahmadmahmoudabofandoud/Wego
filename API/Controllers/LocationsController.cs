@@ -1,189 +1,122 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Stripe.Climate;
-using Stripe.Terminal;
+using AutoMapper;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using Wego.Core.Services.Contract;
+using Wego.API.Models.DTOS.Locations.Dtos;
+using Wego.Core.Specifications;
+using Wego.Core;
+using Wego.API.Helpers;
+using API.Errors;
+using System.IO;
+using Wego.Repository;
+using Wego.Core.Specifications.LocationSpacification;
+using Wego.Core.Models;
 
-namespace API.Controllers
+namespace Wego.API.Controllers
 {
-    //[Route("api/[controller]")]
-    //[ApiController]
-    //public class LocationsController : ControllerBase
-    //{
-    //    private IUnitOfWork _unitOfWork { get; }
 
-    //    public LocationsController(IUnitOfWork unitOfWork)
-    //    {
-    //        _unitOfWork = unitOfWork;
-    //    }
+    public class LocationsController : BaseApiController
+    {
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-    //    // GET: api/Locations
-    //    [HttpGet]
-    //    public async Task<ActionResult<IEnumerable<LocationDTO>>> GetAllLocations()
-    //    {
-    //        var locations = await _unitOfWork.LocationRepository.GetAllAsync();
+        public LocationsController(IUnitOfWork unitOfWork, IMapper mapper)
+        {
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
+        }
 
-    //        if (locations is null)
-    //        {
-    //            return NotFound();
-    //        }
+        [HttpGet]
+        public async Task<ActionResult<Pagination<LocationsDto>>> GetAllLocations([FromQuery] AppSpecParams specParams)
+        {
+            var spec = new LocationWithAirportsAndHotelsSpecification(specParams);
+            var locations = await _unitOfWork.Repository<Location>().GetAllWithSpecAsync(spec);
+            var totalCount = await _unitOfWork.Repository<Location>().GetCountWithSpecAsync(spec);
 
-    //        List<LocationDTO> locationDTOs = new List<LocationDTO>();
-    //        foreach (var location in locations)
-    //        {
-    //            locationDTOs.Add(LocationDTO.MapToLocationDTO(location));
-    //        }
-    //        return Ok(locationDTOs);
-    //    }
+            var data = _mapper.Map<IReadOnlyList<Location>, IReadOnlyList<LocationsDto>>(locations);
+            data = data.Select(loc =>
+            {
+                loc.Image = string.IsNullOrEmpty(loc.Image) ? null : $"{Request.Scheme}://{Request.Host.Value}{loc.Image}";
+                return loc;
+            }).ToList();
 
-    //    // GET: api/Locations/5
-    //    [HttpGet("{id}")]
-    //    public async Task<ActionResult<LocationDTO>> GetLocation(int id)
-    //    {
-    //        var location = await _unitOfWork.LocationRepository.GetByIdAsync(id);
+            return Ok(new Pagination<LocationsDto>(specParams.PageIndex, specParams.PageSize, totalCount, data));
+        }
 
-    //        if (location == null)
-    //        {
-    //            return NotFound();
-    //        }
+        [HttpGet("{id}")]
+        [ProducesResponseType(typeof(LocationsDto), 200)]
+        [ProducesResponseType(typeof(ApiResponse), 404)]
+        public async Task<ActionResult<LocationsDto>> GetLocationById(int id)
+        {
+            var spec = new LocationWithAirportsAndHotelsSpecification(id);
+            var location = await _unitOfWork.Repository<Location>().GetEntityWithSpecAsync(spec);
+            if (location == null) return NotFound(new ApiResponse(404));
 
-    //        return Ok(LocationDTO.MapToLocationDTO(location));
-    //    }
+            var res = _mapper.Map<LocationsDto>(location);
+            res.Image = string.IsNullOrEmpty(res.Image) ? null : $"{Request.Scheme}://{Request.Host.Value}{res.Image}";
 
-    //    // PUT: api/Locations/5
-    //    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-    //    [HttpPut("{id}")]
-    //    public async Task<IActionResult> EditLocation(int id, LocationDTO locationDTO)
-    //    {
-    //        if (id != locationDTO.Id)
-    //        {
-    //            return BadRequest();
-    //        }
+            return Ok(res);
+        }
 
-    //        if (ModelState.IsValid)
-    //        {
-    //            var location = await _unitOfWork.LocationRepository.GetByIdAsync(id);
-    //            location.City = locationDTO.City ?? location.City;
-    //            location.Country = locationDTO.Country ?? location.Country;
+        [HttpPost]
+        public async Task<ActionResult<LocationsDto>> AddLocation([FromForm] LocationPostDto dto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-    //            if (locationDTO.Image is { })
-    //            {
-    //                ImageHelper.RemoveImage("locations",location.Image ?? "");
-    //                var request = HttpContext.Request;
-    //                location.Image = await GetImageUrl(locationDTO.Image,location.Id,request);
-    //            }
-    //            if (locationDTO.CategoryIds is { } && locationDTO.CategoryIds.Any())
-    //            {
-    //                location.Categories.Clear();
-    //                foreach (var categoryId in locationDTO.CategoryIds)
-    //                {
-    //                    var category = await _unitOfWork.CategoryRepository.GetByIdAsync(categoryId);
-    //                    location.Categories.Add(category);
-    //                }
-    //            }
-    //            try
-    //            {
-    //                await _unitOfWork.LocationRepository.UpdateAsync(location);
-    //                await _unitOfWork.LocationRepository.SaveChangesAsync();
-    //            }
-    //            catch (DbUpdateConcurrencyException)
-    //            {
-    //                if (!LocationExists(id))
-    //                {
-    //                    return NotFound();
-    //                }
-    //                else
-    //                {
-    //                    throw;
-    //                }
-    //            }
+            var location = _mapper.Map<Location>(dto);
+            location.Image = await ProcessLocationImageAsync(dto.ImageFile, "locationsImg");
 
+            await _unitOfWork.Repository<Location>().Add(location);
+            await _unitOfWork.CompleteAsync();
 
-    //            return Ok(LocationDTO.MapToLocationDTO(location));
-    //        }
-    //        return BadRequest();
-    //    }
+            return CreatedAtAction(nameof(GetLocationById), new { id = location.Id }, _mapper.Map<LocationsDto>(location));
+        }
 
-    //    // POST: api/Locations
-    //    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-    //    [HttpPost]
-    //    public async Task<ActionResult<LocationDTO>> AddLocation(LocationDTO locationDTO)
-    //    {
-    //        if (ModelState.IsValid)
-    //        {
-    //            var location = LocationDTO.MapToLocation(locationDTO);
-    //            await _unitOfWork.LocationRepository.AddAsync(location);
-    //            if (locationDTO.CategoryIds.Any())
-    //            {
-    //                foreach (var categoryId in locationDTO.CategoryIds)
-    //                {
-    //                    var category = await _unitOfWork.CategoryRepository.GetByIdAsync(categoryId);
-    //                    location.Categories.Add(category);
-    //                }
-    //            }
-    //            try
-    //            {
-    //                await _unitOfWork.LocationRepository.SaveChangesAsync();
-    //                if (locationDTO.Image is { })
-    //                {
-    //                    var request = HttpContext.Request;
-    //                    location.Image = await GetImageUrl(locationDTO.Image, location.Id, request);
-    //                }
-    //                await _unitOfWork.LocationRepository.UpdateAsync(location);
-    //                await _unitOfWork.LocationRepository.SaveChangesAsync();
-    //            }
+        [HttpPut("{id}")]
+        public async Task<ActionResult<LocationsDto>> UpdateLocation(int id, [FromForm] LocationPutDto dto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (id != dto.Id) return BadRequest("ID mismatch");
 
-    //            catch (Exception e)
-    //            {
-    //                throw new Exception(e.Message);
-    //            }
+            var location = await _unitOfWork.Repository<Location>().GetByIdAsync(dto.Id);
+            if (location == null) return NotFound(new ApiResponse(404));
 
-    //            return CreatedAtAction("GetLocation", new { id = location.Id }, LocationDTO.MapToLocationDTO(location));
-    //        }
+            _mapper.Map(dto, location);
+            location.Image = await ProcessLocationImageAsync(dto.ImageFile, "locationsImg", location.Image);
 
-    //        return BadRequest();
-    //    }
+            _unitOfWork.Repository<Location>().Update(location);
+            await _unitOfWork.CompleteAsync();
 
-    //    // DELETE: api/Locations/5
-    //    [HttpDelete("{id}")]
-    //    public async Task<IActionResult> DeleteLocation(int id)
-    //    {
-    //        var location = await _unitOfWork.LocationRepository.GetByIdAsync(id);
+            return Ok(_mapper.Map<LocationsDto>(location));
+        }
 
-    //        if (location == null)
-    //        {
-    //            return NotFound();
-    //        }
-    //        if (location.Airports.Any()) 
-    //            return BadRequest("All airports in this location must be deleted first");
-    //        await _unitOfWork.LocationRepository.DeleteAsync(location);
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteLocation(int id)
+        {
+            var location = await _unitOfWork.Repository<Location>().GetByIdAsync(id);
+            if (location == null) return NotFound(new ApiResponse(404));
 
-    //        try
-    //        {
-    //            await _unitOfWork.LocationRepository.SaveChangesAsync();
-    //        }
-    //        catch (Exception e)
-    //        {
-    //            throw new Exception(e.Message);
-    //        }
-    //        return NoContent();
-    //    }
+            _unitOfWork.Repository<Location>().Delete(location);
+            await _unitOfWork.CompleteAsync();
 
-    //    private bool LocationExists(int id)
-    //    {
-    //        var location = _unitOfWork.LocationRepository.GetById(id);
-    //        if (location == null) return false;
-    //        return true;
-    //    }
+            return Ok(new { message = $"Location '{location.City}, {location.Country}' has been deleted successfully." });
+        }
 
-    //    private async Task<string> GetImageUrl(IFormFile image,int locationId , HttpRequest request)
-    //    {
-    //        string folder = "locations";
-    //        var serverUrl = $"{request.Scheme}://{request.Host.Value}";
-    //        string fileName = await ImageHelper
-    //            .UploadImageAsync(image, folder, $"location-{locationId}-image");
+        private async Task<string?> ProcessLocationImageAsync(IFormFile? imageFile, string folder, string? existingImage = null)
+        {
+            if (imageFile == null) return existingImage;
 
-    //        var imageUrl = $"{serverUrl}/imgs/{folder}/{fileName}";
-    //        return imageUrl;
-    //    }
-    //}
+            if (!string.IsNullOrEmpty(existingImage))
+            {
+                var oldImageName = Path.GetFileName(existingImage);
+                ImageHelper.RemoveImage(folder, oldImageName);
+            }
+
+            string newImageName = $"location-{Guid.NewGuid()}.jpg";
+            await ImageHelper.UploadImageAsync(imageFile, folder, newImageName);
+
+            return $"/imgs/{folder}/{newImageName}";
+        }
+    }
 }

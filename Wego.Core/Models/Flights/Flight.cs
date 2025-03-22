@@ -7,41 +7,27 @@ namespace Wego.Core.Models.Flights
 {
     public class Flight : BaseModel
     {
-        [Required]
         public DateTime DepartureTime { get; set; }
 
-        [Required]
         public DateTime ArrivalTime { get; set; }
 
-        [Required]
         public FlightStatus Status { get; set; } = FlightStatus.Scheduled;
 
-        [Required]
         public double EconomyClassPrice { get; set; }
 
-        [Required]
         public double BusinessClassPrice { get; set; }
 
-        [Required]
         public double FirstClassPrice { get; set; }
 
-        public Guid? AirlineId { get; set; }
-        [ForeignKey("AirlineId")]
+        public int? AirlineId { get; set; }
+        public int AirplaneId { get; set; }
+        public int ArrivalAirportId { get; set; }  // المفتاح الخارجي للمطار الذي ستصل إليه الرحلة
+        public int DepartureAirportId { get; set; } // المفتاح الخارجي للمطار الذي ستنطلق منه الرحلة
+
         public virtual Airline? Airline { get; set; }
-
-        public Guid AirplaneId { get; set; }
-        [ForeignKey("AirplaneId")]
         public virtual Airplane Airplane { get; set; }
-
-        [Required]
-        public Guid DepartureTerminalId { get; set; }
-        [ForeignKey("DepartureTerminalId")]
-        public virtual Terminal DepartureTerminal { get; set; }
-
-        [Required]
-        public Guid ArrivalTerminalId { get; set; }
-        [ForeignKey("ArrivalTerminalId")]
-        public virtual Terminal ArrivalTerminal { get; set; }
+        public virtual Airport? ArrivalAirport { get; set; }
+        public virtual Airport? DepartureAirport { get; set; }
 
         public virtual ICollection<FlightBooking> FlightBookings { get; set; } = new List<FlightBooking>();
 

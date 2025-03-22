@@ -9,15 +9,22 @@ using Wego.Core.Models.Flights;
 
 namespace Wego.Repository.Data.Configurations
 {
-    internal class AirplaneConfiguration : IEntityTypeConfiguration<Airplane>
+
+    public class AirplaneConfiguration : IEntityTypeConfiguration<Airplane>
     {
-        public void Configure(EntityTypeBuilder<Airplane> builder)
+        public void Configure(EntityTypeBuilder<Airplane> entity)
         {
-            builder
-              .HasOne(a => a.Airline)
-              .WithMany(al => al.Airplanes)
-              .HasForeignKey(a => a.AirlineId)
-              .OnDelete(DeleteBehavior.SetNull);
+            entity.Property(e => e.Id);
+
+            entity.Property(e => e.Code)
+                .HasMaxLength(50);
+
+            entity.Property(e => e.Type)
+                .HasMaxLength(255);
+
+            entity.HasOne(d => d.Airline)
+                .WithMany(p => p.Airplanes)
+                .HasForeignKey(d => d.AirlineId);
         }
     }
 }

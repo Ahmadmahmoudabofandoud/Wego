@@ -24,3 +24,16 @@ C:\Users\El-asdekaa\Downloads\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\
 C:\Users\El-asdekaa\Downloads\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\refint\Wego.Core.dll
 C:\Users\El-asdekaa\Downloads\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\Wego.Core.pdb
 C:\Users\El-asdekaa\Downloads\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\ref\Wego.Core.dll
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\bin\Debug\net8.0\Wego.Core.deps.json
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\bin\Debug\net8.0\Wego.Core.dll
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\bin\Debug\net8.0\Wego.Core.pdb
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\Wego.Core.csproj.AssemblyReference.cache
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\Wego.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\Wego.Core.AssemblyInfoInputs.cache
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\Wego.Core.AssemblyInfo.cs
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\Wego.Core.csproj.CoreCompileInputs.cache
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\Wego.Core.sourcelink.json
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\Wego.Core.dll
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\refint\Wego.Core.dll
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\Wego.Core.pdb
+D:\El-asdekaa\Documents\Fandoud\Final-Project\Backend\Wego.Core\obj\Debug\net8.0\ref\Wego.Core.dll

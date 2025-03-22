@@ -15,8 +15,7 @@ namespace Wego.Core.Models.Booking
     {
         public string? UserId { get; set; }
 
-        [ForeignKey("UserId")]
-        public virtual AppUser? User { get; set; }
+        public int FlightId { get; set; }
 
         public double? TotalPrice { get; set; }
 
@@ -26,12 +25,10 @@ namespace Wego.Core.Models.Booking
         [Required]
         public FlightBookingStatus Status { get; set; } = FlightBookingStatus.Pending;
 
-        [Required]
         public DateTime BookingDate { get; set; } = DateTime.Now;
 
-        public Guid FlightId { get; set; }
+        public virtual AppUser? User { get; set; }
 
-        [ForeignKey("FlightId")]
         public virtual Flight Flight { get; set; }
 
         public virtual ICollection<SeatReservation> SeatReservations { get; set; } = new List<SeatReservation>();

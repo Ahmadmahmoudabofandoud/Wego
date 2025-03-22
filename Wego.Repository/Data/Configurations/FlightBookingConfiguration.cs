@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,21 +9,30 @@ using Wego.Core.Models.Booking;
 
 namespace Wego.Repository.Data.Configurations
 {
-    internal class FlightBookingConfiguration : IEntityTypeConfiguration<FlightBooking>
-    {
-        public void Configure(EntityTypeBuilder<FlightBooking> builder)
-        {
-            builder
-                .HasOne(fb => fb.User)
-                .WithMany(u => u.FlightBookings)
-                .HasForeignKey(fb => fb.UserId)
-                .OnDelete(DeleteBehavior.SetNull);
 
-            builder
-                .HasOne(fb => fb.Flight)
-                .WithMany(f => f.FlightBookings)
-                .HasForeignKey(fb => fb.FlightId)
-                .OnDelete(DeleteBehavior.Restrict);
+    public class FlightBookingConfiguration : IEntityTypeConfiguration<FlightBooking>
+    {
+        public void Configure(EntityTypeBuilder<FlightBooking> entity)
+        {
+            entity.Property(e => e.Id);
+
+            entity.Property(e => e.BookingDate).HasColumnType("datetime");
+
+            entity.Property(e => e.PaymentMethod)
+                .HasMaxLength(50);
+
+            entity.Property(e => e.Status)
+                .HasMaxLength(255);
+
+            entity.Property(e => e.TotalPrice).HasColumnType("decimal(10, 2)");
+
+            entity.HasOne(d => d.Flight)
+                .WithMany(p => p.FlightBookings)
+                .HasForeignKey(d => d.FlightId);
+
+            entity.HasOne(d => d.User)
+                .WithMany(p => p.FlightBookings)
+                .HasForeignKey(d => d.UserId);
         }
     }
 }

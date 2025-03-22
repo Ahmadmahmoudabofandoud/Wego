@@ -5,25 +5,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Wego.Core.Models.Booking;
+using Wego.Core.Models.Flights;
 
 namespace Wego.Repository.Data.Configurations
 {
-    internal class SeatReservationConfiguration : IEntityTypeConfiguration<SeatReservation>
+    public class SeatReservationConfiguration : IEntityTypeConfiguration<SeatReservation>
     {
         public void Configure(EntityTypeBuilder<SeatReservation> builder)
         {
-            builder
-             .HasOne(sr => sr.FlightBooking)
-             .WithMany(fb => fb.SeatReservations)
-             .HasForeignKey(sr => sr.FlightBookingId)
-             .OnDelete(DeleteBehavior.Cascade);
+            builder.Property(e => e.Id);
 
-            builder
-                .HasOne(sr => sr.Seat)
-                .WithMany(s => s.SeatReservations)
-                .HasForeignKey(sr => sr.SeatId)
-                .OnDelete(DeleteBehavior.SetNull);
+            builder.HasOne(d => d.FlightBooking)
+                .WithMany(p => p.SeatReservations)
+                .HasForeignKey(d => d.FlightBookingId);
         }
     }
 }

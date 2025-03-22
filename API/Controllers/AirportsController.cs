@@ -1,126 +1,94 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
+using Wego.Core;
+using Wego.Core.Models;
+using Wego.API.Helpers;
+using API.Errors;
+using Wego.API.Models.DTOS.Flights.Dtos;
+using Wego.Core.Models.Flights;
+using Wego.Core.Specifications;
+using Wego.Core.Specifications.AirportSpecification;
 
 namespace Wego.API.Controllers
 {
-    //[Route("api/[controller]")]
-    //[ApiController]
-    //public class AirportsController : ControllerBase
-    //{
-    //    private readonly IUnitOfWork _unit;
-    //    private readonly IGenericRepository<Airport> _airportRepository;
-    //    private readonly IGenericRepository<Location> _locationRepository;
-    //    private readonly IMapper _mapper;
-    //    public AirportsController(IUnitOfWork unitOfWork, IMapper mapper)
-    //    {
-    //        _unit = unitOfWork;
-    //        _mapper = mapper;
-    //        _airportRepository = _unit.AirportRepository;
-    //        _locationRepository = _unit.LocationRepository;
-    //    }
+    public class AirportsController : BaseApiController
+    {
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-    //    [HttpGet]
-    //    public async Task<IActionResult> GetAll(int pageIndex = 1, int pageSize = 10, string search = "")
-    //    {
-    //        IEnumerable<Airport> result = await _airportRepository
-    //            .GetPaginatedAsync(pageIndex, pageSize,
-    //                a => string.IsNullOrEmpty(search) ||
-    //                a.Name.ToLower().Contains(search.ToLower()) ||
-    //                a.Location.City.ToLower().Contains(search.ToLower()) ||
-    //                a.Location.Country.ToLower().Contains(search.ToLower())
-    //            );
+        public AirportsController(IUnitOfWork unitOfWork, IMapper mapper)
+        {
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
+        }
 
-    //        var resCount = await _airportRepository
-    //            .CountAsync(a => string.IsNullOrEmpty(search) ||
-    //                a.Name.ToLower().Contains(search.ToLower()) ||
-    //                a.Location.City.ToLower().Contains(search.ToLower()) ||
-    //                a.Location.Country.ToLower().Contains(search.ToLower())
-    //            );
+        [HttpGet]
+        public async Task<ActionResult<Pagination<AirportDto>>> GetAllAirports([FromQuery] AppSpecParams specParams)
+        {
+            var spec = new AirportWithLocationSpecification(specParams);
+            var airports = await _unitOfWork.Repository<Airport>().GetAllWithSpecAsync(spec);
+            var totalCount = await _unitOfWork.Repository<Airport>().GetCountWithSpecAsync(spec);
 
-    //        var res = _mapper.ToAirportDtoList(result);
+            var data = _mapper.Map<IReadOnlyList<Airport>, IReadOnlyList<AirportDto>>(airports);
+            return Ok(new Pagination<AirportDto>(specParams.PageIndex, specParams.PageSize, totalCount, data));
+        }
 
-    //        return Ok(new { data = res, Total = resCount });
-    //    }
+        [HttpGet("{id}")]
+        [ProducesResponseType(typeof(AirportDto), 200)]
+        [ProducesResponseType(typeof(ApiResponse), 404)]
+        public async Task<ActionResult<AirportDto>> GetAirportById(int id)
+        {
+            var spec = new AirportWithLocationSpecification(id);
+            var airport = await _unitOfWork.Repository<Airport>().GetEntityWithSpecAsync(spec);
+            if (airport == null) return NotFound(new ApiResponse(404));
 
-    //    [HttpGet("{routeId:int}")]
-    //    public async Task<IActionResult> GetById(int routeId)
-    //    {
-    //        var airport = await _airportRepository.GetByIdAsync(routeId);
-    //        if (airport is { })
-    //        {
-    //            var res = _mapper.ToAirportDto(airport);
-    //            return Ok(res);
-    //        }
-    //        return NotFound();
-    //    }
+            return Ok(_mapper.Map<AirportDto>(airport));
+        }
 
-    //    [HttpPost]
-    //    public async Task<IActionResult> NewAirport(AirportPostDto dto)
-    //    {
-    //        if (!ModelState.IsValid)
-    //            return BadRequest(ModelState);
+        [HttpPost]
+        public async Task<ActionResult<AirportDto>> AddAirport([FromBody] AirportPostDto dto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-    //        var airport = _mapper.FromAirportDto(dto);
+            var airport = _mapper.Map<Airport>(dto);
+            await _unitOfWork.Repository<Airport>().Add(airport);
+            await _unitOfWork.CompleteAsync();
 
-    //        try
-    //        {
-    //            await _airportRepository.AddAsync(airport);
-    //            await _airportRepository.SaveChangesAsync();
-    //        }
-    //        catch (Exception)
-    //        {
-    //            return BadRequest("Error occured on saving");
-    //        }
-    //        airport.Location = await _locationRepository.GetByIdAsync(airport.LocationId);
-    //        var res = _mapper.ToAirportDto(airport);
+            return CreatedAtAction(nameof(GetAirportById), new { id = airport.Id }, _mapper.Map<AirportDto>(airport));
+        }
 
-    //        return CreatedAtAction("GetById", new { routeId = airport.Id }, res);
-    //    }
+        [HttpPut("{id}")]
+        public async Task<ActionResult<AirportDto>> UpdateAirport(int id, [FromBody] AirportPutDto dto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (id != dto.Id) return BadRequest("ID mismatch");
 
-    //    [HttpPut("{routeId:int}")]
-    //    public async Task<IActionResult> UpdateAirport(int routeId, AirportPutDto dto)
-    //    {
-    //        if (!ModelState.IsValid)
-    //            return BadRequest(ModelState);
-    //        if (routeId != dto.Id)
-    //            return BadRequest("Route id and Airport Id did not match");
+            var airport = await _unitOfWork.Repository<Airport>().GetByIdAsync(dto.Id);
+            if (airport == null) return NotFound(new ApiResponse(404));
 
-    //        var airport = await _airportRepository.GetByIdAsync(dto.Id);
-    //        if (airport is not { })
-    //            return NotFound();
+            _mapper.Map(dto, airport);
+            _unitOfWork.Repository<Airport>().Update(airport);
+            await _unitOfWork.CompleteAsync();
 
-    //        airport.Name = dto.Name ?? airport.Name;
-    //        airport.Code = dto.Code ?? airport.Code;
-    //        airport.LocationId = dto.LocationId ?? airport.LocationId;
-    //        try
-    //        {
-    //            await _airportRepository.UpdateAsync(airport);
-    //            await _airportRepository.SaveChangesAsync();
-    //        }
-    //        catch (Exception)
-    //        {
-    //            return BadRequest("Error occured on saving");
-    //        }
-    //        airport.Location = await _locationRepository.GetByIdAsync(airport.LocationId);
+            return Ok(_mapper.Map<AirportDto>(airport));
+        }
 
-    //        var res = _mapper.ToAirportDto(airport);
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteAirport(int id)
+        {
+            var airport = await _unitOfWork.Repository<Airport>().GetByIdAsync(id);
+            if (airport == null) return NotFound(new ApiResponse(404));
 
-    //        return Ok(res);
-    //    }
+            if (airport.FlightArrivalAirports.Any() || airport.FlightDepartureAirports.Any())
+                return BadRequest("Airport has associated flights.");
 
-    //    [HttpDelete("{routeId:int}")]
-    //    public async Task<IActionResult> DeleteAirport(int routeId)
-    //    {
-    //        var airport = await _airportRepository.GetByIdAsync(routeId);
-    //        if (airport is { })
-    //        {
-    //            if (airport.Terminals.Any())
-    //                return BadRequest("You have to remove Terminals associated with this airport first");
+            _unitOfWork.Repository<Airport>().Delete(airport);
+            await _unitOfWork.CompleteAsync();
 
-    //            await _airportRepository.DeleteAsync(airport);
-    //            await _airportRepository.SaveChangesAsync();
-    //            return NoContent();
-    //        }
-    //        return NotFound();
-    //    }
-    //}
+            return Ok(new { message = $"Airport '{airport.Name}' has been deleted successfully." });
+        }
+    }
 }

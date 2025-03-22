@@ -8,8 +8,10 @@ namespace Wego.Core.Models.Enums
 {
     public enum FlightBookingStatus
     {
-        Pending,
-        Confirmed,
-        Cancelled
+        Pending = 0,
+        Confirmed = 1,
+        Cancelled = 2,
+        Completed = 3
     }
+
 }
