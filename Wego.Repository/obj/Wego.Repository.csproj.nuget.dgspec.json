@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Repository\\Wego.Repository.csproj": {}
+    "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj": {}
   },
   "projects": {
-    "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Core\\Wego.Core.csproj": {
+    "E:\\Wego\\Wego.Core\\Wego.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Core\\Wego.Core.csproj",
+        "projectUniqueName": "E:\\Wego\\Wego.Core\\Wego.Core.csproj",
         "projectName": "Wego.Core",
-        "projectPath": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Core\\Wego.Core.csproj",
-        "packagesPath": "C:\\Users\\El-asdekaa\\.nuget\\packages\\",
-        "outputPath": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Core\\obj\\",
+        "projectPath": "E:\\Wego\\Wego.Core\\Wego.Core.csproj",
+        "packagesPath": "C:\\Users\\Abdelrahman\\.nuget\\packages\\",
+        "outputPath": "E:\\Wego\\Wego.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\El-asdekaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Abdelrahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,7 +38,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -77,21 +87,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Repository\\Wego.Repository.csproj": {
+    "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Repository\\Wego.Repository.csproj",
+        "projectUniqueName": "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj",
         "projectName": "Wego.Repository",
-        "projectPath": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Repository\\Wego.Repository.csproj",
-        "packagesPath": "C:\\Users\\El-asdekaa\\.nuget\\packages\\",
-        "outputPath": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Repository\\obj\\",
+        "projectPath": "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj",
+        "packagesPath": "C:\\Users\\Abdelrahman\\.nuget\\packages\\",
+        "outputPath": "E:\\Wego\\Wego.Repository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\El-asdekaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Abdelrahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,8 +119,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Core\\Wego.Core.csproj": {
-                "projectPath": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Core\\Wego.Core.csproj"
+              "E:\\Wego\\Wego.Core\\Wego.Core.csproj": {
+                "projectPath": "E:\\Wego\\Wego.Core\\Wego.Core.csproj"
               }
             }
           }
@@ -115,7 +129,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -150,7 +170,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

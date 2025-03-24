@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3ZpjBPEo3v4tTOpa6AV52kMCen6l5vAWmfOs6y+GwlY=",
+  "Hash": "d6V4xcLrwekxISvafBCHU1xAiF7A43oVS1YTR46Y6lI=",
   "Source": "Wego.API",
   "BasePath": "_content/Wego.API",
   "Mode": "Default",
@@ -10,296 +10,1558 @@
     {
       "Name": "Wego.API\\wwwroot",
       "Source": "Wego.API",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/HotelsImg/Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg",
+      "RelativePath": "imgs/HotelsImg/Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "ra59sfxitb",
+      "Integrity": "E0sux4QT60FQvyVBsWL6gFNvDbzUPxQLrro988qcBDA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\HotelsImg\\Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/HotelsImg/Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg",
+      "RelativePath": "imgs/HotelsImg/Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "7dtivxg83a",
+      "Integrity": "1feq8fapuVqtpdcuy/aNCM/no3b4Ly0wEjtn/9KczaU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\HotelsImg\\Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/HotelsImg/Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg",
+      "RelativePath": "imgs/HotelsImg/Hotel-75a4702b-082d-475d-b51f-681a2385d6c7#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "ggj5tw4kqk",
+      "Integrity": "QBG9yZUk11KjoEtvAqtLEWYKtdrhTgjVBj/Nq0yR988=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\HotelsImg\\Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/HotelsImg/Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg",
+      "RelativePath": "imgs/HotelsImg/Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "88t4fzvopk",
+      "Integrity": "+Dda6lchLlkXMsr182+RJOQjN4uFGVYZRgDbgu7EXI4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\HotelsImg\\Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/locationsImg/location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg",
+      "RelativePath": "imgs/locationsImg/location-122a0119-79b0-41b6-aa55-4eda26c41617#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "mppb0q3atr",
+      "Integrity": "6q5xxGDJg4g0olUnp2dmHsL4dt9yCnujI/LvT2zP6vY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\locationsImg\\location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/locationsImg/location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg",
+      "RelativePath": "imgs/locationsImg/location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "eke8xnozap",
+      "Integrity": "vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw+zqFYtRjsk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\locationsImg\\location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/locationsImg/location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg",
+      "RelativePath": "imgs/locationsImg/location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "ilj61moh2z",
+      "Integrity": "tiHyZz5dE6t86NV91yvLrv4QmhXlj+nXJ25BzGnkaG4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\locationsImg\\location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/locationsImg/location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg",
+      "RelativePath": "imgs/locationsImg/location-7077f000-d32c-4241-80e7-b7d6dc203b17#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "sun8x91xb2",
+      "Integrity": "xP8LaDcyMoUXTn4dTluHOPMR3KPhfNUNmBp4DwWkirM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\locationsImg\\location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/locationsImg/location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg",
+      "RelativePath": "imgs/locationsImg/location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "eke8xnozap",
+      "Integrity": "vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw+zqFYtRjsk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\locationsImg\\location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/locationsImg/location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg",
+      "RelativePath": "imgs/locationsImg/location-9e759c5e-c519-4323-8443-4d9d32ebd2f7#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "y9spvb64qf",
+      "Integrity": "mrlUGuS+VUy71+jH89i4IYhgQpNBi1KaGmhKCE8zhyA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\locationsImg\\location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/locationsImg/location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg",
+      "RelativePath": "imgs/locationsImg/location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "y9spvb64qf",
+      "Integrity": "mrlUGuS+VUy71+jH89i4IYhgQpNBi1KaGmhKCE8zhyA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\locationsImg\\location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/locationsImg/location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg",
+      "RelativePath": "imgs/locationsImg/location-b47c6da6-83d1-4382-ab16-3050cdd04e36#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "5lwvxvmmya",
+      "Integrity": "R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\locationsImg\\location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/locationsImg/location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg",
+      "RelativePath": "imgs/locationsImg/location-bb5855ef-abc5-4429-9443-c05bc6357cbf#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "8bbaf31250",
+      "Integrity": "xEKYGNwgn71KpG2EQKIYVfepz5+8i6Cp7UPpA7mhCQM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\locationsImg\\location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/locationsImg/location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg",
+      "RelativePath": "imgs/locationsImg/location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "i87nrmkgtc",
+      "Integrity": "nijTXUVzZHPqMFbSLzu8DFmtFOu4gvQC8BBZ+x2pep8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\locationsImg\\location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg"
     },
     {
-      "Identity": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\roomsImg\\Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg",
+      "Identity": "E:\\Wego\\API\\wwwroot\\imgs\\roomsImg\\Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg",
       "SourceId": "Wego.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\",
+      "ContentRoot": "E:\\Wego\\API\\wwwroot\\",
       "BasePath": "_content/Wego.API",
-      "RelativePath": "imgs/roomsImg/Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg",
+      "RelativePath": "imgs/roomsImg/Room-11a99a5d-2fa5-46b3-9698-1315424a0b32#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "4k4rn0swog",
+      "Integrity": "1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imgs\\roomsImg\\Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "imgs/HotelsImg/Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14479"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"E0sux4QT60FQvyVBsWL6gFNvDbzUPxQLrro988qcBDA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-E0sux4QT60FQvyVBsWL6gFNvDbzUPxQLrro988qcBDA="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/HotelsImg/Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.ra59sfxitb.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14479"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"E0sux4QT60FQvyVBsWL6gFNvDbzUPxQLrro988qcBDA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ra59sfxitb"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/HotelsImg/Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-E0sux4QT60FQvyVBsWL6gFNvDbzUPxQLrro988qcBDA="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/HotelsImg/Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.7dtivxg83a.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1feq8fapuVqtpdcuy/aNCM/no3b4Ly0wEjtn/9KczaU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7dtivxg83a"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/HotelsImg/Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1feq8fapuVqtpdcuy/aNCM/no3b4Ly0wEjtn/9KczaU="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/HotelsImg/Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6956"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1feq8fapuVqtpdcuy/aNCM/no3b4Ly0wEjtn/9KczaU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1feq8fapuVqtpdcuy/aNCM/no3b4Ly0wEjtn/9KczaU="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/HotelsImg/Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.ggj5tw4kqk.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "143419"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QBG9yZUk11KjoEtvAqtLEWYKtdrhTgjVBj/Nq0yR988=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ggj5tw4kqk"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/HotelsImg/Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QBG9yZUk11KjoEtvAqtLEWYKtdrhTgjVBj/Nq0yR988="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/HotelsImg/Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "143419"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QBG9yZUk11KjoEtvAqtLEWYKtdrhTgjVBj/Nq0yR988=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QBG9yZUk11KjoEtvAqtLEWYKtdrhTgjVBj/Nq0yR988="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/HotelsImg/Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.88t4fzvopk.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "179265"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+Dda6lchLlkXMsr182+RJOQjN4uFGVYZRgDbgu7EXI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "88t4fzvopk"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/HotelsImg/Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+Dda6lchLlkXMsr182+RJOQjN4uFGVYZRgDbgu7EXI4="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/HotelsImg/Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "179265"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+Dda6lchLlkXMsr182+RJOQjN4uFGVYZRgDbgu7EXI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+Dda6lchLlkXMsr182+RJOQjN4uFGVYZRgDbgu7EXI4="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1859214"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6q5xxGDJg4g0olUnp2dmHsL4dt9yCnujI/LvT2zP6vY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6q5xxGDJg4g0olUnp2dmHsL4dt9yCnujI/LvT2zP6vY="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-122a0119-79b0-41b6-aa55-4eda26c41617.mppb0q3atr.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1859214"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6q5xxGDJg4g0olUnp2dmHsL4dt9yCnujI/LvT2zP6vY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mppb0q3atr"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/locationsImg/location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6q5xxGDJg4g0olUnp2dmHsL4dt9yCnujI/LvT2zP6vY="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.eke8xnozap.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "510026"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw+zqFYtRjsk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eke8xnozap"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/locationsImg/location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw+zqFYtRjsk="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "510026"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw+zqFYtRjsk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw+zqFYtRjsk="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.ilj61moh2z.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19690"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tiHyZz5dE6t86NV91yvLrv4QmhXlj+nXJ25BzGnkaG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ilj61moh2z"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/locationsImg/location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tiHyZz5dE6t86NV91yvLrv4QmhXlj+nXJ25BzGnkaG4="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19690"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tiHyZz5dE6t86NV91yvLrv4QmhXlj+nXJ25BzGnkaG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tiHyZz5dE6t86NV91yvLrv4QmhXlj+nXJ25BzGnkaG4="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "123375"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xP8LaDcyMoUXTn4dTluHOPMR3KPhfNUNmBp4DwWkirM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xP8LaDcyMoUXTn4dTluHOPMR3KPhfNUNmBp4DwWkirM="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-7077f000-d32c-4241-80e7-b7d6dc203b17.sun8x91xb2.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "123375"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xP8LaDcyMoUXTn4dTluHOPMR3KPhfNUNmBp4DwWkirM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sun8x91xb2"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/locationsImg/location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xP8LaDcyMoUXTn4dTluHOPMR3KPhfNUNmBp4DwWkirM="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.eke8xnozap.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "510026"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw+zqFYtRjsk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eke8xnozap"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/locationsImg/location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw+zqFYtRjsk="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "510026"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw+zqFYtRjsk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw+zqFYtRjsk="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8936"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mrlUGuS+VUy71+jH89i4IYhgQpNBi1KaGmhKCE8zhyA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mrlUGuS+VUy71+jH89i4IYhgQpNBi1KaGmhKCE8zhyA="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.y9spvb64qf.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8936"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mrlUGuS+VUy71+jH89i4IYhgQpNBi1KaGmhKCE8zhyA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y9spvb64qf"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/locationsImg/location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mrlUGuS+VUy71+jH89i4IYhgQpNBi1KaGmhKCE8zhyA="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8936"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mrlUGuS+VUy71+jH89i4IYhgQpNBi1KaGmhKCE8zhyA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mrlUGuS+VUy71+jH89i4IYhgQpNBi1KaGmhKCE8zhyA="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.y9spvb64qf.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8936"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mrlUGuS+VUy71+jH89i4IYhgQpNBi1KaGmhKCE8zhyA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y9spvb64qf"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/locationsImg/location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mrlUGuS+VUy71+jH89i4IYhgQpNBi1KaGmhKCE8zhyA="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-b47c6da6-83d1-4382-ab16-3050cdd04e36.5lwvxvmmya.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5462"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5lwvxvmmya"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/locationsImg/location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5462"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-bb5855ef-abc5-4429-9443-c05bc6357cbf.8bbaf31250.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8405"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xEKYGNwgn71KpG2EQKIYVfepz5+8i6Cp7UPpA7mhCQM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8bbaf31250"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/locationsImg/location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xEKYGNwgn71KpG2EQKIYVfepz5+8i6Cp7UPpA7mhCQM="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8405"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xEKYGNwgn71KpG2EQKIYVfepz5+8i6Cp7UPpA7mhCQM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xEKYGNwgn71KpG2EQKIYVfepz5+8i6Cp7UPpA7mhCQM="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.i87nrmkgtc.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "160974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nijTXUVzZHPqMFbSLzu8DFmtFOu4gvQC8BBZ+x2pep8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i87nrmkgtc"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/locationsImg/location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nijTXUVzZHPqMFbSLzu8DFmtFOu4gvQC8BBZ+x2pep8="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/locationsImg/location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "160974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nijTXUVzZHPqMFbSLzu8DFmtFOu4gvQC8BBZ+x2pep8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nijTXUVzZHPqMFbSLzu8DFmtFOu4gvQC8BBZ+x2pep8="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/roomsImg/Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.4k4rn0swog.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\roomsImg\\Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10034"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4k4rn0swog"
+        },
+        {
+          "Name": "label",
+          "Value": "imgs/roomsImg/Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="
+        }
+      ]
+    },
+    {
+      "Route": "imgs/roomsImg/Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg",
+      "AssetFile": "E:\\Wego\\API\\wwwroot\\imgs\\roomsImg\\Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10034"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 19:01:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="
+        }
+      ]
     }
   ]
 }

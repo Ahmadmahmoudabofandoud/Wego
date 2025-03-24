@@ -1,64 +1,68 @@
 {
   "Files": [
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg",
       "PackagePath": "staticwebassets\\imgs\\HotelsImg\\Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg",
       "PackagePath": "staticwebassets\\imgs\\HotelsImg\\Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg",
       "PackagePath": "staticwebassets\\imgs\\HotelsImg\\Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\HotelsImg\\Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg",
       "PackagePath": "staticwebassets\\imgs\\HotelsImg\\Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg",
       "PackagePath": "staticwebassets\\imgs\\locationsImg\\location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg",
       "PackagePath": "staticwebassets\\imgs\\locationsImg\\location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg",
       "PackagePath": "staticwebassets\\imgs\\locationsImg\\location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg",
       "PackagePath": "staticwebassets\\imgs\\locationsImg\\location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg",
       "PackagePath": "staticwebassets\\imgs\\locationsImg\\location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg",
       "PackagePath": "staticwebassets\\imgs\\locationsImg\\location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg",
       "PackagePath": "staticwebassets\\imgs\\locationsImg\\location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg",
       "PackagePath": "staticwebassets\\imgs\\locationsImg\\location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg",
       "PackagePath": "staticwebassets\\imgs\\locationsImg\\location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\locationsImg\\location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\locationsImg\\location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg",
       "PackagePath": "staticwebassets\\imgs\\locationsImg\\location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg"
     },
     {
-      "Id": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\wwwroot\\imgs\\roomsImg\\Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg",
+      "Id": "E:\\Wego\\API\\wwwroot\\imgs\\roomsImg\\Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg",
       "PackagePath": "staticwebassets\\imgs\\roomsImg\\Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Wego.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Wego.API.Microsoft.AspNetCore.StaticWebAssets.props",

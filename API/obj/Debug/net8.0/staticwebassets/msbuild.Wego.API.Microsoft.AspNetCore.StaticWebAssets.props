@@ -1,6 +1,6 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -12,11 +12,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ra59sfxitb</Fingerprint>
+      <Integrity>E0sux4QT60FQvyVBsWL6gFNvDbzUPxQLrro988qcBDA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-49d0bf3e-d76a-48d0-a453-870193cfdb85.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -28,11 +30,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7dtivxg83a</Fingerprint>
+      <Integrity>1feq8fapuVqtpdcuy/aNCM/no3b4Ly0wEjtn/9KczaU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-4fc88230-cad3-41b4-9e5e-1f9ce65b3bc6.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -44,11 +48,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ggj5tw4kqk</Fingerprint>
+      <Integrity>QBG9yZUk11KjoEtvAqtLEWYKtdrhTgjVBj/Nq0yR988=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-75a4702b-082d-475d-b51f-681a2385d6c7.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -60,11 +66,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>88t4fzvopk</Fingerprint>
+      <Integrity>+Dda6lchLlkXMsr182+RJOQjN4uFGVYZRgDbgu7EXI4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-bca82208-f5a0-41a6-a910-e0fae5b0e716.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -76,11 +84,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>mppb0q3atr</Fingerprint>
+      <Integrity>6q5xxGDJg4g0olUnp2dmHsL4dt9yCnujI/LvT2zP6vY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-122a0119-79b0-41b6-aa55-4eda26c41617.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -92,11 +102,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>eke8xnozap</Fingerprint>
+      <Integrity>vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw+zqFYtRjsk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-3a844b02-ccb9-45fc-8f6e-ac1a3d7098a7.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -108,11 +120,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ilj61moh2z</Fingerprint>
+      <Integrity>tiHyZz5dE6t86NV91yvLrv4QmhXlj+nXJ25BzGnkaG4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-3f3f1e48-2ca5-41be-bb54-3536a28c8f33.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -124,11 +138,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>sun8x91xb2</Fingerprint>
+      <Integrity>xP8LaDcyMoUXTn4dTluHOPMR3KPhfNUNmBp4DwWkirM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-7077f000-d32c-4241-80e7-b7d6dc203b17.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -140,11 +156,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>eke8xnozap</Fingerprint>
+      <Integrity>vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw+zqFYtRjsk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-8a96a68b-f64b-4c7f-ba7a-4a578aada9ed.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -156,11 +174,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>y9spvb64qf</Fingerprint>
+      <Integrity>mrlUGuS+VUy71+jH89i4IYhgQpNBi1KaGmhKCE8zhyA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-9e759c5e-c519-4323-8443-4d9d32ebd2f7.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -172,11 +192,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>y9spvb64qf</Fingerprint>
+      <Integrity>mrlUGuS+VUy71+jH89i4IYhgQpNBi1KaGmhKCE8zhyA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-a6e7c423-e7dd-4efd-918a-fe4de76d3da7.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -188,11 +210,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5lwvxvmmya</Fingerprint>
+      <Integrity>R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-b47c6da6-83d1-4382-ab16-3050cdd04e36.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -204,11 +228,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8bbaf31250</Fingerprint>
+      <Integrity>xEKYGNwgn71KpG2EQKIYVfepz5+8i6Cp7UPpA7mhCQM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-bb5855ef-abc5-4429-9443-c05bc6357cbf.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -220,11 +246,13 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>i87nrmkgtc</Fingerprint>
+      <Integrity>nijTXUVzZHPqMFbSLzu8DFmtFOu4gvQC8BBZ+x2pep8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-f6092c3b-926f-4a8a-bf99-29c6f77e1e99.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Wego.API</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
@@ -236,9 +264,11 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>4k4rn0swog</Fingerprint>
+      <Integrity>1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-11a99a5d-2fa5-46b3-9698-1315424a0b32.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

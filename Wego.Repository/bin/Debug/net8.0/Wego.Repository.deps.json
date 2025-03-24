@@ -972,7 +972,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.13"
         },
         "runtime": {
-          "Wego.Core.dll": {}
+          "Wego.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

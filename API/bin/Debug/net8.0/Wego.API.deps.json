@@ -1198,12 +1198,6 @@
       "System.Text.Json/8.0.4": {
         "dependencies": {
           "System.Text.Encodings.Web": "8.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/System.Text.Json.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.724.31311"
-          }
         }
       },
       "System.Threading.Channels/6.0.0": {},
@@ -1217,7 +1211,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.13"
         },
         "runtime": {
-          "Wego.Core.dll": {}
+          "Wego.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Wego.Repository/1.0.0": {
@@ -1228,17 +1225,24 @@
           "Wego.Core": "1.0.0"
         },
         "runtime": {
-          "Wego.Repository.dll": {}
+          "Wego.Repository.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Wego.Service/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.13",
           "Microsoft.AspNetCore.Identity": "2.3.0",
+          "Stripe.net": "46.2.1",
           "Wego.Core": "1.0.0"
         },
         "runtime": {
-          "Wego.Service.dll": {}
+          "Wego.Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

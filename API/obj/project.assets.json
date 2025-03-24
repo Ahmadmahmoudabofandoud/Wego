@@ -2158,6 +2158,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.13",
           "Microsoft.AspNetCore.Identity": "2.3.0",
+          "Stripe.net": "46.2.1",
           "Wego.Core": "1.0.0"
         },
         "compile": {
@@ -5530,19 +5531,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\El-asdekaa\\.nuget\\packages\\": {}
+    "C:\\Users\\Abdelrahman\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\Wego.API.csproj",
+      "projectUniqueName": "E:\\Wego\\API\\Wego.API.csproj",
       "projectName": "Wego.API",
-      "projectPath": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\Wego.API.csproj",
-      "packagesPath": "C:\\Users\\El-asdekaa\\.nuget\\packages\\",
-      "outputPath": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\API\\obj\\",
+      "projectPath": "E:\\Wego\\API\\Wego.API.csproj",
+      "packagesPath": "C:\\Users\\Abdelrahman\\.nuget\\packages\\",
+      "outputPath": "E:\\Wego\\API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\El-asdekaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Abdelrahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5556,11 +5562,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Repository\\Wego.Repository.csproj": {
-              "projectPath": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Repository\\Wego.Repository.csproj"
+            "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj": {
+              "projectPath": "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj"
             },
-            "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Service\\Wego.Service.csproj": {
-              "projectPath": "D:\\El-asdekaa\\Documents\\Fandoud\\Final-Project\\Backend\\Wego.Service\\Wego.Service.csproj"
+            "E:\\Wego\\Wego.Service\\Wego.Service.csproj": {
+              "projectPath": "E:\\Wego\\Wego.Service\\Wego.Service.csproj"
             }
           }
         }
@@ -5569,7 +5575,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -5625,7 +5637,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
@@ -5636,6 +5648,16 @@
       "warningLevel": 1,
       "message": "Package 'Microsoft.AspNetCore.Identity' 2.3.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-2865-hh9g-w894",
       "libraryId": "Microsoft.AspNetCore.Identity",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.Json' 8.0.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "libraryId": "System.Text.Json",
       "targetGraphs": [
         "net8.0"
       ]

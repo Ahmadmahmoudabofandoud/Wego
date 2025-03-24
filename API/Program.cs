@@ -32,6 +32,7 @@ namespace Wego.API
             builder.Services.AddAutoMapper(typeof(MappingProfile));
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddSingleton<IEmailService, EmailService>();
+            builder.Services.AddScoped<IPaymentService, PaymentService>();
             builder.Services.AddIdentityConfiguration();
             builder.Services.AddJwtAuthentication(configuration);
             builder.Services.AddCorsPolicy();
