@@ -1,24 +1,26 @@
 ﻿using System.Linq;
+using System.Linq.Expressions;
 using Wego.Core.Models;
 using Wego.Core.Models.Hotels;
-using Wego.Core.Specifications;
 
 namespace Wego.Core.Specifications.HotelSpecification
 {
     public class HotelWithDetailsSpecification : BaseSpecifcation<Hotel>
     {
-        public HotelWithDetailsSpecification(AppSpecParams specParams)
+        public HotelWithDetailsSpecification(HotelSpecParams specParams)
             : base(H =>
-                    (string.IsNullOrEmpty(specParams.Search) ||
-                     (H.Name != null && H.Name.ToLower().Contains(specParams.Search)) ||
-                     (H.Location != null && H.Location.City.ToLower().Contains(specParams.Search)) ||
-                     (H.Location != null && H.Location.Country.ToLower().Contains(specParams.Search)) 
-                    )
+                     (string.IsNullOrEmpty(specParams.Search) ||
+                      (H.Name != null && H.Name.ToLower().Contains(specParams.Search)) ||
+                      (H.Location != null && H.Location.City.ToLower().Contains(specParams.Search)) ||
+                      (H.Location != null && H.Location.Country.ToLower().Contains(specParams.Search))
+                     ) &&
+                     (!specParams.LocationId.HasValue || H.LocationId == specParams.LocationId) &&
+                     (!specParams.MinRating.HasValue || H.Rating >= specParams.MinRating)
             )
         {
             AddIncludes();
 
-            // ترتيب حسب التقييم أو الاسم
+
             if (!string.IsNullOrEmpty(specParams.Sort))
             {
                 switch (specParams.Sort)
@@ -36,9 +38,9 @@ namespace Wego.Core.Specifications.HotelSpecification
                         AddOrderByDesc(H => H.Name);
                         break;
                 }
+
             }
 
-            // تطبيق Pagination
             ApplyPagination((specParams.PageIndex - 1) * specParams.PageSize, specParams.PageSize);
         }
 
@@ -50,14 +52,23 @@ namespace Wego.Core.Specifications.HotelSpecification
 
         private void AddIncludes()
         {
-            Includes.Add(H => H.Images);
-            Includes.Add(H => H.Rooms);
-            Includes.Add(H => H.Location);
+            Includes.Add(h => h.Images);
+            Includes.Add(h => h.Location);
+            Includes.Add(h => h.Reviews);
+            Includes.Add(h => h.Amenities);
+
+
+
+            ThenIncludes.Add((
+                (Expression<Func<Hotel, object>>)(h => h.Rooms),
+                (Expression<Func<object, object>>)(r => ((Room)r).Images)));
+            ThenIncludes.Add((
+                (Expression<Func<Hotel, object>>)(h => h.Rooms),
+                (Expression<Func<object, object>>)(r => ((Room)r).Amenities)));
+            ThenIncludes.Add((
+                (Expression<Func<Hotel, object>>)(h => h.Rooms),
+                (Expression<Func<object, object>>)(r => ((Room)r).RoomOptions)));
+
         }
-
-
-
-
-
     }
 }

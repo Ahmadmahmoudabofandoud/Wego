@@ -20,6 +20,9 @@ namespace Wego.Repository.Data.Configurations
 
             entity.Property(e => e.Name)
                 .HasMaxLength(255);
+
+            entity.Property(e => e.Image)
+                .HasMaxLength(255);
         }
     }
 }

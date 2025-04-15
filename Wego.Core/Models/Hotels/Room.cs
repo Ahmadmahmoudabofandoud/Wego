@@ -16,15 +16,16 @@ namespace Wego.Core.Models.Hotels
 
         public required string RoomTitle { get; set; }
         public required string RoomLocation { get; set; }
-
-        public required int Price { get; set; }
         public required int Rating { get; set; }
 
         public required RoomType RoomType { get; set; }
 
-        public required bool IsActive { get; set; } //status
+        public required bool IsActive { get; set; } 
         public virtual Hotel? Hotel { get; set; }
         public virtual ICollection<Image> Images { get; set; } = new HashSet<Image>();
+        public virtual ICollection<Amenity> Amenities { get; set; }= new HashSet<Amenity>();
         public virtual ICollection<RoomBooking> RoomBookings { get; set; } = new HashSet<RoomBooking>();
+        public virtual ICollection<RoomOption> RoomOptions { get; set; } = new HashSet<RoomOption>();
+
     }
 }

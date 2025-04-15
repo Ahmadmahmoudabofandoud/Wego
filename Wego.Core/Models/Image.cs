@@ -12,12 +12,11 @@ namespace Wego.Core.Models
 {
     public class Image : BaseModel
     {
-        public string Url { get; set; } = null!;
+        public string? ImageData { get; set; } = null;
+
         public int? HotelId { get; set; }
         public int? RoomId { get; set; }
-        public int? AirlineId { get; set; }
 
-        public virtual Airline? Airline { get; set; }
         public virtual Hotel? Hotel { get; set; }
         public virtual Room? Room { get; set; }
     }

@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -32,8 +32,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\imgs\locationsImg\" />
+    <Folder Include="wwwroot\imgs\airlinesImg\" />
     <Folder Include="wwwroot\imgs\HotelsImg\" />
+    <Folder Include="wwwroot\imgs\locationsImg\" />
+    <Folder Include="wwwroot\imgs\profileImg\" />
     <Folder Include="wwwroot\imgs\roomsImg\" />
   </ItemGroup>
 

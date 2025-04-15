@@ -17,6 +17,7 @@ namespace Wego.Core.Repositories.Contract
         Task<IReadOnlyList<T>> GetAllAsync();
 
         Task<T> GetByIdAsync(int id);
+        Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> predicate);
 
         #endregion
 
@@ -26,11 +27,12 @@ namespace Wego.Core.Repositories.Contract
         Task<T> GetEntityWithSpecAsync(ISpecification<T> spec);
 
         #endregion
-
-        // Pagination Count
         Task<int> GetCountWithSpecAsync(ISpecification<T> spec);
 
+        Task<IReadOnlyList<Favorite>> GetUserIdAsync(string userId);
+
         Task Add(T entity);
+        Task AddRange(IEnumerable<T> entities);  
         void Update(T entity);
         void Delete(T entity);
     }

@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using Wego.Core.Models;
+using Wego.Core.Models.Flights;
+using Wego.Core.Models.Hotels;
+using Wego.Core.Specifications.AirportSpecification;
+using Wego.Core.Specifications.HotelSpecification;
 
 namespace Wego.Core.Specifications.LocationSpacification
 {
@@ -14,14 +19,13 @@ namespace Wego.Core.Specifications.LocationSpacification
                     (string.IsNullOrEmpty(specParams.Search) ||
                      L.City.ToLower().Contains(specParams.Search) ||
                      L.Country.ToLower().Contains(specParams.Search))
+
             )
         {
             AddIncludes();
 
-            // ترتيب حسب الأكثر شهرة (عدد الفنادق + عدد المطارات)
             AddOrderByDesc(L => (L.Hotels.Count + L.Airports.Count));
 
-            // دعم الترتيب حسب اسم المدينة أو الدولة
             if (!string.IsNullOrEmpty(specParams.Sort))
             {
                 switch (specParams.Sort)
@@ -41,7 +45,6 @@ namespace Wego.Core.Specifications.LocationSpacification
                 }
             }
 
-            // تطبيق Pagination
             ApplyPagination((specParams.PageIndex - 1) * specParams.PageSize, specParams.PageSize);
         }
 
@@ -55,6 +58,7 @@ namespace Wego.Core.Specifications.LocationSpacification
         {
             Includes.Add(P => P.Hotels);
             Includes.Add(P => P.Airports);
+     
         }
     }
 }

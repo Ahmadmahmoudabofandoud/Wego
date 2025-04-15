@@ -29,7 +29,5 @@ namespace Wego.Core.Specifications
         public int PageIndex { get; set; } = 1;
 
         public string? Sort { get; set; }
-        public int? BrandId { get; set; }
-        public int? TypeId { get; set; }
     }
 }

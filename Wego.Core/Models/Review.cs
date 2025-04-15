@@ -16,10 +16,13 @@ namespace Wego.Core.Models
         public string? Comment { get; set; }
         public DateTime? ReviewDate { get; set; }
 
-        public virtual AppUser? User { get; set; }
+        public int? HotelId { get; set; } = null;
+        public int? AirlineId { get; set; } = null;
 
+        public virtual AppUser? User { get; set; }
         public virtual Hotel? Hotel { get; set; }
         public virtual Airline? Airline { get; set; }
     }
+
 
 }

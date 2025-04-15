@@ -10,8 +10,8 @@ namespace Wego.Core.Specifications
 {
     public class BaseSpecifcation<T> : ISpecification<T> where T : BaseModel
     {
-        public Expression<Func<T, bool>> Criteria { get; set; } // Null
-        public List<Expression<Func<T, object>>> Includes { get; set; } = new List<Expression<Func<T, object>>>(); // Null
+        public Expression<Func<T, bool>> Criteria { get; set; } 
+        public List<Expression<Func<T, object>>> Includes { get; set; } = new List<Expression<Func<T, object>>>();
         public List<(Expression<Func<T, object>>, Expression<Func<object, object>>)> ThenIncludes { get; set; } = new();
 
         public Expression<Func<T, object>> OrderBy { get; set; }
@@ -19,6 +19,7 @@ namespace Wego.Core.Specifications
         public int Take { get; set; }
         public int SKip { get; set; }
         public bool IsPaginationEnabled { get; set; }
+
 
         public BaseSpecifcation()
         {
@@ -39,6 +40,11 @@ namespace Wego.Core.Specifications
         {
             OrderByDesc = orderByDescExpression;
         }
+        protected void IncludeWith(Expression<Func<T, object>> includeExpression)
+        {
+            Includes.Add(includeExpression);
+        }
+
         public void ApplyPagination(int skip, int take)
         {
             IsPaginationEnabled = true;

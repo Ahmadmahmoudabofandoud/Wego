@@ -5,6 +5,11 @@ using Microsoft.AspNetCore.Identity;
 using API.Errors;
 using Wego.Core.Models.Identity;
 using Wego.API.Models.DTOS.Identity;
+using System.IO;
+using System;
+using Microsoft.AspNetCore.Http;
+using Wego.API.Helpers;
+using System.Security.Claims;
 
 namespace Wego.API.Controllers
 {
@@ -19,29 +24,71 @@ namespace Wego.API.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("{userId}")]
-        public async Task<ActionResult<ProfileDto>> GetProfile(string userId)
+        [HttpGet("GetuserProfile")]
+        public async Task<ActionResult<ProfileDto>> GetProfile()
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); 
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized(new ApiResponse(401, "User is not authenticated"));
+            }
+
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null) return NotFound(new ApiResponse(404, "User not found"));
 
-            return Ok(_mapper.Map<ProfileDto>(user));
+            var profileDto = _mapper.Map<ProfileDto>(user);
+            profileDto.ProfileImageUrl = string.IsNullOrEmpty(user.ProfileImageUrl)
+                ? null
+                : $"{Request.Scheme}://{Request.Host.Value}{user.ProfileImageUrl}";
+
+            return Ok(profileDto);
         }
 
-        [HttpPut("{userId}")]
-        public async Task<ActionResult> UpdateProfile(string userId, [FromBody] ProfileUpdateDto dto)
+        [HttpPut("UpdateUserProfile")]
+        public async Task<ActionResult<ProfileDto>> UpdateProfile([FromForm] ProfileUpdateDto dto)
         {
-            if (userId != dto.Id) return BadRequest("User ID mismatch");
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); 
 
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized(new ApiResponse(401, "User is not authenticated"));
+            }
             var user = await _userManager.FindByIdAsync(userId);
-            if (user == null) return NotFound(new ApiResponse(404, "User not found"));
+            if (user == null)
+            {
+                return NotFound(new ApiResponse(404, "User not found"));
+            }
 
             _mapper.Map(dto, user);
+            if (dto.ProfileImageUrl != null)
+            {
+                user.ProfileImageUrl = await ProcessProfileImageAsync(dto.ProfileImageUrl, "profileImg", user.ProfileImageUrl);
+            }
             var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+            {
+                return BadRequest(new ApiResponse(400, "Failed to update profile"));
+            }
 
-            if (!result.Succeeded) return BadRequest(new ApiResponse(400, "Failed to update profile"));
+            return await GetProfile();
+        }
 
-            return Ok(new ApiResponse(200, "Profile updated successfully"));
+
+
+        private async Task<string?> ProcessProfileImageAsync(IFormFile? imageFile, string folder, string? existingImage = null)
+        {
+            if (imageFile == null) return existingImage;
+
+            if (!string.IsNullOrEmpty(existingImage))
+            {
+                var oldImageName = Path.GetFileName(existingImage);
+                ImageHelper.RemoveImage(folder, oldImageName);
+            }
+
+            string newImageName = $"profile-{Guid.NewGuid()}.jpg";
+            await ImageHelper.UploadImageAsync(imageFile, folder, newImageName);
+
+            return $"/imgs/{folder}/{newImageName}";
         }
     }
 }

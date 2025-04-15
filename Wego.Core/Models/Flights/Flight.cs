@@ -21,8 +21,8 @@ namespace Wego.Core.Models.Flights
 
         public int? AirlineId { get; set; }
         public int AirplaneId { get; set; }
-        public int ArrivalAirportId { get; set; }  // المفتاح الخارجي للمطار الذي ستصل إليه الرحلة
-        public int DepartureAirportId { get; set; } // المفتاح الخارجي للمطار الذي ستنطلق منه الرحلة
+        public int ArrivalAirportId { get; set; }  
+        public int DepartureAirportId { get; set; }
 
         public virtual Airline? Airline { get; set; }
         public virtual Airplane Airplane { get; set; }

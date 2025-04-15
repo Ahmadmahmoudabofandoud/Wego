@@ -1,4 +1,5 @@
 ﻿using Wego.API.Models.DTOS.Rooms.Dtos;
+using Wego.Core.Models.Hotels;
 
 namespace Wego.API.Models.DTOS.Hotels.Dtos
 {
@@ -6,29 +7,44 @@ namespace Wego.API.Models.DTOS.Hotels.Dtos
     {
         public int Id { get; set; }
         public string? Name { get; set; }
+        public string? AboutHotel { get; set; }
         public int? LocationId { get; set; }
-        public decimal? Rating { get; set; }
+        public int? Rating { get; set; }
         public string? LocationName { get; set; }
+        public bool IsFavorite { get; set; } = false;
         public List<string>? Images { get; set; } = new List<string>();
-        public List<RoomDto> Rooms { get; set; } = new(); 
+        public List<AmenityDto>? Amenities { get; set; } = new List<AmenityDto>();
+        public List<RoomDto>? Rooms { get; set; } = new List<RoomDto>();
+        //public List<ReviewDto>? Reviews { get; set; } = new List<ReviewDto>();
+        public List<string>? Policies { get; set; }
 
+        public List<int>? ReviewIds { get; set; } = new List<int>(); 
     }
+
 
     public class HotelPostDto
     {
         public string Name { get; set; } = string.Empty;
+        public string? AboutHotel { get; set; }
         public int LocationId { get; set; }
         public decimal Rating { get; set; }
         public List<IFormFile>? Images { get; set; }
+        public List<string>? Policies { get; set; }
+        public List<int> AmenityIds { get; set; } = new List<int>();
     }
     public class HotelPutDto
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
+        public string? AboutHotel { get; set; }
+        public bool IsFavorite { get; set; } = false;
+
         public int LocationId { get; set; }
         public decimal Rating { get; set; }
-        public List<IFormFile>? NewImages { get; set; }  // صور جديدة يتم رفعها
-        public List<int>? ImagesToDelete { get; set; }   // قائمة بمعرفات الصور التي سيتم حذفها
+        public List<string>? Policies { get; set; }
+        public List<IFormFile>? NewImages { get; set; } 
+        public List<int>? ImagesToDelete { get; set; }
+        public List<int> AmenityIds { get; set; } = new List<int>();
     }
 
 

@@ -15,15 +15,9 @@ namespace Wego.Repository.Data.Configurations
         {
             builder.Property(e => e.Id);
 
-            builder.Property(e => e.Url)
-                .HasMaxLength(255)
-                .IsUnicode(false)
-                .HasColumnName("URL");
-
-            builder.HasOne(d => d.Airline)
-                .WithOne(p => p.Images)
-                .HasForeignKey<Image>(d => d.AirlineId);
-
+            builder.Property(e => e.ImageData)
+                .HasColumnType("VARBINARY(MAX)") // تحديد نوع البيانات بشكل صحيح
+                .HasColumnName("ImageData");
 
 
             builder.HasOne(d => d.Hotel)

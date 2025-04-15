@@ -10,7 +10,6 @@ namespace Wego.Core.Models.Booking
 {
     public  class HotelBooking:BaseModel
     {
-
         public string? UserId { get; set; }
         public DateTime? BookingDate { get; set; }
         public decimal? TotalPrice { get; set; }

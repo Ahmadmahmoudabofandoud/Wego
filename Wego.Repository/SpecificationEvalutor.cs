@@ -45,5 +45,4 @@ namespace Wego.Repository
 
     }
 
-
 }

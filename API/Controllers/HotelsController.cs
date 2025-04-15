@@ -6,8 +6,11 @@ using Wego.Core.Specifications.HotelSpecification;
 using Wego.API.Helpers;
 using API.Errors;
 using Wego.Core.Models.Hotels;
-using Wego.Core.Specifications;
 using Wego.Core.Models;
+using Wego.Core.Models.Enums;
+using Microsoft.AspNetCore.Identity;
+using Wego.Core.Models.Identity;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Wego.API.Controllers
 {
@@ -15,21 +18,37 @@ namespace Wego.API.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly UserManager<AppUser> _userManager;
 
-        public HotelsController(IUnitOfWork unitOfWork, IMapper mapper)
+        public HotelsController(IUnitOfWork unitOfWork, IMapper mapper, UserManager<AppUser> userManager)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _userManager = userManager;
         }
 
         [HttpGet]
-        public async Task<ActionResult<Pagination<HotelDto>>> GetAllHotels([FromQuery] AppSpecParams specParams)
+        public async Task<ActionResult<Pagination<HotelDto>>> GetAllHotels([FromQuery] HotelSpecParams specParams)
         {
             var spec = new HotelWithDetailsSpecification(specParams);
             var hotels = await _unitOfWork.Repository<Hotel>().GetAllWithSpecAsync(spec);
             var totalCount = await _unitOfWork.Repository<Hotel>().GetCountWithSpecAsync(new HotelWithFilterationForCountSpecifications(specParams));
 
+            var currentUser = await _userManager.GetUserAsync(User);
+            var favoriteHotelIds = currentUser != null
+                ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.HotelId != null))
+                    .Select(f => f.HotelId)
+                    .ToList()
+                : new List<int?>();
+
             var data = _mapper.Map<IReadOnlyList<Hotel>, IReadOnlyList<HotelDto>>(hotels);
+            data = data.Select(h =>
+            {
+                h.IsFavorite = favoriteHotelIds.Contains(h.Id);
+                h.Images = h.Images.Select(image => string.IsNullOrEmpty(image) ? null : $"{Request.Scheme}://{Request.Host.Value}{image}").ToList();
+                return h;
+            }).ToList();
+
             return Ok(new Pagination<HotelDto>(specParams.PageIndex, specParams.PageSize, totalCount, data));
         }
 
@@ -42,18 +61,34 @@ namespace Wego.API.Controllers
             var hotel = await _unitOfWork.Repository<Hotel>().GetEntityWithSpecAsync(spec);
             if (hotel == null) return NotFound(new ApiResponse(404));
 
+
+            var currentUser = await _userManager.GetUserAsync(User);
+            var isFavorite = currentUser != null
+                ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.HotelId == id))
+                    .Any()
+                : false;
+
             var result = _mapper.Map<HotelDto>(hotel);
+            result.IsFavorite = isFavorite;
+            result.Images = result.Images.Select(image => string.IsNullOrEmpty(image) ? null : $"{Request.Scheme}://{Request.Host.Value}{image}").ToList();
+
             return Ok(result);
         }
+
 
 
         [HttpPost]
         public async Task<ActionResult<HotelDto>> AddHotel([FromForm] HotelPostDto dto)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
             var hotel = _mapper.Map<Hotel>(dto);
+
             hotel.Images = await ProcessHotelImagesAsync(dto.Images, "hotelsImg");
+
+            var amenities = await _unitOfWork.Repository<Amenity>().GetAsync(a => dto.AmenityIds.Contains(a.Id));
+            hotel.Amenities = amenities.ToList();
 
             await _unitOfWork.Repository<Hotel>().Add(hotel);
             await _unitOfWork.CompleteAsync();
@@ -72,12 +107,14 @@ namespace Wego.API.Controllers
 
             _mapper.Map(dto, hotel);
             hotel.Images = await ProcessHotelImagesAsync(dto.NewImages, "hotelsImg", hotel.Images?.ToList(), dto.ImagesToDelete);
-
+            var amenities = await _unitOfWork.Repository<Amenity>().GetAsync(a => dto.AmenityIds.Contains(a.Id));
+            hotel.Amenities = amenities.ToList();
             _unitOfWork.Repository<Hotel>().Update(hotel);
             await _unitOfWork.CompleteAsync();
 
             return Ok(_mapper.Map<HotelDto>(hotel));
         }
+
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteHotel(int id)
@@ -107,7 +144,7 @@ namespace Wego.API.Controllers
             {
                 string newImageName = $"Hotel-{Guid.NewGuid()}.jpg";
                 await ImageHelper.UploadImageAsync(file, folder, newImageName);
-                existingImages.Add(new Image { Url = $"/imgs/{folder}/{newImageName}" });
+                existingImages.Add(new Image { ImageData = $"/imgs/{folder}/{newImageName}" });
             }
 
             return existingImages;

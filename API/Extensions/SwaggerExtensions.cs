@@ -47,6 +47,8 @@ namespace Wego.API.Extensions
                         new string[] {}
                     }
                 });
+                c.EnableAnnotations(); 
+
             });
 
             return services;

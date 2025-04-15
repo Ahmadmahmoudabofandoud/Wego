@@ -22,6 +22,36 @@ namespace Wego.Repository.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("AmenityHotel", b =>
+                {
+                    b.Property<int>("AmenitiesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AmenityHotelsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AmenitiesId", "AmenityHotelsId");
+
+                    b.HasIndex("AmenityHotelsId");
+
+                    b.ToTable("AmenityHotel", (string)null);
+                });
+
+            modelBuilder.Entity("AmenityRoom", b =>
+                {
+                    b.Property<int>("AmenitiesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AmenityRoomsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AmenitiesId", "AmenityRoomsId");
+
+                    b.HasIndex("AmenityRoomsId");
+
+                    b.ToTable("AmenityRoom", (string)null);
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -189,7 +219,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("FlightBookings");
+                    b.ToTable("FlightBookings", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Booking.HotelBooking", b =>
@@ -218,7 +248,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("HotelBookings");
+                    b.ToTable("HotelBookings", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Booking.RoomBooking", b =>
@@ -238,10 +268,16 @@ namespace Wego.Repository.Migrations
                     b.Property<DateTime>("Checkout")
                         .HasColumnType("datetime");
 
+                    b.Property<int>("Children")
+                        .HasColumnType("int");
+
                     b.Property<int>("Guests")
                         .HasColumnType("int");
 
                     b.Property<int>("RoomId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoomOptionId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -250,7 +286,42 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("RoomId");
 
+                    b.HasIndex("RoomOptionId");
+
                     b.ToTable("RoomBooking", (string)null);
+                });
+
+            modelBuilder.Entity("Wego.Core.Models.Favorite", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("AirlineId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("HotelId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("LocationId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AirlineId");
+
+                    b.HasIndex("HotelId");
+
+                    b.HasIndex("LocationId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Favorites", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.Airline", b =>
@@ -265,16 +336,20 @@ namespace Wego.Repository.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("ImagesId")
-                        .HasColumnType("int");
+                    b.Property<string>("Image")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("Name")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<int?>("Rating")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Airlines");
+                    b.ToTable("Airlines", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.Airplane", b =>
@@ -292,6 +367,10 @@ namespace Wego.Repository.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<string>("Feature")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Type")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
@@ -300,7 +379,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("AirlineId");
 
-                    b.ToTable("Airplanes");
+                    b.ToTable("Airplanes", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.Airport", b =>
@@ -326,37 +405,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("LocationId");
 
-                    b.ToTable("Airports");
-                });
-
-            modelBuilder.Entity("Wego.Core.Models.Flights.Feature", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("AirplaneId")
-                        .HasColumnType("int");
-
-                    b.Property<bool?>("Meal")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("Usb")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("Video")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("Wifi")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AirplaneId");
-
-                    b.ToTable("Features");
+                    b.ToTable("Airports", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.Flight", b =>
@@ -409,7 +458,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("DepartureAirportId");
 
-                    b.ToTable("Flights");
+                    b.ToTable("Flights", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.SeatReservation", b =>
@@ -430,7 +479,76 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("FlightBookingId");
 
-                    b.ToTable("SeatReservations");
+                    b.ToTable("SeatReservations", (string)null);
+                });
+
+            modelBuilder.Entity("Wego.Core.Models.Hotels.Amenity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Amenities", (string)null);
+                });
+
+            modelBuilder.Entity("Wego.Core.Models.Hotels.Attraction", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double?>("DistanceFromLocation")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double?>("Latitude")
+                        .HasColumnType("float");
+
+                    b.Property<int?>("LocationId")
+                        .HasColumnType("int");
+
+                    b.Property<double?>("Longitude")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("Rating")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LocationId");
+
+                    b.ToTable("Attractions", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Hotels.Hotel", b =>
@@ -441,6 +559,9 @@ namespace Wego.Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AboutHotel")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("LocationId")
                         .HasColumnType("int");
 
@@ -449,6 +570,9 @@ namespace Wego.Repository.Migrations
                         .IsUnicode(false)
                         .HasColumnType("varchar(255)");
 
+                    b.Property<string>("Policies")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal?>("Rating")
                         .HasColumnType("decimal(3, 2)");
 
@@ -456,7 +580,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("LocationId");
 
-                    b.ToTable("Hotels");
+                    b.ToTable("Hotels", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Hotels.Room", b =>
@@ -472,9 +596,6 @@ namespace Wego.Repository.Migrations
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(10, 2)");
 
                     b.Property<int>("Rating")
                         .HasColumnType("int");
@@ -502,7 +623,41 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("HotelId");
 
-                    b.ToTable("Rooms");
+                    b.ToTable("Rooms", (string)null);
+                });
+
+            modelBuilder.Entity("Wego.Core.Models.Hotels.RoomOption", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Capacity")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IncludesBreakfast")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsRefundable")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoomId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("RoomOptions", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Identity.AppUser", b =>
@@ -512,6 +667,9 @@ namespace Wego.Repository.Migrations
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -531,11 +689,20 @@ namespace Wego.Repository.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("Gender")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("LocationId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<int?>("Nationality")
+                        .HasColumnType("int");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -557,6 +724,9 @@ namespace Wego.Repository.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("ProfileImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -568,6 +738,8 @@ namespace Wego.Repository.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("LocationId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -588,33 +760,23 @@ namespace Wego.Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("AirlineId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("HotelId")
                         .HasColumnType("int");
+
+                    b.Property<byte[]>("ImageData")
+                        .HasColumnType("VARBINARY(MAX)")
+                        .HasColumnName("ImageData");
 
                     b.Property<int?>("RoomId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Url")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(255)")
-                        .HasColumnName("URL");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("AirlineId")
-                        .IsUnique()
-                        .HasFilter("[AirlineId] IS NOT NULL");
 
                     b.HasIndex("HotelId");
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("Images");
+                    b.ToTable("Images", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Location", b =>
@@ -624,6 +786,9 @@ namespace Wego.Repository.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("AverageRoomPrice")
+                        .HasColumnType("int");
 
                     b.Property<string>("City")
                         .HasMaxLength(255)
@@ -637,9 +802,18 @@ namespace Wego.Repository.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<double?>("Latitude")
+                        .HasColumnType("float");
+
+                    b.Property<double?>("Longitude")
+                        .HasColumnType("float");
+
+                    b.Property<int?>("Rating")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Locations");
+                    b.ToTable("Locations", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Review", b =>
@@ -676,7 +850,37 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Reviews");
+                    b.ToTable("Reviews", (string)null);
+                });
+
+            modelBuilder.Entity("AmenityHotel", b =>
+                {
+                    b.HasOne("Wego.Core.Models.Hotels.Amenity", null)
+                        .WithMany()
+                        .HasForeignKey("AmenitiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Wego.Core.Models.Hotels.Hotel", null)
+                        .WithMany()
+                        .HasForeignKey("AmenityHotelsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AmenityRoom", b =>
+                {
+                    b.HasOne("Wego.Core.Models.Hotels.Amenity", null)
+                        .WithMany()
+                        .HasForeignKey("AmenitiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Wego.Core.Models.Hotels.Room", null)
+                        .WithMany()
+                        .HasForeignKey("AmenityRoomsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -770,9 +974,44 @@ namespace Wego.Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Wego.Core.Models.Hotels.RoomOption", "RoomOption")
+                        .WithMany()
+                        .HasForeignKey("RoomOptionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Booking");
 
                     b.Navigation("Room");
+
+                    b.Navigation("RoomOption");
+                });
+
+            modelBuilder.Entity("Wego.Core.Models.Favorite", b =>
+                {
+                    b.HasOne("Wego.Core.Models.Flights.Airline", "Airline")
+                        .WithMany()
+                        .HasForeignKey("AirlineId");
+
+                    b.HasOne("Wego.Core.Models.Hotels.Hotel", "Hotel")
+                        .WithMany()
+                        .HasForeignKey("HotelId");
+
+                    b.HasOne("Wego.Core.Models.Location", "Location")
+                        .WithMany()
+                        .HasForeignKey("LocationId");
+
+                    b.HasOne("Wego.Core.Models.Identity.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Airline");
+
+                    b.Navigation("Hotel");
+
+                    b.Navigation("Location");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.Airplane", b =>
@@ -791,15 +1030,6 @@ namespace Wego.Repository.Migrations
                         .HasForeignKey("LocationId");
 
                     b.Navigation("Location");
-                });
-
-            modelBuilder.Entity("Wego.Core.Models.Flights.Feature", b =>
-                {
-                    b.HasOne("Wego.Core.Models.Flights.Airplane", "Airplane")
-                        .WithMany("Features")
-                        .HasForeignKey("AirplaneId");
-
-                    b.Navigation("Airplane");
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.Flight", b =>
@@ -844,6 +1074,15 @@ namespace Wego.Repository.Migrations
                     b.Navigation("FlightBooking");
                 });
 
+            modelBuilder.Entity("Wego.Core.Models.Hotels.Attraction", b =>
+                {
+                    b.HasOne("Wego.Core.Models.Location", "Location")
+                        .WithMany()
+                        .HasForeignKey("LocationId");
+
+                    b.Navigation("Location");
+                });
+
             modelBuilder.Entity("Wego.Core.Models.Hotels.Hotel", b =>
                 {
                     b.HasOne("Wego.Core.Models.Location", "Location")
@@ -862,12 +1101,26 @@ namespace Wego.Repository.Migrations
                     b.Navigation("Hotel");
                 });
 
+            modelBuilder.Entity("Wego.Core.Models.Hotels.RoomOption", b =>
+                {
+                    b.HasOne("Wego.Core.Models.Hotels.Room", "Room")
+                        .WithMany("RoomOptions")
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Room");
+                });
+
+            modelBuilder.Entity("Wego.Core.Models.Identity.AppUser", b =>
+                {
+                    b.HasOne("Wego.Core.Models.Location", null)
+                        .WithMany("UsersWhoFavorite")
+                        .HasForeignKey("LocationId");
+                });
+
             modelBuilder.Entity("Wego.Core.Models.Image", b =>
                 {
-                    b.HasOne("Wego.Core.Models.Flights.Airline", "Airline")
-                        .WithOne("Images")
-                        .HasForeignKey("Wego.Core.Models.Image", "AirlineId");
-
                     b.HasOne("Wego.Core.Models.Hotels.Hotel", "Hotel")
                         .WithMany("Images")
                         .HasForeignKey("HotelId");
@@ -875,8 +1128,6 @@ namespace Wego.Repository.Migrations
                     b.HasOne("Wego.Core.Models.Hotels.Room", "Room")
                         .WithMany("Images")
                         .HasForeignKey("RoomId");
-
-                    b.Navigation("Airline");
 
                     b.Navigation("Hotel");
 
@@ -890,7 +1141,7 @@ namespace Wego.Repository.Migrations
                         .HasForeignKey("AirlineId");
 
                     b.HasOne("Wego.Core.Models.Hotels.Hotel", "Hotel")
-                        .WithMany()
+                        .WithMany("Reviews")
                         .HasForeignKey("HotelId");
 
                     b.HasOne("Wego.Core.Models.Identity.AppUser", "User")
@@ -920,15 +1171,11 @@ namespace Wego.Repository.Migrations
 
                     b.Navigation("Flights");
 
-                    b.Navigation("Images");
-
                     b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.Airplane", b =>
                 {
-                    b.Navigation("Features");
-
                     b.Navigation("Flights");
                 });
 
@@ -948,6 +1195,8 @@ namespace Wego.Repository.Migrations
                 {
                     b.Navigation("Images");
 
+                    b.Navigation("Reviews");
+
                     b.Navigation("Rooms");
                 });
 
@@ -956,6 +1205,8 @@ namespace Wego.Repository.Migrations
                     b.Navigation("Images");
 
                     b.Navigation("RoomBookings");
+
+                    b.Navigation("RoomOptions");
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Identity.AppUser", b =>
@@ -972,6 +1223,8 @@ namespace Wego.Repository.Migrations
                     b.Navigation("Airports");
 
                     b.Navigation("Hotels");
+
+                    b.Navigation("UsersWhoFavorite");
                 });
 #pragma warning restore 612, 618
         }

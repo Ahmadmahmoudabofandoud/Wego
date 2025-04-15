@@ -11,17 +11,17 @@ namespace Wego.Core.Models.Booking
 {
     public class RoomBooking: BaseModel
     {
-        public int BookingId { get; set; }
-
-        public int RoomId { get; set; }
-
         [Required]
         public DateTime Checkin { get; set; }
         [Required]
         public DateTime Checkout { get; set; }
         public int Guests { get; set; }
+        public int Children { get; set; }
+        public int BookingId { get; set; }
+        public int RoomId { get; set; }
+        public int? RoomOptionId { get; set; }
+        public virtual RoomOption? RoomOption { get; set; }
         public virtual Room? Room { get; set; }
         public virtual HotelBooking? Booking { get; set; }
-
     }
 }

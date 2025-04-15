@@ -1,3 +1,134 @@
-{
-
-}
+[
+  {
+    "country": "Egypt",
+    "city": "Alexandria",
+    "latitude": 31.1975,
+    "longitude": 29.8925
+  },
+  {
+    "country": "Egypt",
+    "city": "Luxor",
+    "latitude": 25.6872,
+    "longitude": 32.6396
+  },
+  {
+    "country": "Egypt",
+    "city": "Aswan",
+    "latitude": 24.0889,
+    "longitude": 32.8997
+  },
+  {
+    "country": "Egypt",
+    "city": "Sharm El Sheikh",
+    "latitude": 27.9158,
+    "longitude": 34.3295
+  },
+  {
+    "country": "Egypt",
+    "city": "Hurghada",
+    "latitude": 27.2572,
+    "longitude": 33.8128
+  },
+  {
+    "country": "Egypt",
+    "city": "Taba",
+    "latitude": 29.5,
+    "longitude": 34.75
+  },
+  {
+    "country": "Egypt",
+    "city": "Port Said",
+    "latitude": 31.2653,
+    "longitude": 32.3019
+  },
+  {
+    "country": "Egypt",
+    "city": "Marsa Alam",
+    "latitude": 25.5481,
+    "longitude": 34.8886
+  },
+  {
+    "country": "Egypt",
+    "city": "Ismailia",
+    "latitude": 30.5895,
+    "longitude": 32.2642
+  },
+  {
+    "country": "Egypt",
+    "city": "Suez",
+    "latitude": 29.973,
+    "longitude": 32.5475
+  },
+  {
+    "country": "Egypt",
+    "city": "Burg El Arab",
+    "latitude": 30.9042,
+    "longitude": 29.6964
+  },
+  {
+    "country": "Egypt",
+    "city": "Mansoura",
+    "latitude": 31.05,
+    "longitude": 31.3833
+  },
+  {
+    "country": "Egypt",
+    "city": "Qena",
+    "latitude": 26.1667,
+    "longitude": 32.7167
+  },
+  {
+    "country": "Egypt",
+    "city": "10th of Ramadan",
+    "latitude": 30.3065,
+    "longitude": 31.7415
+  },
+  {
+    "country": "Egypt",
+    "city": "New Cairo",
+    "latitude": 30.0081,
+    "longitude": 31.5204
+  },
+  {
+    "country": "Egypt",
+    "city": "6th of October City",
+    "latitude": 29.9705,
+    "longitude": 31.2090
+  },
+  {
+    "country": "Egypt",
+    "city": "Shorouk City",
+    "latitude": 30.1607,
+    "longitude": 31.5972
+  },
+  {
+    "country": "Egypt",
+    "city": "Badr City",
+    "latitude": 30.1775,
+    "longitude": 31.2742
+  },
+  {
+    "country": "Egypt",
+    "city": "Madinty",
+    "latitude": 30.2250,
+    "longitude": 31.6322
+  },
+  {
+    "country": "Egypt",
+    "city": "New Administrative Capital",
+    "latitude": 30.0070,
+    "longitude": 31.2890
+  },
+  {
+    "country": "Egypt",
+    "city": "Dahab",
+    "latitude": 28.4972,
+    "longitude": 34.5156
+  },
+  {
+    "country": "Egypt",
+    "city": "North Coast",
+    "latitude": 31.2000,
+    "longitude": 29.8000
+  }
+]

@@ -15,7 +15,6 @@ namespace Wego.Repository.Data.Configurations
         {
             builder.Property(e => e.Id);
 
-            builder.Property(e => e.Price).HasColumnType("decimal(10, 2)");
 
             builder.Property(e => e.RoomLocation)
                 .HasMaxLength(255);

@@ -1,152 +1,151 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using System.Threading.Tasks;
-using System.Linq;
-using System;
-using System.Collections.Generic;
-using Wego.Core.Repositories.Contract;
-using Wego.Core.Models;
 using Wego.Core;
-using Wego.API.Helpers;
-using Microsoft.EntityFrameworkCore;
-using Wego.Core.Models.Hotels;
-using System.Linq.Expressions;
 using Wego.API.Models.DTOS.Rooms.Dtos;
+using Wego.Core.Specifications.RoomSpecification;
+using API.Errors;
+using Wego.Core.Models.Hotels;
+using Wego.Core.Specifications;
+using Wego.Core.Models;
+using Wego.API.Helpers;
+using Swashbuckle.AspNetCore.Annotations;
+using Wego.API.Models.DTOS.Hotels.Dtos;
+using Wego.Core.Specifications.HotelSpecification;
+using Wego.Service;
+using Wego.Repository.Migrations;
 
 namespace Wego.API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class RoomsController : ControllerBase
+    public class RoomsController : BaseApiController
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IGenericRepository<Room> _roomRepository;
         private readonly IMapper _mapper;
+        private readonly AmenityService _amenityService;
 
-        public RoomsController(IUnitOfWork unitOfWork, IMapper mapper)
+        public RoomsController(IUnitOfWork unitOfWork, IMapper mapper, AmenityService amenityService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
-            _roomRepository = _unitOfWork.Repository<Room>();
+            _amenityService = amenityService;
         }
 
-        //[HttpGet("GetAllRooms")]
-        //public async Task<IActionResult> GetAll(int pageIndex = 1, int pageSize = 10, string search = "")
-        //{
-        //    var rooms = await _roomRepository.SearchAsync(
-        //        r => string.IsNullOrEmpty(search) || r.RoomTitle.ToLower().Contains(search.ToLower()),
-        //    "RoomTitle", "asc", pageIndex, pageSize,
-        //        "Images", "Hotel");
+        [HttpGet("all-rooms-details")]
+        [SwaggerOperation(Summary = "Get all rooms with details", Description = "Retrieve a list of all rooms along with additional details.")]
+        public async Task<ActionResult<Pagination<RoomDto>>> GetAllRoomsWithDetails([FromQuery] RoomSpecParams specParams)
+        {
+            var spec = new RoomWithDetailsSpecification(specParams); 
+            var rooms = await _unitOfWork.Repository<Room>().GetAllWithSpecAsync(spec);
 
-        //    var totalCount = (await _roomRepository.GetAllAsync()).Count;
-        //    var mappedResult = _mapper.Map<List<RoomDto>>(rooms);
+            var totalCount = await _unitOfWork.Repository<Room>().GetCountWithSpecAsync(new RoomWithFilterationForCountSpecifications(specParams));
 
-        //    foreach (var room in mappedResult)
-        //    {
-        //        room.Images = room.Images?.Select(img => $"{Request.Scheme}://{Request.Host.Value}{img}").ToList();
-        //    }
+            var data = _mapper.Map<IReadOnlyList<Room>, IReadOnlyList<RoomDto>>(rooms); 
 
-        //    return Ok(new { message = "Rooms retrieved successfully", data = mappedResult, total = totalCount });
-        //}
-
-        //[HttpGet("GetRoomById/{id:int}")]
-        //public async Task<IActionResult> GetById(int id)
-        //{
-        //    var room = await _roomRepository.GetAsync(id, "Images,Hotel");
-        //    if (room is null)
-        //        return NotFound(new { message = "Room not found" });
-
-        //    var mappedRoom = _mapper.Map<RoomDto>(room);
-
-        //    // التحقق من صحة الـ Request قبل استخدامه
-        //    if (!string.IsNullOrEmpty(Request?.Host.Value) && mappedRoom.Images?.Any() == true)
-        //    {
-        //        string baseUrl = $"{Request.Scheme}://{Request.Host}";
-
-        //        mappedRoom.Images = mappedRoom.Images
-        //            .Where(img => !string.IsNullOrEmpty(img))
-        //            .Select(img => img.StartsWith("/") ? $"{baseUrl}{img}" : $"{baseUrl}/{img}")
-        //            .ToList();
-        //    }
-
-        //    return Ok(new { message = "Room retrieved successfully", data = mappedRoom });
-        //}
+            return Ok(new Pagination<RoomDto>(specParams.PageIndex, specParams.PageSize, totalCount, data)); 
+        }
 
 
 
-        //[HttpPost("AddNewRoom")]
-        //public async Task<IActionResult> AddRoom([FromForm] RoomPostDto dto)
-        //{
-        //    if (!ModelState.IsValid)
-        //        return BadRequest(new { message = "Invalid data" });
+        [HttpGet("{id}")]
+        [ProducesResponseType(typeof(RoomDto), 200)]
+        [ProducesResponseType(typeof(ApiResponse), 404)]
+        public async Task<ActionResult<RoomDto>> GetRoomById(int id)
+        {
+            var spec = new RoomWithDetailsSpecification(id);
+            var room = await _unitOfWork.Repository<Room>().GetEntityWithSpecAsync(spec);
+            if (room == null) return NotFound(new ApiResponse(404));
 
-        //    var room = _mapper.Map<Room>(dto);
-        //    room.Images = await ProcessRoomImagesAsync(dto.Images, "roomsImg");
+            var result = _mapper.Map<RoomDto>(room);
+            return Ok(result);
+        }
 
-        //    await _roomRepository.AddAsync(room);
-        //    await _unitOfWork.CompleteAsync();
+        [HttpPost]
+        public async Task<ActionResult<RoomDto>> AddRoom([FromForm] RoomPostDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-        //    var result = _mapper.Map<RoomDto>(room);
-        //    return CreatedAtAction(nameof(GetById), new { id = room.Id }, new { message = "Room created successfully", data = result });
-        //}
+            var room = _mapper.Map<Room>(dto);
+            if (dto.Images != null && dto.Images.Any())
+            {
+                room.Images = await ProcessRoomImagesAsync(dto.Images, "roomsImg");
+            }
 
+            var amenities = await _unitOfWork.Repository<Amenity>().GetAsync(a => dto.AmenityIds.Contains(a.Id));
+            room.Amenities = amenities.ToList();
+           
+            var roomOptions = dto.RoomOptions.Select(optionDto =>
+            {
+                var roomOption = _mapper.Map<RoomOption>(optionDto);
+                roomOption.Room = room;
+                return roomOption;
+            }).ToList();
 
-        //[HttpPut("UpdateRoom/{id:int}")]
-        //public async Task<IActionResult> UpdateRoom(int id, [FromForm] RoomPutDto dto)
-        //{
-        //    if (!ModelState.IsValid)
-        //        return BadRequest(new { message = "Invalid data" });
+            room.RoomOptions = roomOptions;
+            await _unitOfWork.Repository<Room>().Add(room);
+            await _unitOfWork.CompleteAsync();
 
-        //    if (id != dto.Id)
-        //        return BadRequest(new { message = "ID mismatch" });
+            return CreatedAtAction(nameof(GetRoomById), new { id = room.Id }, _mapper.Map<RoomDto>(room));
+        }
 
-        //    var room = await _roomRepository.GetAsync(dto.Id);
-        //    if (room is null)
-        //        return NotFound(new { message = "Room not found" });
+        [HttpPut("{id}")]
+        public async Task<ActionResult<RoomDto>> UpdateRoom(int id, [FromForm] RoomPutDto dto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (id != dto.Id) return BadRequest("ID mismatch");
 
-        //    _mapper.Map(dto, room);
-        //    room.Images = await ProcessRoomImagesAsync(dto.NewImages, "roomsImg", room.Images.ToList(), dto.ImagesToDelete);
+            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(dto.Id);
+            if (room == null) return NotFound(new ApiResponse(404));
 
-        //    _roomRepository.Update(room);
-        //    await _unitOfWork.CompleteAsync();
+            _mapper.Map(dto, room);
+            room.Images = await ProcessRoomImagesAsync(dto.NewImages, "roomsImg", room.Images?.ToList(), dto.ImagesToDelete);
 
-        //    var result = _mapper.Map<RoomDto>(room);
-        //    return Ok(new { message = "Room updated successfully", data = result });
-        //}
+            var amenities = await _unitOfWork.Repository<Amenity>().GetAsync(a => dto.AmenityIds.Contains(a.Id));
+            room.Amenities = amenities.ToList();
 
-        //[HttpDelete("DeleteRoom/{id:int}")]
-        //public async Task<IActionResult> DeleteRoom(int id)
-        //{
-        //    var room = await _roomRepository.GetAsync(id);
-        //    if (room is null)
-        //        return NotFound(new { message = "Room not found" });
+            var roomOptions = new List<RoomOption>();
+            foreach (var optionDto in dto.RoomOptions)
+            {
+                var roomOption = _mapper.Map<RoomOption>(optionDto); 
+                roomOptions.Add(roomOption);
+            }
 
-        //    _roomRepository.Delete(room);
-        //    await _unitOfWork.CompleteAsync();
+            await _unitOfWork.Repository<RoomOption>().AddRange(roomOptions);
+            room.RoomOptions = roomOptions;
+            _unitOfWork.Repository<Room>().Update(room);
+            await _unitOfWork.CompleteAsync();
 
-        //    return Ok(new { message = $"Room '{room.RoomTitle}' has been deleted successfully." });
-        //}
+            return Ok(_mapper.Map<RoomDto>(room));
+        }
 
-        //private async Task<List<Image>> ProcessRoomImagesAsync(List<IFormFile>? imageFiles, string folder, List<Image>? existingImages = null, List<int>? imagesToDelete = null)
-        //{
-        //    existingImages ??= new List<Image>();
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteRoom(int id)
+        {
+            var room = await _unitOfWork.Repository<Room>().GetByIdAsync(id);
+            if (room == null) return NotFound(new ApiResponse(404));
 
-        //    if (imagesToDelete != null)
-        //    {
-        //        existingImages.RemoveAll(img => imagesToDelete.Contains(img.Id));
-        //    }
+            _unitOfWork.Repository<Room>().Delete(room);
+            await _unitOfWork.CompleteAsync();
 
-        //    if (imageFiles == null || !imageFiles.Any())
-        //        return existingImages;
+            return Ok(new { message = $"Room '{room.RoomTitle}' has been deleted successfully." });
+        }
 
-        //    foreach (var file in imageFiles)
-        //    {
-        //        string newImageName = $"Room-{Guid.NewGuid()}.jpg";
-        //        await ImageHelper.UploadImageAsync(file, folder, newImageName);
-        //        existingImages.Add(new Image { Url = $"/imgs/{folder}/{newImageName}" });
-        //    }
+        private async Task<List<Image>> ProcessRoomImagesAsync(List<IFormFile>? imageFiles, string folder, List<Image>? existingImages = null, List<int>? imagesToDelete = null)
+        {
+            existingImages ??= new List<Image>();
+            if (imagesToDelete != null)
+            {
+                existingImages.RemoveAll(img => imagesToDelete.Contains(img.Id));
+            }
+            if (imageFiles == null || !imageFiles.Any())
+                return existingImages;
 
-        //    return existingImages;
-        //}
+            foreach (var file in imageFiles)
+            {
+                string newImageName = $"Room-{Guid.NewGuid()}.jpg";
+                await ImageHelper.UploadImageAsync(file, folder, newImageName);
+                existingImages.Add(new Image { ImageData = $"/imgs/{folder}/{newImageName}" });
+            }
+            return existingImages;
+        }
     }
 }

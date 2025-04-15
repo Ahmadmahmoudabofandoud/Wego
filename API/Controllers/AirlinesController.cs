@@ -1,218 +1,180 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 using Wego.Core;
-using Wego.Core.Models.Flights;
+using Wego.Core.Models;
 using Wego.Core.Repositories.Contract;
 using Wego.Core.Services;
+using Wego.Core.Specifications.AirlineSpecification;
+using Wego.API.Models.DTOS.Flights.Dtos;
+using Wego.API.Helpers;
+using API.Errors;
+using System.IO;
+using Wego.Core.Models.Flights;
+using Microsoft.AspNetCore.Identity;
+using Wego.Core.Models.Identity;
 
 namespace Wego.API.Controllers
 {
-    //public class AirlinesController : BaseApiController
-    //{
-    //    private readonly IUnitOfWork _unitOfWork;
-    //    private readonly IAirlineService _airlineService;
-    //    private readonly IMapper _mapper;
+    public class AirlineController : BaseApiController
+    {
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
+        private readonly UserManager<AppUser> _userManager;
 
-    //    public AirlinesController(IUnitOfWork unitOfWork, IAirlineService airlineService, IMapper mapper)
-    //    {
-    //        _unitOfWork = unitOfWork;
-    //        _mapper = mapper;
-    //        _airlineService = airlineService;
-    //    }
+        public AirlineController(IUnitOfWork unitOfWork, IMapper mapper, UserManager<AppUser> userManager)
+        {
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
+            _userManager = userManager;
+        }
 
-    //    [HttpGet("GetAllAirline")]
-    //    public async Task<IActionResult> GetAll(int pageIndex = 1, int pageSize = 10, string search = "")
-    //    {
-    //        var airlineRepository = _unitOfWork.Repository<Airline>();
+        [HttpGet]
+        public async Task<ActionResult<Pagination<AirlineDto>>> GetAllAirlines([FromQuery] AirlineSpecParams specParams)
+        {
+            var spec = new AirlineWithAirplanesAndFlightsSpecification(specParams);
+            var airlines = await _unitOfWork.Repository<Airline>().GetAllWithSpecAsync(spec);
+            var totalCount = await _unitOfWork.Repository<Airline>().GetCountWithSpecAsync(spec);
 
-    //        var result = await airlineRepository.GetPaginatedAsync(pageIndex, pageSize,
-    //            a => string.IsNullOrEmpty(search) || a.Name.ToLower().Contains(search.ToLower()));
+            var currentUser = await _userManager.GetUserAsync(User);
+            var favoriteAirlineIds = currentUser != null
+                ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.AirlineId != null))
+                    .Select(f => f.AirlineId)
+                    .ToList()
+                : new List<int?>();
 
-    //        var resCount = await airlineRepository.CountAsync(a => string.IsNullOrEmpty(search) || a.Name.ToLower().Contains(search.ToLower()));
+            var data = _mapper.Map<IReadOnlyList<Airline>, IReadOnlyList<AirlineDto>>(airlines);
+            data = data.Select(a =>
+            {
+                a.IsFavorite = favoriteAirlineIds.Contains(a.Id);
+                a.Image = string.IsNullOrEmpty(a.Image) ? null : $"{Request.Scheme}://{Request.Host.Value}{a.Image}";
+                return a;
+            }).ToList();
 
-    //        var res = _mapper.Map<List<AirlineGetDto>>(result);
+            return Ok(new Pagination<AirlineDto>(specParams.PageIndex, specParams.PageSize, totalCount, data));
+        }
 
-    //        return Ok(new { data = res, Total = resCount });
-    //    }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<AirlineDto>> GetAirlineById(int id)
+        {
+            var spec = new AirlineWithAirplanesAndFlightsSpecification(id);
+            var airline = await _unitOfWork.Repository<Airline>().GetEntityWithSpecAsync(spec);
+            if (airline == null) return NotFound(new ApiResponse(404));
 
-    //    [HttpGet("{routeId:int}")]
-    //    public async Task<IActionResult> GetById(int routeId)
-    //    {
-    //        var airlineRepository = _unitOfWork.Repository<Airline>();
-    //        var airline = await airlineRepository.GetByIdAsync(routeId);
+            var currentUser = await _userManager.GetUserAsync(User);
+            var isFavorite = currentUser != null
+                ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.AirlineId == id))
+                    .Any()
+                : false;
 
-    //        if (airline != null)
-    //        {
-    //            var res = _mapper.Map<AirlineGetDto>(airline);
-    //            return Ok(res);
-    //        }
+            var result = _mapper.Map<AirlineDto>(airline);
+            result.IsFavorite = isFavorite;
+            result.Image = string.IsNullOrEmpty(result.Image) ? null : $"{Request.Scheme}://{Request.Host.Value}{result.Image}";
 
-    //        return NotFound();
-    //    }
-
-    //    [HttpPost("CreateAirLine")]
-    //    public async Task<IActionResult> NewAirline([FromForm] AirlinePostDto dto)
-    //    {
-    //        if (!ModelState.IsValid)
-    //            return BadRequest(ModelState);
-
-    //        var airline = _mapper.Map<Airline>(dto);
-    //        var airlineRepository = _unitOfWork.Repository<Airline>();
-
-    //        try
-    //        {
-    //            await airlineRepository.AddAsync(airline);
-    //            await _unitOfWork.CompleteAsync();
-    //        }
-    //        catch (Exception ex)
-    //        {
-    //            // تسجيل الخطأ
-    //            return BadRequest("Error occurred while adding the airline.");
-    //        }
-
-    //        try
-    //        {
-    //            var request = HttpContext.Request;
-
-    //            if (dto.Image != null)
-    //            {
-    //                airline.Image = await _airlineService.UpdateAirlineImageAsync(dto.Image, airline, request);
-    //                await airlineRepository.UpdateAsync(airline);
-    //                await _unitOfWork.CompleteAsync();
-    //            }
-    //        }
-    //        catch (Exception ex)
-    //        {
-    //            // التحقق مما إذا كان الكيان مضافًا قبل حذفه
-    //            if (airline.Id > 0)
-    //            {
-    //                await airlineRepository.DeleteAsync(airline);
-    //            }
-    //            return BadRequest("Error occurred while updating images.");
-    //        }
-
-    //        var res = _mapper.Map<AirlinePostDto>(airline);
-    //        return CreatedAtAction("GetById", new { routeId = airline.Id }, res);
-    //    }
+            return Ok(result);
+        }
 
 
-    //    [HttpPut("{routeId:int}")]
-    //    public async Task<IActionResult> UpdateAirline(int routeId, AirlinePutDto dto)
-    //    {
-    //        if (!ModelState.IsValid)
-    //            return BadRequest(ModelState);
 
-    //        if (routeId != dto.Id)
-    //            return BadRequest("Route id and Airline Id did not match");
+        //public class AirlineController : BaseApiController
+        //{
+        //    private readonly IUnitOfWork _unitOfWork;
+        //    private readonly IMapper _mapper;
 
-    //        var airlineRepository = _unitOfWork.Repository<Airline>();
-    //        var airline = await airlineRepository.GetByIdAsync(dto.Id);
+        //    public AirlineController(IUnitOfWork unitOfWork, IMapper mapper)
+        //    {
+        //        _unitOfWork = unitOfWork;
+        //        _mapper = mapper;
+        //    }
 
-    //        if (airline == null)
-    //            return NotFound();
+        //    [HttpGet]
+        //    public async Task<ActionResult<Pagination<AirlineDto>>> GetAllAirlines([FromQuery] AirlineSpecParams specParams)
+        //    {
+        //        var spec = new AirlineWithAirplanesAndFlightsSpecification(specParams);
+        //        var airlines = await _unitOfWork.Repository<Airline>().GetAllWithSpecAsync(spec);
+        //        var totalCount = await _unitOfWork.Repository<Airline>().GetCountWithSpecAsync(spec);
 
-    //        airline.Name = dto.Name ?? airline.Name;
-    //        airline.Code = dto.Code ?? airline.Code;
+        //        var data = _mapper.Map<IReadOnlyList<Airline>, IReadOnlyList<AirlineDto>>(airlines);
+        //        data = data.Select(a =>
+        //        {
+        //            a.Image = string.IsNullOrEmpty(a.Image) ? null : $"{Request.Scheme}://{Request.Host.Value}{a.Image}";
+        //            return a;
+        //        }).ToList();
 
-    //        if (dto.Image != null)
-    //        {
-    //            var request = HttpContext.Request;
-    //            _airlineService.RemoveAirlineImage(airline);
-    //            airline.Image = await _airlineService.UpdateAirlineImageAsync(dto.Image, airline, request);
-    //        }
+        //        return Ok(new Pagination<AirlineDto>(specParams.PageIndex, specParams.PageSize, totalCount, data));
+        //    }
 
-    //        try
-    //        {
-    //            await airlineRepository.UpdateAsync(airline);
-    //            await _unitOfWork.CompleteAsync();
-    //        }
-    //        catch
-    //        {
-    //            return BadRequest("Error occurred while updating");
-    //        }
+        //    [HttpGet("{id}")]
+        //    public async Task<ActionResult<AirlineDto>> GetAirlineById(int id)
+        //    {
+        //        var spec = new AirlineWithAirplanesAndFlightsSpecification(id);
+        //        var airline = await _unitOfWork.Repository<Airline>().GetEntityWithSpecAsync(spec);
+        //        if (airline == null) return NotFound(new ApiResponse(404));
 
-    //        var res = _mapper.Map<AirlinePutDto>(airline);
-    //        return Ok(res);
-    //    }
+        //        var result = _mapper.Map<AirlineDto>(airline);
+        //        result.Image = string.IsNullOrEmpty(result.Image) ? null : $"{Request.Scheme}://{Request.Host.Value}{result.Image}";
 
-    //    [HttpDelete("{routeId:int}")]
-    //    public async Task<IActionResult> DeleteAirline(int routeId)
-    //    {
-    //        var airlineRepository = _unitOfWork.Repository<Airline>();
-    //        var airline = await airlineRepository.GetByIdAsync(routeId);
+        //        return Ok(result);
+        //    }
+        [HttpPost]
+        public async Task<ActionResult<AirlineDto>> AddAirline([FromForm] AirlinePostDto dto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
-    //        if (airline != null)
-    //        {
-    //            if (airline.Airplanes.Any())
-    //                return BadRequest("You have to remove airplanes associated with this airline first");
+            var airline = _mapper.Map<Airline>(dto);
+            airline.Image = await ProcessLocationImageAsync(dto.ImageFile, "airlinesImg");
 
-    //            _airlineService.RemoveAirlineImage(airline);
-    //            await airlineRepository.DeleteAsync(airline);
-    //            await _unitOfWork.CompleteAsync();
-    //            return NoContent();
-    //        }
+            await _unitOfWork.Repository<Airline>().Add(airline);
+            await _unitOfWork.CompleteAsync();
 
-    //        return NotFound();
-    //    }
+            return CreatedAtAction(nameof(GetAirlineById), new { id = airline.Id }, _mapper.Map<AirlineDto>(airline));
+        }
 
-    //    [HttpGet("{routeId:int}/flights")]
-    //    public async Task<IActionResult> AirlineFlights(int routeId)
-    //    {
-    //        var airlineRepository = _unitOfWork.Repository<Airline>();
-    //        var airline = await airlineRepository.GetByIdAsync(routeId);
+        [HttpPut("{id}")]
+        public async Task<ActionResult<AirlineDto>> UpdateAirline(int id, [FromForm] AirlinePutDto dto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (id != dto.Id) return BadRequest("ID mismatch");
 
-    //        if (airline != null)
-    //        {
-    //            var flights = airline.Flights;
-    //            var res = flights
-    //                .Select(f => new
-    //                {
-    //                    Id = f.Id,
-    //                    DepartureTime = f.DepartureTime.ToString("hh:mm tt"),
-    //                    ArrivalTime = f.ArrivalTime.ToString("hh:mm tt"),
-    //                    DepartureAirport = f.DepartureTerminal.Airport.Name,
-    //                    ArrivalAirport = f.ArrivalTerminal.Airport.Name,
-    //                    From = f.DepartureTerminal.Airport.Location.Country,
-    //                    To = f.ArrivalTerminal.Airport.Location.Country
-    //                });
+            var airline = await _unitOfWork.Repository<Airline>().GetByIdAsync(dto.Id);
+            if (airline == null) return NotFound(new ApiResponse(404));
 
-    //            return Ok(res);
-    //        }
+            _mapper.Map(dto, airline);
+            airline.Image = await ProcessLocationImageAsync(dto.Image, "airlinesImg", airline.Image);
 
-    //        return NotFound();
-    //    }
+            _unitOfWork.Repository<Airline>().Update(airline);
+            await _unitOfWork.CompleteAsync();
 
-    //    [HttpGet("{routeId:int}/airplanes")]
-    //    public async Task<IActionResult> AirlineAirplanes(int routeId)
-    //    {
-    //        var airlineRepository = _unitOfWork.Repository<Airline>();
-    //        var airline = await airlineRepository.GetByIdAsync(routeId);
+            return Ok(_mapper.Map<AirlineDto>(airline));
+        }
 
-    //        if (airline != null)
-    //        {
-    //            var airplanes = airline.Airplanes;
-    //            var res = airplanes
-    //                .Select(a => new
-    //                {
-    //                    a.Id,
-    //                    a.Type,
-    //                    a.Code,
-    //                    Features = a.Feature,
-    //                });
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteAirline(int id)
+        {
+            var airline = await _unitOfWork.Repository<Airline>().GetByIdAsync(id);
+            if (airline == null) return NotFound(new ApiResponse(404));
 
-    //            return Ok(res);
-    //        }
+            _unitOfWork.Repository<Airline>().Delete(airline);
+            await _unitOfWork.CompleteAsync();
 
-    //        return NotFound();
-    //    }
+            return Ok(new { message = $"Airline '{airline.Name}' has been deleted successfully." });
+        }
 
-    //    [HttpGet("popular")]
-    //    public async Task<IActionResult> PopularAirline(string country, int count = 5)
-    //    {
-    //        var airlines = await _airlineService.GetFamousAirlineAsync(country, count);
-    //        var res = _mapper.Map<List<AirlineGetDto>>(airlines);
+        private async Task<string?> ProcessLocationImageAsync(IFormFile? imageFile, string folder, string? existingImage = null)
+        {
+            if (imageFile == null) return existingImage;
 
-    //        return Ok(res);
-    //    }
-    //}
+            if (!string.IsNullOrEmpty(existingImage))
+            {
+                var oldImageName = Path.GetFileName(existingImage);
+                ImageHelper.RemoveImage(folder, oldImageName);
+            }
+
+            string newImageName = $"location-{Guid.NewGuid()}.jpg";
+            await ImageHelper.UploadImageAsync(imageFile, folder, newImageName);
+
+            return $"/imgs/{folder}/{newImageName}";
+        }
+    }
 }

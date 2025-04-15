@@ -1,22 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Wego.Core.Models.Enums;
 
 namespace Wego.Core.Models.Flights
 {
     public class Airplane: BaseModel
     {
-        public Airplane()
-        {
-            Features = new HashSet<Feature>();
-            Flights = new HashSet<Flight>();
-        }
+
         public string? Code { get; set; }
         public string? Type { get; set; }
         public int? AirlineId { get; set; }
+        public List<Features> Feature { get; set; } = new List<Features>(); 
 
         public virtual Airline? Airline { get; set; }
-        public virtual ICollection<Feature> Features { get; set; }
-        public virtual ICollection<Flight> Flights { get; set; }
+        public virtual ICollection<Flight> Flights { get; set; } = new HashSet<Flight>();
 
     }
 }
