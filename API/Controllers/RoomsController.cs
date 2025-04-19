@@ -30,7 +30,6 @@ namespace Wego.API.Controllers
         }
 
         [HttpGet("all-rooms-details")]
-        [SwaggerOperation(Summary = "Get all rooms with details", Description = "Retrieve a list of all rooms along with additional details.")]
         public async Task<ActionResult<Pagination<RoomDto>>> GetAllRoomsWithDetails([FromQuery] RoomSpecParams specParams)
         {
             var spec = new RoomWithDetailsSpecification(specParams); 

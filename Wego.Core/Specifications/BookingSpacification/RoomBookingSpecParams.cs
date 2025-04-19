@@ -30,22 +30,18 @@ namespace Wego.Core.Specifications.BookingSpacification
 
         public string? Sort { get; set; }
 
-        // فلترة حسب تاريخ الوصول
         public DateTime? Checkin { get; set; }
 
-        // فلترة حسب تاريخ المغادرة
         public DateTime? Checkout { get; set; }
 
-        // فلترة حسب عدد الضيوف
         public int? Guests { get; set; }
 
-        // فلترة حسب عدد الأطفال
         public int? Children { get; set; }
 
-        // فلترة حسب حالة الحجز
         public BookingStatus? Status { get; set; }
+        public List<int>? RoomIds { get; set; }
 
-        // فلترة حسب معرف المستخدم
+
         public string? UserId { get; set; }
     }
 }

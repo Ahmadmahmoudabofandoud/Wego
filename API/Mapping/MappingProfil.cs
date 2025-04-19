@@ -132,6 +132,7 @@ public class MappingProfile : Profile
         CreateMap<AppUser, ProfileDto>()
             .ForMember(dest => dest.ProfileImageUrl, opt => opt.Ignore())
             .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
+            .ForMember(dest => dest.IsGuest, opt => opt.MapFrom(src => src.IsGuest)) 
             .ForMember(dest => dest.Nationality, opt => opt.MapFrom(src => src.Nationality));
 
         CreateMap<ProfileUpdateDto, AppUser>()
@@ -142,6 +143,21 @@ public class MappingProfile : Profile
             .ForMember(dest => dest.Nationality, opt => opt.MapFrom(src => src.Nationality))
             .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
             .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.Address));
+
+        CreateMap<ProfilePostDto, AppUser>()
+            .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.DisplayName)) 
+            .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
+            .ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => src.PhoneNumber))
+            .ForMember(dest => dest.DisplayName, opt => opt.MapFrom(src => src.DisplayName))
+            .ForMember(dest => dest.PassportNumber, opt => opt.MapFrom(src => src.PassportNumber))
+            .ForMember(dest => dest.Nationality, opt => opt.MapFrom(src => src.Nationality))
+            .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
+            .ForMember(dest => dest.NationalId, opt => opt.MapFrom(src => src.NationalId))
+            .ForMember(dest => dest.TripPurpose, opt => opt.MapFrom(src => src.TripPurpose))
+            .ForMember(dest => dest.SpecialNeeds, opt => opt.MapFrom(src => src.SpecialNeeds))
+                        .ForMember(dest => dest.IsGuest, opt => opt.MapFrom(src => src.IsGuest)); 
+        
+
         #endregion
 
         #region Airplane Mapping

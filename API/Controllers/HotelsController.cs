@@ -10,7 +10,11 @@ using Wego.Core.Models;
 using Wego.Core.Models.Enums;
 using Microsoft.AspNetCore.Identity;
 using Wego.Core.Models.Identity;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using Wego.API.Models.DTOS.Locations.Dtos;
+using Wego.Core.Models.Booking;
+using Wego.Core.Specifications.BookingSpacification;
+using Wego.Core.Specifications.LocationSpacification;
+using Wego.Core.Specifications.RoomSpecification;
 
 namespace Wego.API.Controllers
 {
@@ -28,6 +32,8 @@ namespace Wego.API.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(HotelDto), 200)]
+        [ProducesResponseType(typeof(ApiResponse), 404)]
         public async Task<ActionResult<Pagination<HotelDto>>> GetAllHotels([FromQuery] HotelSpecParams specParams)
         {
             var spec = new HotelWithDetailsSpecification(specParams);
@@ -51,6 +57,70 @@ namespace Wego.API.Controllers
 
             return Ok(new Pagination<HotelDto>(specParams.PageIndex, specParams.PageSize, totalCount, data));
         }
+
+        [HttpGet("RoomAvailableByCity")]
+        [ProducesResponseType(typeof(LocationWithHotelsResponseDto), 200)]
+        [ProducesResponseType(typeof(ApiResponse), 404)]
+        public async Task<ActionResult<List<LocationWithHotelsResponseDto>>> CheckRoomAvailabilityByCity(
+            [FromQuery] string city,
+            [FromQuery] DateTime checkin,
+            [FromQuery] DateTime checkout,
+            [FromQuery] int? guests,
+            [FromQuery] int? children)
+        {
+            if (string.IsNullOrWhiteSpace(city))
+                return BadRequest(new ApiResponse(400, "City name is required"));
+
+            var locationSpecParams = new AppSpecParamsNearby
+            {
+                Search = city.Trim(),
+                PageIndex = 1,
+                PageSize = 50
+            };
+
+            var locationSpec = new LocationWithAirportsAndHotelsSpecification(locationSpecParams);
+            var locations = await _unitOfWork.Repository<Location>().GetAllWithSpecAsync(locationSpec);
+
+            if (locations == null || !locations.Any())
+                return NotFound(new ApiResponse(404, "No locations found in this city."));
+
+            var hotelIds = locations
+                .SelectMany(l => l.Hotels)
+                .Select(h => h.Id)
+                .ToList();
+
+            if (!hotelIds.Any())
+                return NotFound(new ApiResponse(404, "No hotels found in this city."));
+
+            var rooms = await _unitOfWork.Repository<Room>()
+                .GetAllWithSpecAsync(new RoomByHotelIdsSpecification(hotelIds));
+
+            var roomIds = rooms.Select(r => r.Id).ToList();
+
+            if (!roomIds.Any())
+                return NotFound(new ApiResponse(404, "No rooms found in the hotels of this city."));
+
+            var spec = new RoomBookingWithDetailsSpecification(new RoomBookingSpecParams
+            {
+                RoomIds = roomIds,
+                Checkin = checkin,
+                Checkout = checkout,
+                Status = BookingStatus.Confirmed,
+                Guests = guests,
+                Children = children
+            });
+
+            var bookings = await _unitOfWork.Repository<RoomBooking>().GetAllWithSpecAsync(spec);
+            var locationDtos = _mapper.Map<List<LocationWithHotelsResponseDto>>(locations);
+
+            if (bookings.Any())
+                return BadRequest(new ApiResponse(400, "All rooms in this city are booked during the selected dates."));
+
+            return Ok(locationDtos);
+        }
+
+
+
 
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(HotelDto), 200)]

@@ -10,6 +10,8 @@ using System;
 using Microsoft.AspNetCore.Http;
 using Wego.API.Helpers;
 using System.Security.Claims;
+using Newtonsoft.Json;
+using Wego.Core.Services.Contract;
 
 namespace Wego.API.Controllers
 {
@@ -23,6 +25,24 @@ namespace Wego.API.Controllers
             _userManager = userManager;
             _mapper = mapper;
         }
+
+        [HttpPost("SaveGuestDetails")]
+        public async Task<ActionResult<ProfileDto>> SaveGuestDetails([FromBody] ProfilePostDto dto)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized(new ApiResponse(401, "User is not authenticated"));
+
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+                return NotFound(new ApiResponse(404, "User not found"));
+
+            _mapper.Map(dto, user);
+
+            var result = await _userManager.UpdateAsync(user);
+            return !result.Succeeded ? (ActionResult<ProfileDto>)BadRequest(new ApiResponse(400, "Failed to save guest details")) : await GetProfile();
+        }
+
 
         [HttpGet("GetuserProfile")]
         public async Task<ActionResult<ProfileDto>> GetProfile()

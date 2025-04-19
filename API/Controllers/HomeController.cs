@@ -7,20 +7,15 @@ using Wego.Core;
 using Wego.Core.Models;
 using Wego.Core.Models.Flights;
 using Wego.Core.Models.Hotels;
-using Wego.Core.Specifications;
 using Wego.Core.Specifications.AirlineSpecification;
 using Wego.Core.Specifications.LocationSpacification;
 using Wego.Core.Specifications.HotelSpecification;
-using Wego.Service;
 using Swashbuckle.AspNetCore.Annotations;
 using Wego.API.Models.DTOS;
 using Microsoft.AspNetCore.Identity;
 using Wego.Core.Models.Identity;
 using Wego.Core.Specifications.AirportSpecification;
-using API.Errors;
-using Wego.Core.Models.Booking;
-using Wego.Core.Models.Enums;
-using Wego.Core.Specifications.BookingSpacification;
+
 
 namespace Wego.API.Controllers
 {
@@ -40,7 +35,6 @@ namespace Wego.API.Controllers
         }
 
         [HttpGet("popular-hotels-details(Recommendation)")]
-        [SwaggerOperation(Summary = "Get popular hotels with details", Description = "Retrieve a list of popular hotels along with additional details.")]
         public async Task<ActionResult<IEnumerable<HotelDto>>> GetPopularHotelsWithDetails([FromQuery] HotelSpecParams specParams)
         {
             var spec = new HotelWithDetailsSpecification(specParams);
@@ -68,7 +62,6 @@ namespace Wego.API.Controllers
         }
 
         [HttpGet("nearby")]
-        [SwaggerOperation(Summary = "Get nearby locations based on coordinates", Description = "Find locations near the given GPS coordinates within a specified distance.")]
         public async Task<ActionResult<List<LocationWithHotelsResponseDto>>> GetNearbyLocations([FromQuery] AppSpecParamsNearby specParams)
         {
             var nearbyLocations = await _locationService.GetNearbyLocationsAsync(specParams);
@@ -83,16 +76,13 @@ namespace Wego.API.Controllers
 
 
         [HttpGet("LocationWithHotelsResponse_ByCityName")]
-        [SwaggerOperation(Summary = "Get locations within a specific city", Description = "Retrieve hotels and airports within a given city.")]
         public async Task<ActionResult<List<LocationWithHotelsResponseDto>>> GetNearLocations([FromQuery] string city)
         {
-            // التحقق من صحة اسم المدينة
             if (string.IsNullOrWhiteSpace(city))
             {
                 return BadRequest(new { message = "City name is required." });
             }
 
-            // إعداد المعايير للبحث
             var specParams = new AppSpecParamsNearby
             {
                 Search = city.Trim(),
@@ -100,7 +90,6 @@ namespace Wego.API.Controllers
                 PageSize = 10
             };
 
-            // إعداد الـ Specifications الخاصة بالفنادق والمطارات
             var hotelSpecParams = new HotelSpecParams
             {
                 Search = specParams.Search,
@@ -133,98 +122,7 @@ namespace Wego.API.Controllers
         }
 
 
-        //        [HttpGet("SearchAvailableHotels")]
-//        [SwaggerOperation(
-//    Summary = "Search for hotels in a city with room availability check",
-//    Description = "Retrieve hotels in a specific city and check room availability for given dates and guests"
-//)]
-//        public async Task<ActionResult<List<HotelWithAvailabilityResponseDto>>> SearchAvailableHotels(
-//    [FromQuery] string city,
-//    [FromQuery] DateTime checkIn,
-//    [FromQuery] DateTime checkOut,
-//    [FromQuery] int rooms = 1,
-//    [FromQuery] int adults = 2,
-//    [FromQuery] int[] children = null)
-//        {
-//            // التحقق من صحة المدخلات
-//            if (string.IsNullOrWhiteSpace(city))
-//            {
-//                return BadRequest(new ApiResponse(400, "City name is required."));
-//            }
-
-//            if (checkIn >= checkOut)
-//            {
-//                return BadRequest(new ApiResponse(400, "Check-out date must be after check-in date."));
-//            }
-
-//            // البحث عن الفنادق في المدينة المطلوبة
-//            var hotelSpecParams = new HotelSpecParams
-//            {
-//                Search = city.Trim(),
-//                PageIndex = 1,
-//                PageSize = 10
-//            };
-
-//            var hotelSpec = new HotelWithDetailsSpecification(hotelSpecParams);
-//            var hotels = await _unitOfWork.Repository<Hotel>().GetAllWithSpecAsync(hotelSpec);
-
-//            if (hotels == null || !hotels.Any())
-//            {
-//                return NotFound(new ApiResponse(404, "No hotels found in this city."));
-//            }
-
-//            // إنشاء DTO للاستجابة
-//            var response = new List<HotelWithAvailabilityResponseDto>();
-
-//            foreach (var hotel in hotels)
-//            {
-//                var hotelDto = _mapper.Map<HotelWithAvailabilityResponseDto>(hotel);
-
-//                // التحقق من توفر الغرف لكل فندق
-//                var availableRooms = new List<RoomAvailabilityDto>();
-
-//                foreach (var room in hotel.Rooms)
-//                {
-//                    // التحقق من سعة الغرفة
-//                    if (room.CapacityAdults < adults || room.CapacityChildren < (children?.Length ?? 0))
-//                    {
-//                        continue; // الغرفة لا تكفي لعدد الضيوف
-//                    }
-
-//                    // التحقق من توفر الغرفة في التواريخ المطلوبة
-//                    var bookingSpec = new RoomBookingWithDetailsSpecification(new RoomBookingSpecParams
-//                    {
-//                        Search = room.Id.ToString(),
-//                        Checkin = checkIn,
-//                        Checkout = checkOut,
-//                        Status = BookingStatus.Confirmed
-//                    });
-
-//                    var bookings = await _unitOfWork.Repository<RoomBooking>().GetAllWithSpecAsync(bookingSpec);
-
-//                    if (!bookings.Any())
-//                    {
-//                        availableRooms.Add(new RoomAvailabilityDto
-//                        {
-//                            RoomId = room.Id,
-//                            RoomType = room.Type,
-//                            Price = room.Price,
-//                            MaxAdults = room.CapacityAdults,
-//                            MaxChildren = room.CapacityChildren,
-//                            IsAvailable = true
-//                        });
-//                    }
-//                }
-
-//                hotelDto.AvailableRooms = availableRooms;
-//                hotelDto.HasAvailableRooms = availableRooms.Any();
-//                response.Add(hotelDto);
-//            }
-
-//            return Ok(response);
-//        }
-
-
+       
 
         [HttpGet("LocationWithHotelsResponse_ByLocationId")]
         [SwaggerOperation(Summary = "Get locations by ID", Description = "Retrieve hotels and airports within a specific location based on its ID.")]
@@ -263,10 +161,8 @@ namespace Wego.API.Controllers
                 return NotFound(new { message = "No location found with this ID." });
             }
 
-            // إعداد الـ DTO
             var locationDto = _mapper.Map<LocationWithHotelsResponseDto>(location);
 
-            // إضافة الفنادق والمطارات إلى الـ DTO
             locationDto.Hotels = _mapper.Map<List<HotelDto>>(hotels);
             locationDto.Airports = _mapper.Map<List<AirportDto>>(airports);
 
@@ -286,6 +182,7 @@ namespace Wego.API.Controllers
 
             return Ok(_mapper.Map<List<AirlineDto>>(airlines));
         }
+
 
         [HttpGet("nearby-attractions")]
         [SwaggerOperation(Summary = "Get nearby attractions based on coordinates", Description = "Find attractions near the given GPS coordinates within a specified distance.")]
@@ -318,115 +215,3 @@ namespace Wego.API.Controllers
     }
 }
 
-
-//using AutoMapper;
-//using Microsoft.AspNetCore.Mvc;
-//using Wego.API.Models.DTOS.Flights.Dtos;
-//using Wego.API.Models.DTOS.Hotels.Dtos;
-//using Wego.API.Models.DTOS.Locations.Dtos;
-//using Wego.Core;
-//using Wego.Core.Models;
-//using Wego.Core.Models.Flights;
-//using Wego.Core.Models.Hotels;
-//using Wego.Core.Specifications;
-//using Wego.Core.Specifications.AirlineSpecification;
-//using Wego.Core.Specifications.LocationSpacification;
-//using Wego.Core.Specifications.HotelSpecification;
-//using Wego.Service;
-//using Swashbuckle.AspNetCore.Annotations;
-//using Wego.API.Models.DTOS;
-
-//namespace Wego.API.Controllers
-//{
-//    public class HomeController : BaseApiController
-//    {
-//        private readonly IUnitOfWork _unitOfWork;
-//        private readonly IMapper _mapper;
-//        private readonly LocationService _locationService;
-
-//        public HomeController(IUnitOfWork unitOfWork, IMapper mapper, LocationService locationService)
-//        {
-//            _unitOfWork = unitOfWork;
-//            _mapper = mapper;
-//            _locationService = locationService;
-//        }
-
-//        [HttpGet("popular-hotels-details(Recommendation)")]
-//        [SwaggerOperation(Summary = "Get popular hotels with details", Description = "Retrieve a list of popular hotels along with additional details.")]
-//        public async Task<ActionResult<IEnumerable<HotelDto>>> GetPopularHotelsWithDetails([FromQuery] HotelSpecParams specParams)
-//        {
-//            var spec = new HotelWithDetailsSpecification(specParams);
-//            var hotels = await _unitOfWork.Repository<Hotel>().GetAllWithSpecAsync(spec) ?? new List<Hotel>();
-
-//            if (!hotels.Any())
-//                return NotFound(new { message = "No popular hotels found." });
-
-//            return Ok(_mapper.Map<List<HotelDto>>(hotels));
-//        }
-
-
-//        [HttpGet("nearby")]
-//        [SwaggerOperation(Summary = "Get nearby locations based on coordinates", Description = "Find locations near the given GPS coordinates within a specified distance.")]
-//        public async Task<ActionResult<List<Location>>> GetNearbyLocations([FromQuery] AppSpecParamsNearby specParams)
-//        {
-//            var nearbyLocations = await _locationService.GetNearbyLocationsAsync(specParams);
-
-//            if (nearbyLocations == null || !nearbyLocations.Any())
-//            {
-//                return NotFound("No locations found within the specified distance.");
-//            }
-
-//            return Ok(nearbyLocations);
-//        }
-
-
-//        [HttpGet("near-location")]
-//        [SwaggerOperation(Summary = "Get locations within a specific city", Description = "Retrieve hotels and airports within a given city.")]
-//        public async Task<ActionResult<IEnumerable<LocationsDto>>> GetNearLocations([FromQuery] string city)
-//        {
-//            if (string.IsNullOrWhiteSpace(city))
-//                return BadRequest(new { message = "City name is required." });
-
-//            var specParams = new AppSpecParams { Search = city.Trim(), PageIndex = 1, PageSize = 10 };
-
-//            var locationSpec = new LocationWithAirportsAndHotelsSpecification(specParams);
-//            var locations = await _unitOfWork.Repository<Location>().GetAllWithSpecAsync(locationSpec);
-
-//            if (locations == null || !locations.Any())
-//                return NotFound(new { message = "No locations found in this city." });
-
-//            return Ok(_mapper.Map<List<LocationsDto>>(locations));
-//        }
-
-//        [HttpGet("popular-airlines")]
-//        [SwaggerOperation(Summary = "Get popular airlines", Description = "Retrieve a list of popular airlines with flight details.")]
-//        public async Task<ActionResult<IEnumerable<AirlineDto>>> GetPopularAirlines([FromQuery] AirlineSpecParams specParams)
-//        {
-//            var spec = new AirlineWithAirplanesAndFlightsSpecification(specParams);
-//            var airlines = await _unitOfWork.Repository<Airline>().GetAllWithSpecAsync(spec) ?? new List<Airline>();
-
-//            if (!airlines.Any())
-//                return NotFound(new { message = "No popular airlines found." });
-
-//            return Ok(_mapper.Map<List<AirlineDto>>(airlines));
-//        }
-
-//        [HttpGet("nearby-attractions")]
-//        [SwaggerOperation(Summary = "Get nearby attractions based on coordinates", Description = "Find attractions near the given GPS coordinates within a specified distance.")]
-//        public async Task<ActionResult<List<AttractionDto>>> GetNearbyAttractions([FromQuery] AppSpecParamsNearby specParams)
-//        {
-//            var spec = new AttractionSpecification(specParams);
-
-//            var nearbyAttractions = await _locationService.GetNearbyLocationsAsync(specParams);
-
-//            if (nearbyAttractions == null || !nearbyAttractions.Any())
-//            {
-//                return NotFound("No attractions found within the specified distance.");
-//            }
-
-//            return Ok(nearbyAttractions);
-//        }
-
-
-//    }
-//}

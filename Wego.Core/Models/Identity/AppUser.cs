@@ -12,8 +12,12 @@ namespace Wego.Core.Models.Identity
         public DateTime? DateOfBirth { get; set; }
         public Nationality? Nationality { get; set; }
         public Gender? Gender { get; set; }
+        public string? NationalId { get; set; }
+        public TripPurpose? TripPurpose { get; set; }
+        public string? SpecialNeeds { get; set; }
         public string? Address { get; set; }
         public string? ProfileImageUrl { get; set; }
+        public bool IsGuest { get; set; }
 
         public virtual ICollection<HotelBooking> HotelBookings { get; set; } = new HashSet<HotelBooking>();
         public virtual ICollection<Review> Reviews { get; set; } = new HashSet<Review>();

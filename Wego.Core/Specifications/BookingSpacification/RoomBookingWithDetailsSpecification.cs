@@ -10,15 +10,18 @@ namespace Wego.Core.Specifications.BookingSpacification
     public class RoomBookingWithDetailsSpecification : BaseSpecifcation<RoomBooking>
     {
         public RoomBookingWithDetailsSpecification(RoomBookingSpecParams specParams)
-            : base(RB =>
+                : base(RB =>
                     (string.IsNullOrEmpty(specParams.Search) ||
                      (RB.Room.RoomTitle != null && RB.Room.RoomTitle.ToLower().Contains(specParams.Search)) ||
                      (RB.Booking.UserId != null && RB.Booking.UserId.ToLower().Contains(specParams.Search))) &&
-                    (!specParams.Checkin.HasValue || RB.Checkin.Date == specParams.Checkin.Value.Date) &&
-                    (!specParams.Checkout.HasValue || RB.Checkout.Date == specParams.Checkout.Value.Date) &&
+                    (!specParams.Checkin.HasValue || RB.Checkin.Date < specParams.Checkout.Value.Date) &&
+                    (!specParams.Checkout.HasValue || RB.Checkout.Date > specParams.Checkin.Value.Date) &&
                     (!specParams.Guests.HasValue || RB.Guests == specParams.Guests) &&
-                    (!specParams.Children.HasValue || RB.Children == specParams.Children)
-            )
+                    (!specParams.Children.HasValue || RB.Children == specParams.Children) &&
+                    (!specParams.Status.HasValue || RB.Booking.Status == specParams.Status) &&
+                    (specParams.RoomIds == null || specParams.RoomIds.Contains(RB.RoomId))
+                )
+
         {
             AddIncludes();
 
@@ -48,7 +51,9 @@ namespace Wego.Core.Specifications.BookingSpacification
         public RoomBookingWithDetailsSpecification(int id)
             : base(RB => RB.Id == id)
         {
+
             AddIncludes();
+
         }
 
         private void AddIncludes()
