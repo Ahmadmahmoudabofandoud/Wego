@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wego.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd36620fa5dca0ffb14f1268065bead957511927")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f61eae58cdf62f5c3bd5de46b7a182c70fce111a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wego.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wego.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

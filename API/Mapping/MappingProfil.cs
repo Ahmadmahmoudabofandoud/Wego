@@ -95,9 +95,9 @@ public class MappingProfile : Profile
         CreateMap<RoomOptionCreateDto, RoomOption>();
         #endregion
 
-
         #region RoomBooking
         CreateMap<RoomBooking, RoomBookingDto>()
+            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Booking.Id))
             .ForMember(dest => dest.RoomTitle, opt => opt.MapFrom(src => src.Room.RoomTitle))
             .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Booking.Status.ToString()))
             .ForMember(dest => dest.TotalPrice, opt => opt.MapFrom(src => src.Booking.TotalPrice))
@@ -155,8 +155,13 @@ public class MappingProfile : Profile
             .ForMember(dest => dest.NationalId, opt => opt.MapFrom(src => src.NationalId))
             .ForMember(dest => dest.TripPurpose, opt => opt.MapFrom(src => src.TripPurpose))
             .ForMember(dest => dest.SpecialNeeds, opt => opt.MapFrom(src => src.SpecialNeeds))
-                        .ForMember(dest => dest.IsGuest, opt => opt.MapFrom(src => src.IsGuest)); 
-        
+                        .ForMember(dest => dest.IsGuest, opt => opt.MapFrom(src => src.IsGuest));
+
+        CreateMap<AppUser, ProfileBookingDto>()
+            .ForMember(dest => dest.Nationality, opt => opt.MapFrom(src => src.Nationality.ToString()))
+            .ForMember(dest => dest.IsGuest, opt => opt.MapFrom(src => src.IsGuest ? "Yes" : "No"))
+            .ForMember(dest => dest.TripPurpose, opt => opt.MapFrom(src => src.TripPurpose.HasValue ? src.TripPurpose.ToString() : null));
+
 
         #endregion
 
@@ -213,7 +218,7 @@ public class MappingProfile : Profile
             .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
             .ForMember(dest => dest.HotelId, opt => opt.MapFrom(src => src.HotelId))
             .ForMember(dest => dest.LocationId, opt => opt.MapFrom(src => src.LocationId))
-            .ForMember(dest => dest.AirlineId, opt => opt.MapFrom(src => src.AirlineId))
+            //.ForMember(dest => dest.AirlineId, opt => opt.MapFrom(src => src.AirlineId))
             .ReverseMap();
 
         #endregion

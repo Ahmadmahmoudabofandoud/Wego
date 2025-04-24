@@ -52,5 +52,18 @@ namespace Wego.API.Models.DTOS.Identity
         public string? SpecialNeeds { get; set; }
     }
 
+    public class ProfileBookingDto
+    {
+        public string Id { get; set; }
+        public string DisplayName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public string PassportNumber { get; set; }
+        public string Nationality { get; set; }
+        public string IsGuest { get; set; }
+        public string NationalId { get; set; }
+        public string? TripPurpose { get; set; } 
+        public string? SpecialNeeds { get; set; }
+    }
 
 }

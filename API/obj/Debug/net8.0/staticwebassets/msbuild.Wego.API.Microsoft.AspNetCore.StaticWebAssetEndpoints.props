@@ -1,0 +1,664 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/airlinesImg/location-746e930c-f9dc-402d-aaa8-0fef2398792d.7upwlpll20.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\airlinesImg\location-746e930c-f9dc-402d-aaa8-0fef2398792d.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7upwlpll20"},{"Name":"integrity","Value":"sha256-zxNl23r\u002BV2R36RkoodKiKY\u002BbFoLDyVmLNesMb864Hb4="},{"Name":"label","Value":"_content/Wego.API/imgs/airlinesImg/location-746e930c-f9dc-402d-aaa8-0fef2398792d.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"51469"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022zxNl23r\u002BV2R36RkoodKiKY\u002BbFoLDyVmLNesMb864Hb4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/airlinesImg/location-746e930c-f9dc-402d-aaa8-0fef2398792d.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\airlinesImg\location-746e930c-f9dc-402d-aaa8-0fef2398792d.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-zxNl23r\u002BV2R36RkoodKiKY\u002BbFoLDyVmLNesMb864Hb4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"51469"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022zxNl23r\u002BV2R36RkoodKiKY\u002BbFoLDyVmLNesMb864Hb4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-0026310e-ce91-463d-97e5-ce27d6ee40e5.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-0026310e-ce91-463d-97e5-ce27d6ee40e5.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-xPzafsUJr0a05RX\u002Be25raxap9sO6bDISOBj5D/XT\u002BB0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"21662"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022xPzafsUJr0a05RX\u002Be25raxap9sO6bDISOBj5D/XT\u002BB0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-0026310e-ce91-463d-97e5-ce27d6ee40e5.odx9i4xwhj.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-0026310e-ce91-463d-97e5-ce27d6ee40e5.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"odx9i4xwhj"},{"Name":"integrity","Value":"sha256-xPzafsUJr0a05RX\u002Be25raxap9sO6bDISOBj5D/XT\u002BB0="},{"Name":"label","Value":"_content/Wego.API/imgs/amenitiesImg/amenity-0026310e-ce91-463d-97e5-ce27d6ee40e5.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"21662"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022xPzafsUJr0a05RX\u002Be25raxap9sO6bDISOBj5D/XT\u002BB0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-0dea33da-673a-4d37-8278-9f26a4c61a12.7w6uj45pvd.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-0dea33da-673a-4d37-8278-9f26a4c61a12.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7w6uj45pvd"},{"Name":"integrity","Value":"sha256-mW7GWmRACQrrsxtVqYxeBy59Jza52vgky\u002BXfWIew/Vk="},{"Name":"label","Value":"_content/Wego.API/imgs/amenitiesImg/amenity-0dea33da-673a-4d37-8278-9f26a4c61a12.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"17107"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022mW7GWmRACQrrsxtVqYxeBy59Jza52vgky\u002BXfWIew/Vk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-0dea33da-673a-4d37-8278-9f26a4c61a12.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-0dea33da-673a-4d37-8278-9f26a4c61a12.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-mW7GWmRACQrrsxtVqYxeBy59Jza52vgky\u002BXfWIew/Vk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"17107"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022mW7GWmRACQrrsxtVqYxeBy59Jza52vgky\u002BXfWIew/Vk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-32aab7d2-b3b7-467c-8940-f9a6bd19b11c.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-32aab7d2-b3b7-467c-8940-f9a6bd19b11c.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-XXVQPuLWQRmVO21rn2HSLPU3bpufXWkM6kXBkmtBblE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"14892"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022XXVQPuLWQRmVO21rn2HSLPU3bpufXWkM6kXBkmtBblE=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-32aab7d2-b3b7-467c-8940-f9a6bd19b11c.nvvxfj9xvw.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-32aab7d2-b3b7-467c-8940-f9a6bd19b11c.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"nvvxfj9xvw"},{"Name":"integrity","Value":"sha256-XXVQPuLWQRmVO21rn2HSLPU3bpufXWkM6kXBkmtBblE="},{"Name":"label","Value":"_content/Wego.API/imgs/amenitiesImg/amenity-32aab7d2-b3b7-467c-8940-f9a6bd19b11c.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14892"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022XXVQPuLWQRmVO21rn2HSLPU3bpufXWkM6kXBkmtBblE=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-51800d95-6ef5-48d5-b08b-554b91101263.7w6uj45pvd.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-51800d95-6ef5-48d5-b08b-554b91101263.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7w6uj45pvd"},{"Name":"integrity","Value":"sha256-mW7GWmRACQrrsxtVqYxeBy59Jza52vgky\u002BXfWIew/Vk="},{"Name":"label","Value":"_content/Wego.API/imgs/amenitiesImg/amenity-51800d95-6ef5-48d5-b08b-554b91101263.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"17107"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022mW7GWmRACQrrsxtVqYxeBy59Jza52vgky\u002BXfWIew/Vk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-51800d95-6ef5-48d5-b08b-554b91101263.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-51800d95-6ef5-48d5-b08b-554b91101263.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-mW7GWmRACQrrsxtVqYxeBy59Jza52vgky\u002BXfWIew/Vk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"17107"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022mW7GWmRACQrrsxtVqYxeBy59Jza52vgky\u002BXfWIew/Vk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-6a4ddcc9-dafb-42ce-a64c-d23cc4a38d5e.j0bdidslil.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-6a4ddcc9-dafb-42ce-a64c-d23cc4a38d5e.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"j0bdidslil"},{"Name":"integrity","Value":"sha256-Ax\u002BYE/FjOEhdEPsVwgxiXXYp\u002BoX/sBlJD6Z\u002B8msnMwo="},{"Name":"label","Value":"_content/Wego.API/imgs/amenitiesImg/amenity-6a4ddcc9-dafb-42ce-a64c-d23cc4a38d5e.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"18776"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Ax\u002BYE/FjOEhdEPsVwgxiXXYp\u002BoX/sBlJD6Z\u002B8msnMwo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-6a4ddcc9-dafb-42ce-a64c-d23cc4a38d5e.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-6a4ddcc9-dafb-42ce-a64c-d23cc4a38d5e.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Ax\u002BYE/FjOEhdEPsVwgxiXXYp\u002BoX/sBlJD6Z\u002B8msnMwo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"18776"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Ax\u002BYE/FjOEhdEPsVwgxiXXYp\u002BoX/sBlJD6Z\u002B8msnMwo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-8d202f6f-e7f7-4860-986c-5106566b0f0f.8zwm6puezz.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-8d202f6f-e7f7-4860-986c-5106566b0f0f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8zwm6puezz"},{"Name":"integrity","Value":"sha256-jIXxQnrINpvK257oOFzwM\u002BOUcTfAgGvVs/M01dr8zHY="},{"Name":"label","Value":"_content/Wego.API/imgs/amenitiesImg/amenity-8d202f6f-e7f7-4860-986c-5106566b0f0f.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"26875"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022jIXxQnrINpvK257oOFzwM\u002BOUcTfAgGvVs/M01dr8zHY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-8d202f6f-e7f7-4860-986c-5106566b0f0f.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-8d202f6f-e7f7-4860-986c-5106566b0f0f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jIXxQnrINpvK257oOFzwM\u002BOUcTfAgGvVs/M01dr8zHY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"26875"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022jIXxQnrINpvK257oOFzwM\u002BOUcTfAgGvVs/M01dr8zHY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-ca1f4125-c783-468a-a478-89c119d9a326.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-ca1f4125-c783-468a-a478-89c119d9a326.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-BWjkSqfOMnQufl8AdsHles4bZlIdMt\u002BNtvNkqEHt7j4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"14923"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022BWjkSqfOMnQufl8AdsHles4bZlIdMt\u002BNtvNkqEHt7j4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-ca1f4125-c783-468a-a478-89c119d9a326.x5nz4trp11.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-ca1f4125-c783-468a-a478-89c119d9a326.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"x5nz4trp11"},{"Name":"integrity","Value":"sha256-BWjkSqfOMnQufl8AdsHles4bZlIdMt\u002BNtvNkqEHt7j4="},{"Name":"label","Value":"_content/Wego.API/imgs/amenitiesImg/amenity-ca1f4125-c783-468a-a478-89c119d9a326.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14923"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022BWjkSqfOMnQufl8AdsHles4bZlIdMt\u002BNtvNkqEHt7j4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-d27128d3-d7da-4944-8094-89901dded050.8jphlco7um.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-d27128d3-d7da-4944-8094-89901dded050.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8jphlco7um"},{"Name":"integrity","Value":"sha256-hMBJle2LjHFmQK4rFb0VumhdJwJ5ejo7QaeVvcjmChI="},{"Name":"label","Value":"_content/Wego.API/imgs/amenitiesImg/amenity-d27128d3-d7da-4944-8094-89901dded050.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"11795"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hMBJle2LjHFmQK4rFb0VumhdJwJ5ejo7QaeVvcjmChI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-d27128d3-d7da-4944-8094-89901dded050.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-d27128d3-d7da-4944-8094-89901dded050.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hMBJle2LjHFmQK4rFb0VumhdJwJ5ejo7QaeVvcjmChI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"11795"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022hMBJle2LjHFmQK4rFb0VumhdJwJ5ejo7QaeVvcjmChI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-e4c2da40-ddb5-4376-b67c-7a6497981bb4.8vzfmhl2el.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-e4c2da40-ddb5-4376-b67c-7a6497981bb4.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8vzfmhl2el"},{"Name":"integrity","Value":"sha256-rBKhuMH6x9SMzEHxOGptnLbYfkXzC34LgB0v44n4m7A="},{"Name":"label","Value":"_content/Wego.API/imgs/amenitiesImg/amenity-e4c2da40-ddb5-4376-b67c-7a6497981bb4.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"16621"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022rBKhuMH6x9SMzEHxOGptnLbYfkXzC34LgB0v44n4m7A=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-e4c2da40-ddb5-4376-b67c-7a6497981bb4.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-e4c2da40-ddb5-4376-b67c-7a6497981bb4.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-rBKhuMH6x9SMzEHxOGptnLbYfkXzC34LgB0v44n4m7A="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"16621"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022rBKhuMH6x9SMzEHxOGptnLbYfkXzC34LgB0v44n4m7A=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-eb46ee34-3e01-4038-b271-74f71cad2d25.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-eb46ee34-3e01-4038-b271-74f71cad2d25.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-W\u002BvSmWkVoiEvP8xookNHR2icrZgrRzdA5PfW5Qe0fmY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"24489"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022W\u002BvSmWkVoiEvP8xookNHR2icrZgrRzdA5PfW5Qe0fmY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-eb46ee34-3e01-4038-b271-74f71cad2d25.jy4l7ucmb6.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-eb46ee34-3e01-4038-b271-74f71cad2d25.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jy4l7ucmb6"},{"Name":"integrity","Value":"sha256-W\u002BvSmWkVoiEvP8xookNHR2icrZgrRzdA5PfW5Qe0fmY="},{"Name":"label","Value":"_content/Wego.API/imgs/amenitiesImg/amenity-eb46ee34-3e01-4038-b271-74f71cad2d25.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"24489"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022W\u002BvSmWkVoiEvP8xookNHR2icrZgrRzdA5PfW5Qe0fmY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-fc1ba10a-7119-4067-8fde-ce8ee10407e7.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-fc1ba10a-7119-4067-8fde-ce8ee10407e7.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-XXVQPuLWQRmVO21rn2HSLPU3bpufXWkM6kXBkmtBblE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"14892"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022XXVQPuLWQRmVO21rn2HSLPU3bpufXWkM6kXBkmtBblE=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/amenitiesImg/amenity-fc1ba10a-7119-4067-8fde-ce8ee10407e7.nvvxfj9xvw.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\amenitiesImg\amenity-fc1ba10a-7119-4067-8fde-ce8ee10407e7.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"nvvxfj9xvw"},{"Name":"integrity","Value":"sha256-XXVQPuLWQRmVO21rn2HSLPU3bpufXWkM6kXBkmtBblE="},{"Name":"label","Value":"_content/Wego.API/imgs/amenitiesImg/amenity-fc1ba10a-7119-4067-8fde-ce8ee10407e7.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14892"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022XXVQPuLWQRmVO21rn2HSLPU3bpufXWkM6kXBkmtBblE=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/attractionsImg/attraction-afe70c51-f29b-4429-94ee-f57689776849.5lwvxvmmya.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\attractionsImg\attraction-afe70c51-f29b-4429-94ee-f57689776849.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5lwvxvmmya"},{"Name":"integrity","Value":"sha256-R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U="},{"Name":"label","Value":"_content/Wego.API/imgs/attractionsImg/attraction-afe70c51-f29b-4429-94ee-f57689776849.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5462"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/attractionsImg/attraction-afe70c51-f29b-4429-94ee-f57689776849.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\attractionsImg\attraction-afe70c51-f29b-4429-94ee-f57689776849.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5462"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/attractionsImg/attraction-c7518e54-f6c5-47a0-93b2-148fd924558e.5lwvxvmmya.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\attractionsImg\attraction-c7518e54-f6c5-47a0-93b2-148fd924558e.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5lwvxvmmya"},{"Name":"integrity","Value":"sha256-R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U="},{"Name":"label","Value":"_content/Wego.API/imgs/attractionsImg/attraction-c7518e54-f6c5-47a0-93b2-148fd924558e.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5462"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/attractionsImg/attraction-c7518e54-f6c5-47a0-93b2-148fd924558e.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\attractionsImg\attraction-c7518e54-f6c5-47a0-93b2-148fd924558e.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5462"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-033151c4-2e6b-4d12-8996-e787cabc4b3f.i87nrmkgtc.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-033151c4-2e6b-4d12-8996-e787cabc4b3f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"i87nrmkgtc"},{"Name":"integrity","Value":"sha256-nijTXUVzZHPqMFbSLzu8DFmtFOu4gvQC8BBZ\u002Bx2pep8="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-033151c4-2e6b-4d12-8996-e787cabc4b3f.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"160974"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022nijTXUVzZHPqMFbSLzu8DFmtFOu4gvQC8BBZ\u002Bx2pep8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-033151c4-2e6b-4d12-8996-e787cabc4b3f.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-033151c4-2e6b-4d12-8996-e787cabc4b3f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-nijTXUVzZHPqMFbSLzu8DFmtFOu4gvQC8BBZ\u002Bx2pep8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"160974"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022nijTXUVzZHPqMFbSLzu8DFmtFOu4gvQC8BBZ\u002Bx2pep8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-03f656b4-f81e-4c5a-b608-c8b679be3894.jgealshtr8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-03f656b4-f81e-4c5a-b608-c8b679be3894.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jgealshtr8"},{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-03f656b4-f81e-4c5a-b608-c8b679be3894.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-03f656b4-f81e-4c5a-b608-c8b679be3894.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-03f656b4-f81e-4c5a-b608-c8b679be3894.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-150fe9c2-7f4b-4062-9485-298eed39df0e.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-150fe9c2-7f4b-4062-9485-298eed39df0e.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"6709"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-150fe9c2-7f4b-4062-9485-298eed39df0e.kc55nnet6h.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-150fe9c2-7f4b-4062-9485-298eed39df0e.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kc55nnet6h"},{"Name":"integrity","Value":"sha256-VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-150fe9c2-7f4b-4062-9485-298eed39df0e.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6709"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-209d682e-f393-4d8f-8f25-22bab20aedfc.iqagxy6avs.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-209d682e-f393-4d8f-8f25-22bab20aedfc.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"iqagxy6avs"},{"Name":"integrity","Value":"sha256-WgPrjN7xrQgZzZJdRFWG2jq46SL\u002Bn4sLlU2Ccu0gOaY="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-209d682e-f393-4d8f-8f25-22bab20aedfc.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"30308"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022WgPrjN7xrQgZzZJdRFWG2jq46SL\u002Bn4sLlU2Ccu0gOaY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-209d682e-f393-4d8f-8f25-22bab20aedfc.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-209d682e-f393-4d8f-8f25-22bab20aedfc.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-WgPrjN7xrQgZzZJdRFWG2jq46SL\u002Bn4sLlU2Ccu0gOaY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"30308"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022WgPrjN7xrQgZzZJdRFWG2jq46SL\u002Bn4sLlU2Ccu0gOaY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-220c4bbd-717d-4dc1-83a7-2e65e680434f.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-220c4bbd-717d-4dc1-83a7-2e65e680434f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-E0sux4QT60FQvyVBsWL6gFNvDbzUPxQLrro988qcBDA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"14479"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022E0sux4QT60FQvyVBsWL6gFNvDbzUPxQLrro988qcBDA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-220c4bbd-717d-4dc1-83a7-2e65e680434f.ra59sfxitb.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-220c4bbd-717d-4dc1-83a7-2e65e680434f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ra59sfxitb"},{"Name":"integrity","Value":"sha256-E0sux4QT60FQvyVBsWL6gFNvDbzUPxQLrro988qcBDA="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-220c4bbd-717d-4dc1-83a7-2e65e680434f.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14479"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022E0sux4QT60FQvyVBsWL6gFNvDbzUPxQLrro988qcBDA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-33004b5a-c892-40bc-923e-b5e93214e59e.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-33004b5a-c892-40bc-923e-b5e93214e59e.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"6709"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-33004b5a-c892-40bc-923e-b5e93214e59e.kc55nnet6h.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-33004b5a-c892-40bc-923e-b5e93214e59e.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kc55nnet6h"},{"Name":"integrity","Value":"sha256-VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-33004b5a-c892-40bc-923e-b5e93214e59e.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6709"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-354606f3-9ed2-4326-a696-83cfe78252fc.jgealshtr8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-354606f3-9ed2-4326-a696-83cfe78252fc.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jgealshtr8"},{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-354606f3-9ed2-4326-a696-83cfe78252fc.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-354606f3-9ed2-4326-a696-83cfe78252fc.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-354606f3-9ed2-4326-a696-83cfe78252fc.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-44d820ce-3cb8-4d13-9e07-e0001f62ba7c.jgealshtr8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-44d820ce-3cb8-4d13-9e07-e0001f62ba7c.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jgealshtr8"},{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-44d820ce-3cb8-4d13-9e07-e0001f62ba7c.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-44d820ce-3cb8-4d13-9e07-e0001f62ba7c.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-44d820ce-3cb8-4d13-9e07-e0001f62ba7c.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-616083b7-5a40-4a2d-a1c8-681aa2de83bd.jgealshtr8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-616083b7-5a40-4a2d-a1c8-681aa2de83bd.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jgealshtr8"},{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-616083b7-5a40-4a2d-a1c8-681aa2de83bd.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-616083b7-5a40-4a2d-a1c8-681aa2de83bd.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-616083b7-5a40-4a2d-a1c8-681aa2de83bd.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-79f9bf83-2d4f-4845-842e-a1e2ff5990d8.ey8yvxy23l.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-79f9bf83-2d4f-4845-842e-a1e2ff5990d8.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ey8yvxy23l"},{"Name":"integrity","Value":"sha256-Klvq22Ilpo7F3SxUiKtp89w/0INRUvHul4P\u002BSBfYz68="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-79f9bf83-2d4f-4845-842e-a1e2ff5990d8.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"47673"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Klvq22Ilpo7F3SxUiKtp89w/0INRUvHul4P\u002BSBfYz68=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-79f9bf83-2d4f-4845-842e-a1e2ff5990d8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-79f9bf83-2d4f-4845-842e-a1e2ff5990d8.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Klvq22Ilpo7F3SxUiKtp89w/0INRUvHul4P\u002BSBfYz68="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"47673"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Klvq22Ilpo7F3SxUiKtp89w/0INRUvHul4P\u002BSBfYz68=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-7e4f0dd0-b4a7-4fc1-b1a5-817b9909d5cf.jgealshtr8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-7e4f0dd0-b4a7-4fc1-b1a5-817b9909d5cf.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jgealshtr8"},{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-7e4f0dd0-b4a7-4fc1-b1a5-817b9909d5cf.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-7e4f0dd0-b4a7-4fc1-b1a5-817b9909d5cf.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-7e4f0dd0-b4a7-4fc1-b1a5-817b9909d5cf.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-8990fdbf-f91a-4b29-a4aa-b64f3b7a2b7e.iqagxy6avs.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-8990fdbf-f91a-4b29-a4aa-b64f3b7a2b7e.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"iqagxy6avs"},{"Name":"integrity","Value":"sha256-WgPrjN7xrQgZzZJdRFWG2jq46SL\u002Bn4sLlU2Ccu0gOaY="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-8990fdbf-f91a-4b29-a4aa-b64f3b7a2b7e.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"30308"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022WgPrjN7xrQgZzZJdRFWG2jq46SL\u002Bn4sLlU2Ccu0gOaY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-8990fdbf-f91a-4b29-a4aa-b64f3b7a2b7e.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-8990fdbf-f91a-4b29-a4aa-b64f3b7a2b7e.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-WgPrjN7xrQgZzZJdRFWG2jq46SL\u002Bn4sLlU2Ccu0gOaY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"30308"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022WgPrjN7xrQgZzZJdRFWG2jq46SL\u002Bn4sLlU2Ccu0gOaY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-a6cb6bec-e62f-4ab6-9afd-4366f04d8ca9.ey8yvxy23l.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-a6cb6bec-e62f-4ab6-9afd-4366f04d8ca9.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ey8yvxy23l"},{"Name":"integrity","Value":"sha256-Klvq22Ilpo7F3SxUiKtp89w/0INRUvHul4P\u002BSBfYz68="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-a6cb6bec-e62f-4ab6-9afd-4366f04d8ca9.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"47673"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Klvq22Ilpo7F3SxUiKtp89w/0INRUvHul4P\u002BSBfYz68=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-a6cb6bec-e62f-4ab6-9afd-4366f04d8ca9.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-a6cb6bec-e62f-4ab6-9afd-4366f04d8ca9.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Klvq22Ilpo7F3SxUiKtp89w/0INRUvHul4P\u002BSBfYz68="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"47673"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Klvq22Ilpo7F3SxUiKtp89w/0INRUvHul4P\u002BSBfYz68=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-cd562dba-7af3-4d7f-8607-2b7479b51dac.ggj5tw4kqk.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-cd562dba-7af3-4d7f-8607-2b7479b51dac.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ggj5tw4kqk"},{"Name":"integrity","Value":"sha256-QBG9yZUk11KjoEtvAqtLEWYKtdrhTgjVBj/Nq0yR988="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-cd562dba-7af3-4d7f-8607-2b7479b51dac.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"143419"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QBG9yZUk11KjoEtvAqtLEWYKtdrhTgjVBj/Nq0yR988=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-cd562dba-7af3-4d7f-8607-2b7479b51dac.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-cd562dba-7af3-4d7f-8607-2b7479b51dac.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QBG9yZUk11KjoEtvAqtLEWYKtdrhTgjVBj/Nq0yR988="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"143419"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QBG9yZUk11KjoEtvAqtLEWYKtdrhTgjVBj/Nq0yR988=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-cfdd980b-8804-4115-920d-9bb49bca47c8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-cfdd980b-8804-4115-920d-9bb49bca47c8.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"6709"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-cfdd980b-8804-4115-920d-9bb49bca47c8.kc55nnet6h.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-cfdd980b-8804-4115-920d-9bb49bca47c8.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kc55nnet6h"},{"Name":"integrity","Value":"sha256-VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-cfdd980b-8804-4115-920d-9bb49bca47c8.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6709"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-e7f10ab0-15e3-4240-b1b9-161a285833d0.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-e7f10ab0-15e3-4240-b1b9-161a285833d0.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"6709"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-e7f10ab0-15e3-4240-b1b9-161a285833d0.kc55nnet6h.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-e7f10ab0-15e3-4240-b1b9-161a285833d0.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kc55nnet6h"},{"Name":"integrity","Value":"sha256-VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-e7f10ab0-15e3-4240-b1b9-161a285833d0.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6709"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022VP2v4TH1WnM7l44N/eDvTFbsrIsm6e\u002BGIDQCjKdYVzY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-eff8d214-c7b8-43c9-9acf-360a5882c71b.ey8yvxy23l.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-eff8d214-c7b8-43c9-9acf-360a5882c71b.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ey8yvxy23l"},{"Name":"integrity","Value":"sha256-Klvq22Ilpo7F3SxUiKtp89w/0INRUvHul4P\u002BSBfYz68="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-eff8d214-c7b8-43c9-9acf-360a5882c71b.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"47673"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Klvq22Ilpo7F3SxUiKtp89w/0INRUvHul4P\u002BSBfYz68=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-eff8d214-c7b8-43c9-9acf-360a5882c71b.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-eff8d214-c7b8-43c9-9acf-360a5882c71b.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Klvq22Ilpo7F3SxUiKtp89w/0INRUvHul4P\u002BSBfYz68="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"47673"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Klvq22Ilpo7F3SxUiKtp89w/0INRUvHul4P\u002BSBfYz68=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-ff5bf009-cb83-4a5e-a1dc-c66568e1266d.jgealshtr8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-ff5bf009-cb83-4a5e-a1dc-c66568e1266d.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jgealshtr8"},{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="},{"Name":"label","Value":"_content/Wego.API/imgs/HotelsImg/Hotel-ff5bf009-cb83-4a5e-a1dc-c66568e1266d.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/HotelsImg/Hotel-ff5bf009-cb83-4a5e-a1dc-c66568e1266d.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\HotelsImg\Hotel-ff5bf009-cb83-4a5e-a1dc-c66568e1266d.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/locationsImg/location-86df989c-6f7c-4175-8f72-1276faffde4f.8bbaf31250.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-86df989c-6f7c-4175-8f72-1276faffde4f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8bbaf31250"},{"Name":"integrity","Value":"sha256-xEKYGNwgn71KpG2EQKIYVfepz5\u002B8i6Cp7UPpA7mhCQM="},{"Name":"label","Value":"_content/Wego.API/imgs/locationsImg/location-86df989c-6f7c-4175-8f72-1276faffde4f.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8405"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022xEKYGNwgn71KpG2EQKIYVfepz5\u002B8i6Cp7UPpA7mhCQM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/locationsImg/location-86df989c-6f7c-4175-8f72-1276faffde4f.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-86df989c-6f7c-4175-8f72-1276faffde4f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-xEKYGNwgn71KpG2EQKIYVfepz5\u002B8i6Cp7UPpA7mhCQM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"8405"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022xEKYGNwgn71KpG2EQKIYVfepz5\u002B8i6Cp7UPpA7mhCQM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/locationsImg/location-a324d732-4329-4154-8990-58497a5b111f.5lwvxvmmya.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-a324d732-4329-4154-8990-58497a5b111f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5lwvxvmmya"},{"Name":"integrity","Value":"sha256-R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U="},{"Name":"label","Value":"_content/Wego.API/imgs/locationsImg/location-a324d732-4329-4154-8990-58497a5b111f.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5462"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/locationsImg/location-a324d732-4329-4154-8990-58497a5b111f.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-a324d732-4329-4154-8990-58497a5b111f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5462"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022R8zyfS2F3RHtEvK9jAARQxx0T/w61d9C7VK5cgiZD7U=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/locationsImg/location-d35a8c30-be96-46f8-9f4d-839cb96a2c3c.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-d35a8c30-be96-46f8-9f4d-839cb96a2c3c.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-mrlUGuS\u002BVUy71\u002BjH89i4IYhgQpNBi1KaGmhKCE8zhyA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"8936"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022mrlUGuS\u002BVUy71\u002BjH89i4IYhgQpNBi1KaGmhKCE8zhyA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/locationsImg/location-d35a8c30-be96-46f8-9f4d-839cb96a2c3c.y9spvb64qf.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\locationsImg\location-d35a8c30-be96-46f8-9f4d-839cb96a2c3c.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"y9spvb64qf"},{"Name":"integrity","Value":"sha256-mrlUGuS\u002BVUy71\u002BjH89i4IYhgQpNBi1KaGmhKCE8zhyA="},{"Name":"label","Value":"_content/Wego.API/imgs/locationsImg/location-d35a8c30-be96-46f8-9f4d-839cb96a2c3c.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8936"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022mrlUGuS\u002BVUy71\u002BjH89i4IYhgQpNBi1KaGmhKCE8zhyA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/profileImg/profile-0a8ccc50-d182-41ad-8cec-89efbad61db1.eke8xnozap.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\profileImg\profile-0a8ccc50-d182-41ad-8cec-89efbad61db1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"eke8xnozap"},{"Name":"integrity","Value":"sha256-vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw\u002BzqFYtRjsk="},{"Name":"label","Value":"_content/Wego.API/imgs/profileImg/profile-0a8ccc50-d182-41ad-8cec-89efbad61db1.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"510026"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw\u002BzqFYtRjsk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/profileImg/profile-0a8ccc50-d182-41ad-8cec-89efbad61db1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\profileImg\profile-0a8ccc50-d182-41ad-8cec-89efbad61db1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw\u002BzqFYtRjsk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"510026"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw\u002BzqFYtRjsk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/profileImg/profile-0c56c698-5da0-4ada-916f-dfd47ae888eb.eke8xnozap.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\profileImg\profile-0c56c698-5da0-4ada-916f-dfd47ae888eb.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"eke8xnozap"},{"Name":"integrity","Value":"sha256-vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw\u002BzqFYtRjsk="},{"Name":"label","Value":"_content/Wego.API/imgs/profileImg/profile-0c56c698-5da0-4ada-916f-dfd47ae888eb.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"510026"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw\u002BzqFYtRjsk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/profileImg/profile-0c56c698-5da0-4ada-916f-dfd47ae888eb.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\profileImg\profile-0c56c698-5da0-4ada-916f-dfd47ae888eb.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw\u002BzqFYtRjsk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"510026"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022vrhCpNn7UhsVqUUmdcWx4bBYyF2tS1jNw\u002BzqFYtRjsk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-0bd16190-8e74-42c3-9a04-fbd811d70902.2r4i9ptgg4.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-0bd16190-8e74-42c3-9a04-fbd811d70902.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2r4i9ptgg4"},{"Name":"integrity","Value":"sha256-cpp58g3ieoKVSll8VeeB/O7Vr\u002BMWhAB7B/oR3IDtkDA="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-0bd16190-8e74-42c3-9a04-fbd811d70902.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7431"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cpp58g3ieoKVSll8VeeB/O7Vr\u002BMWhAB7B/oR3IDtkDA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-0bd16190-8e74-42c3-9a04-fbd811d70902.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-0bd16190-8e74-42c3-9a04-fbd811d70902.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cpp58g3ieoKVSll8VeeB/O7Vr\u002BMWhAB7B/oR3IDtkDA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"7431"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cpp58g3ieoKVSll8VeeB/O7Vr\u002BMWhAB7B/oR3IDtkDA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-137b4880-4f8b-4659-bfad-c21deb814ff2.7eszzm0rj6.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-137b4880-4f8b-4659-bfad-c21deb814ff2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7eszzm0rj6"},{"Name":"integrity","Value":"sha256-gap/XY5FZduHIWRjfV4oPM8S6wojCEmlDdFMbNvq0uk="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-137b4880-4f8b-4659-bfad-c21deb814ff2.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9417"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022gap/XY5FZduHIWRjfV4oPM8S6wojCEmlDdFMbNvq0uk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-137b4880-4f8b-4659-bfad-c21deb814ff2.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-137b4880-4f8b-4659-bfad-c21deb814ff2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-gap/XY5FZduHIWRjfV4oPM8S6wojCEmlDdFMbNvq0uk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"9417"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022gap/XY5FZduHIWRjfV4oPM8S6wojCEmlDdFMbNvq0uk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-14117852-77b1-40ae-acb4-43e7a5f8c175.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-14117852-77b1-40ae-acb4-43e7a5f8c175.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QPFv9pmPztmLXHVHx8Zom/mGOYNM3GfOa/r1VBl4Zak="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5833"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QPFv9pmPztmLXHVHx8Zom/mGOYNM3GfOa/r1VBl4Zak=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-14117852-77b1-40ae-acb4-43e7a5f8c175.wgitwfl0nx.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-14117852-77b1-40ae-acb4-43e7a5f8c175.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wgitwfl0nx"},{"Name":"integrity","Value":"sha256-QPFv9pmPztmLXHVHx8Zom/mGOYNM3GfOa/r1VBl4Zak="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-14117852-77b1-40ae-acb4-43e7a5f8c175.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5833"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QPFv9pmPztmLXHVHx8Zom/mGOYNM3GfOa/r1VBl4Zak=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-2abe0690-44d0-4a64-b5ec-2bc9acc5ff5b.4k4rn0swog.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-2abe0690-44d0-4a64-b5ec-2bc9acc5ff5b.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4k4rn0swog"},{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-2abe0690-44d0-4a64-b5ec-2bc9acc5ff5b.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-2abe0690-44d0-4a64-b5ec-2bc9acc5ff5b.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-2abe0690-44d0-4a64-b5ec-2bc9acc5ff5b.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-2b9f693c-78b5-4dc0-97b8-3df42852b89f.9gngh4fkhl.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-2b9f693c-78b5-4dc0-97b8-3df42852b89f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9gngh4fkhl"},{"Name":"integrity","Value":"sha256-uQueaSk1olgrm75MH4NuFcoJVXTdWowEJEiuylMqkkg="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-2b9f693c-78b5-4dc0-97b8-3df42852b89f.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9114"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022uQueaSk1olgrm75MH4NuFcoJVXTdWowEJEiuylMqkkg=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-2b9f693c-78b5-4dc0-97b8-3df42852b89f.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-2b9f693c-78b5-4dc0-97b8-3df42852b89f.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-uQueaSk1olgrm75MH4NuFcoJVXTdWowEJEiuylMqkkg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"9114"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022uQueaSk1olgrm75MH4NuFcoJVXTdWowEJEiuylMqkkg=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-39572b1e-f5b3-4463-8d8a-448caa7b1a83.4k4rn0swog.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-39572b1e-f5b3-4463-8d8a-448caa7b1a83.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4k4rn0swog"},{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-39572b1e-f5b3-4463-8d8a-448caa7b1a83.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-39572b1e-f5b3-4463-8d8a-448caa7b1a83.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-39572b1e-f5b3-4463-8d8a-448caa7b1a83.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-417f350d-cc3f-45a1-a01a-19aa2724a565.2r4i9ptgg4.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-417f350d-cc3f-45a1-a01a-19aa2724a565.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2r4i9ptgg4"},{"Name":"integrity","Value":"sha256-cpp58g3ieoKVSll8VeeB/O7Vr\u002BMWhAB7B/oR3IDtkDA="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-417f350d-cc3f-45a1-a01a-19aa2724a565.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7431"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cpp58g3ieoKVSll8VeeB/O7Vr\u002BMWhAB7B/oR3IDtkDA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-417f350d-cc3f-45a1-a01a-19aa2724a565.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-417f350d-cc3f-45a1-a01a-19aa2724a565.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cpp58g3ieoKVSll8VeeB/O7Vr\u002BMWhAB7B/oR3IDtkDA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"7431"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cpp58g3ieoKVSll8VeeB/O7Vr\u002BMWhAB7B/oR3IDtkDA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-56f9d80c-c781-474b-a305-8a0f5b8cc6cc.4k4rn0swog.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-56f9d80c-c781-474b-a305-8a0f5b8cc6cc.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4k4rn0swog"},{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-56f9d80c-c781-474b-a305-8a0f5b8cc6cc.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-56f9d80c-c781-474b-a305-8a0f5b8cc6cc.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-56f9d80c-c781-474b-a305-8a0f5b8cc6cc.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-6181abe2-405b-4ca3-b0fa-e61a5e707fd0.iqagxy6avs.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-6181abe2-405b-4ca3-b0fa-e61a5e707fd0.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"iqagxy6avs"},{"Name":"integrity","Value":"sha256-WgPrjN7xrQgZzZJdRFWG2jq46SL\u002Bn4sLlU2Ccu0gOaY="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-6181abe2-405b-4ca3-b0fa-e61a5e707fd0.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"30308"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022WgPrjN7xrQgZzZJdRFWG2jq46SL\u002Bn4sLlU2Ccu0gOaY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-6181abe2-405b-4ca3-b0fa-e61a5e707fd0.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-6181abe2-405b-4ca3-b0fa-e61a5e707fd0.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-WgPrjN7xrQgZzZJdRFWG2jq46SL\u002Bn4sLlU2Ccu0gOaY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"30308"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022WgPrjN7xrQgZzZJdRFWG2jq46SL\u002Bn4sLlU2Ccu0gOaY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-6f549b88-472e-4e84-b154-b28c5f190fc0.4k4rn0swog.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-6f549b88-472e-4e84-b154-b28c5f190fc0.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4k4rn0swog"},{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-6f549b88-472e-4e84-b154-b28c5f190fc0.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-6f549b88-472e-4e84-b154-b28c5f190fc0.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-6f549b88-472e-4e84-b154-b28c5f190fc0.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-94d5b7e5-e282-4cb7-8138-6d4d98b832d5.4k4rn0swog.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-94d5b7e5-e282-4cb7-8138-6d4d98b832d5.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4k4rn0swog"},{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-94d5b7e5-e282-4cb7-8138-6d4d98b832d5.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-94d5b7e5-e282-4cb7-8138-6d4d98b832d5.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-94d5b7e5-e282-4cb7-8138-6d4d98b832d5.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-9ff507f4-d820-4fab-8ae3-885a5c242783.4k4rn0swog.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-9ff507f4-d820-4fab-8ae3-885a5c242783.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4k4rn0swog"},{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-9ff507f4-d820-4fab-8ae3-885a5c242783.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-9ff507f4-d820-4fab-8ae3-885a5c242783.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-9ff507f4-d820-4fab-8ae3-885a5c242783.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-a082463a-1571-412a-87b2-7cf76a55fbbb.8ejdzb6f0e.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-a082463a-1571-412a-87b2-7cf76a55fbbb.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8ejdzb6f0e"},{"Name":"integrity","Value":"sha256-kC0ICvWN6I\u002B0XPiaew03iBNRq7Q4l6MArIyNJFRCDUw="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-a082463a-1571-412a-87b2-7cf76a55fbbb.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6426"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022kC0ICvWN6I\u002B0XPiaew03iBNRq7Q4l6MArIyNJFRCDUw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-a082463a-1571-412a-87b2-7cf76a55fbbb.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-a082463a-1571-412a-87b2-7cf76a55fbbb.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-kC0ICvWN6I\u002B0XPiaew03iBNRq7Q4l6MArIyNJFRCDUw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"6426"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022kC0ICvWN6I\u002B0XPiaew03iBNRq7Q4l6MArIyNJFRCDUw=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-afc2290d-41df-4c15-9cd3-d74bcab0eaa6.4k4rn0swog.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-afc2290d-41df-4c15-9cd3-d74bcab0eaa6.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4k4rn0swog"},{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-afc2290d-41df-4c15-9cd3-d74bcab0eaa6.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-afc2290d-41df-4c15-9cd3-d74bcab0eaa6.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-afc2290d-41df-4c15-9cd3-d74bcab0eaa6.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-c092bfea-e283-4829-85a4-5d05a1c009e8.4k4rn0swog.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-c092bfea-e283-4829-85a4-5d05a1c009e8.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"4k4rn0swog"},{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-c092bfea-e283-4829-85a4-5d05a1c009e8.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-c092bfea-e283-4829-85a4-5d05a1c009e8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-c092bfea-e283-4829-85a4-5d05a1c009e8.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10034"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221IaWGebT8Zgs1w8PIY8mpen0WEfmoej9v7GIjQDyTeo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-c3f25c67-96d2-4da1-89b7-8abdd31b728d.jgealshtr8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-c3f25c67-96d2-4da1-89b7-8abdd31b728d.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jgealshtr8"},{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-c3f25c67-96d2-4da1-89b7-8abdd31b728d.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-c3f25c67-96d2-4da1-89b7-8abdd31b728d.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-c3f25c67-96d2-4da1-89b7-8abdd31b728d.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"44637"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s9wTWz8z93EsV7NauUALUXBoX04gQ8gBkg1fc8CZRo4=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-df5db80c-4578-46cd-ad9c-682cb55939f4.2r4i9ptgg4.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-df5db80c-4578-46cd-ad9c-682cb55939f4.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2r4i9ptgg4"},{"Name":"integrity","Value":"sha256-cpp58g3ieoKVSll8VeeB/O7Vr\u002BMWhAB7B/oR3IDtkDA="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-df5db80c-4578-46cd-ad9c-682cb55939f4.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7431"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cpp58g3ieoKVSll8VeeB/O7Vr\u002BMWhAB7B/oR3IDtkDA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-df5db80c-4578-46cd-ad9c-682cb55939f4.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-df5db80c-4578-46cd-ad9c-682cb55939f4.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cpp58g3ieoKVSll8VeeB/O7Vr\u002BMWhAB7B/oR3IDtkDA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"7431"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cpp58g3ieoKVSll8VeeB/O7Vr\u002BMWhAB7B/oR3IDtkDA=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-e6fbbb4e-38f8-43ef-9f11-d00dd1bac056.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-e6fbbb4e-38f8-43ef-9f11-d00dd1bac056.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QPFv9pmPztmLXHVHx8Zom/mGOYNM3GfOa/r1VBl4Zak="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5833"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QPFv9pmPztmLXHVHx8Zom/mGOYNM3GfOa/r1VBl4Zak=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Wego.API/imgs/roomsImg/Room-e6fbbb4e-38f8-43ef-9f11-d00dd1bac056.wgitwfl0nx.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\imgs\roomsImg\Room-e6fbbb4e-38f8-43ef-9f11-d00dd1bac056.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"wgitwfl0nx"},{"Name":"integrity","Value":"sha256-QPFv9pmPztmLXHVHx8Zom/mGOYNM3GfOa/r1VBl4Zak="},{"Name":"label","Value":"_content/Wego.API/imgs/roomsImg/Room-e6fbbb4e-38f8-43ef-9f11-d00dd1bac056.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5833"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QPFv9pmPztmLXHVHx8Zom/mGOYNM3GfOa/r1VBl4Zak=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Apr 2025 13:29:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

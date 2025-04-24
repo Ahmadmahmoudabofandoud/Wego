@@ -14,6 +14,9 @@ using Wego.Core.Models.Enums;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
 using Wego.Repository.Data;
+using Wego.API.Models.DTOS.Hotels.Dtos;
+using Wego.API.Models.DTOS.Rooms.Dtos;
+using Wego.Core.Models.Hotels;
 
 
 namespace API.Controllers
@@ -67,7 +70,8 @@ namespace API.Controllers
                 booking.Booking = new HotelBooking
                 {
                     UserId = userId,
-                    TotalPrice = duration * roomOption.Price
+                    TotalPrice = duration * roomOption.Price,
+                    Status = BookingStatus.Pending,
                 };
 
                 _unitOfWork.Repository<RoomBooking>().Add(booking);
@@ -85,7 +89,74 @@ namespace API.Controllers
             }
         }
 
+        [HttpGet("getRoomBookingById")]
+        [Authorize]
+        [SwaggerOperation(Summary = "Get a specific room booking by ID",
+            Description = "Retrieves detailed information about a room booking. Requires authentication.")]
+        public async Task<ActionResult<RoomBookingDto>> GetRoomBookingById([FromQuery] int bookid)
+        {
+            try
+            {
+                var userId = await GetAuthenticatedUserId();
 
+                var spec = new RoomBookingWithDetailsSpecification(bookid); 
+
+                var booking = await _unitOfWork.Repository<RoomBooking>().GetEntityWithSpecAsync(spec);
+
+                if (booking == null)
+                    return NotFound(new ApiResponse(404, "Booking not found"));
+
+                if (booking.Booking.UserId != userId)
+                    return Unauthorized(new ApiResponse(403, "You are not authorized to view this booking"));
+
+                var bookingDto = _mapper.Map<RoomBookingDto>(booking);
+
+                return Ok(bookingDto);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(new ApiResponse(401, ex.Message));
+            }
+        }
+
+
+
+        [HttpGet("check-hotel-availability")]
+        [SwaggerOperation(
+    Summary = "Get available rooms in a hotel",
+    Description = "Returns paged & sorted list of rooms available for the given date range and guest count.")]
+        public async Task<ActionResult<IReadOnlyList<RoomDto>>> CheckHotelAvailability(
+                [FromQuery] HotelAvailabilityQueryDto q)
+        {
+            // basic validation
+            if (q.Checkout <= q.Checkin)
+                return BadRequest(new ApiResponse(400, "Invalid check-in/check-out dates"));
+
+            // map to spec‐params
+            var specParams = new RoomAvailabilitySpecParams
+            {
+                HotelId = q.HotelId,
+                Checkin = q.Checkin,
+                Checkout = q.Checkout,
+                Guests = q.Guests,
+                Children = q.Children,
+                Sort = q.Sort,
+                PageIndex = q.PageIndex,
+                PageSize = q.PageSize
+            };
+
+            // build & run spec
+            var spec = new AvailableRoomsSpecification(specParams);
+            var rooms = await _unitOfWork.Repository<Room>()
+                                 .GetAllWithSpecAsync(spec);
+
+            if (!rooms.Any())
+                return NotFound(new ApiResponse(404, "No available rooms match your criteria"));
+
+            // map to DTO and return
+            var data = _mapper.Map<IReadOnlyList<RoomDto>>(rooms);
+            return Ok(data);
+        }
 
 
         // Get Room Reservations by RoomId and Date Range (Checkin & Checkout)
@@ -116,7 +187,7 @@ namespace API.Controllers
             try
             {
                 var userId = await GetAuthenticatedUserId();
-                var spec = new RoomBookingWithDetailsSpecification(new RoomBookingSpecParams { UserId = userId, Status = BookingStatus.Confirmed });
+                var spec = new RoomBookingWithDetailsSpecification(new RoomBookingSpecParams { UserId = userId});
                 var bookings = await _unitOfWork.Repository<RoomBooking>().GetAllWithSpecAsync(spec);
                 var data = _mapper.Map<IReadOnlyList<RoomBooking>, IReadOnlyList<RoomBookingDto>>(bookings);
 

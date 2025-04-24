@@ -12,6 +12,7 @@ using Wego.API.Helpers;
 using System.Security.Claims;
 using Newtonsoft.Json;
 using Wego.Core.Services.Contract;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Wego.API.Controllers
 {
@@ -25,23 +26,60 @@ namespace Wego.API.Controllers
             _userManager = userManager;
             _mapper = mapper;
         }
-
-        [HttpPost("SaveGuestDetails")]
-        public async Task<ActionResult<ProfileDto>> SaveGuestDetails([FromBody] ProfilePostDto dto)
+        [Authorize]
+        [HttpPost("save-profile")]
+        public async Task<ActionResult<ProfileBookingDto>> SaveProfile([FromBody] ProfilePostDto dto)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (string.IsNullOrEmpty(userId))
                 return Unauthorized(new ApiResponse(401, "User is not authenticated"));
 
-            var user = await _userManager.FindByIdAsync(userId);
-            if (user == null)
+            var currentUser = await _userManager.FindByIdAsync(userId);
+            if (currentUser == null)
                 return NotFound(new ApiResponse(404, "User not found"));
 
-            _mapper.Map(dto, user);
+            if (!dto.IsGuest)
+            {
+                currentUser.DisplayName = dto.DisplayName;
+                currentUser.PhoneNumber = dto.PhoneNumber;
+                currentUser.PassportNumber = dto.PassportNumber;
+                currentUser.Nationality = dto.Nationality;
+                currentUser.Gender = dto.Gender;
+                currentUser.NationalId = dto.NationalId;
+                currentUser.TripPurpose = dto.TripPurpose;
+                currentUser.SpecialNeeds = dto.SpecialNeeds;
 
-            var result = await _userManager.UpdateAsync(user);
-            return !result.Succeeded ? (ActionResult<ProfileDto>)BadRequest(new ApiResponse(400, "Failed to save guest details")) : await GetProfile();
+                var updateResult = await _userManager.UpdateAsync(currentUser);
+                if (!updateResult.Succeeded)
+                    return BadRequest(new ApiResponse(400, "Failed to update user profile"));
+
+                var updatedDto = _mapper.Map<ProfileBookingDto>(currentUser);
+                return Ok(updatedDto);
+            }
+
+            var guest = new AppUser
+            {
+                DisplayName = dto.DisplayName,
+                UserName = Guid.NewGuid().ToString().Substring(0, 10),
+                Email = dto.Email ?? $"{Guid.NewGuid()}@guest.com",
+                PhoneNumber = dto.PhoneNumber,
+                PassportNumber = dto.PassportNumber,
+                Nationality = dto.Nationality,
+                Gender = dto.Gender,
+                NationalId = dto.NationalId,
+                TripPurpose = dto.TripPurpose,
+                SpecialNeeds = dto.SpecialNeeds,
+                IsGuest = true
+            };
+
+            var result = await _userManager.CreateAsync(guest);
+            if (!result.Succeeded)
+                return BadRequest(new ApiResponse(400, "Failed to add guest profile"));
+
+            var guestDto = _mapper.Map<ProfileBookingDto>(guest);
+            return Ok(guestDto);
         }
+
 
 
         [HttpGet("GetuserProfile")]
