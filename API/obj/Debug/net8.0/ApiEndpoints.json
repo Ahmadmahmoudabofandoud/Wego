@@ -614,11 +614,17 @@
   {
     "ContainingType": "Wego.API.Controllers.FavoritesController",
     "Method": "GetFavorites",
-    "RelativePath": "api/Favorites/getFavorites",
+    "RelativePath": "api/Favorites/getFavorites/{type}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
@@ -729,7 +735,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Wego.API.Models.DTOS.Locations.Dtos.LocationWithHotelsResponseDto, Wego.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Wego.API.Helpers.Pagination\u00601[[Wego.API.Models.DTOS.Locations.Dtos.LocationWithHotelsResponseDto, Wego.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -1491,11 +1497,6 @@
       },
       {
         "Name": "PhoneNumber",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "PassportNumber",
         "Type": "System.String",
         "IsRequired": false
       },

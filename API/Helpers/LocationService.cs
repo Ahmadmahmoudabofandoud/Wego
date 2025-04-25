@@ -33,23 +33,19 @@ public class LocationService : ILocationService
             PageSize = specParams.PageSize
         };
         var hotelSpec = new HotelWithDetailsSpecification(hotelSpecParams);
-        var airportSpec = new AirportWithLocationSpecification(specParams);
+        //var airportSpec = new AirportWithLocationSpecification(specParams);
 
-        // جلب الفنادق والمطارات
         var hotels = await _unitOfWork.Repository<Hotel>()
             .GetAllWithSpecAsync(hotelSpec);
 
-        var airports = await _unitOfWork.Repository<Airport>()
-            .GetAllWithSpecAsync(airportSpec);
+        //var airports = await _unitOfWork.Repository<Airport>()
+        //    .GetAllWithSpecAsync(airportSpec);
 
-        // تحديد المعايير لجلب المواقع مع الفنادق والمطارات
         var locationSpec = new LocationWithAirportsAndHotelsSpecification(specParams);
 
-        // جلب المواقع التي تحتوي على الفنادق والمطارات
         var locations = await _unitOfWork.Repository<Location>()
             .GetAllWithSpecAsync(locationSpec);
 
-        // تصفية المواقع حسب المسافة
         var nearbyLocations = locations
             .Where(loc =>
                 loc.Latitude.HasValue && loc.Longitude.HasValue &&
@@ -63,10 +59,8 @@ public class LocationService : ILocationService
             .ToList();
 
 
-        // تحويل المواقع إلى DTOs باستخدام AutoMapper
         var locationDtos = _mapper.Map<List<LocationWithHotelsResponseDto>>(nearbyLocations);
 
-        // إعادة المواقع القريبة
         return locationDtos;
     }
 
@@ -76,7 +70,6 @@ public class LocationService : ILocationService
             .Where(a => a.Latitude != null && a.Longitude != null)
             .ToListAsync();
 
-        // تصفية المعالم السياحية حسب المسافة
         var nearbyAttractions = attractions
             .Where(attraction =>
                 CalculateDistance(

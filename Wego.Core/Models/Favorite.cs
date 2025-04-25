@@ -14,12 +14,15 @@ namespace Wego.Core.Models
         public string? UserId { get; set; } 
         public int? HotelId { get; set; } 
         public int? AirlineId { get; set; } 
-        public int? LocationId { get; set; } 
+        public int? LocationId { get; set; }
+        public int? AttractionId { get; set; }
 
         public virtual AppUser User { get; set; }
         public virtual Hotel? Hotel { get; set; }
         public virtual Airline? Airline { get; set; }
         public virtual Location? Location { get; set; }
+        public virtual Attraction? Attraction { get; set; }
+
     }
 
 }

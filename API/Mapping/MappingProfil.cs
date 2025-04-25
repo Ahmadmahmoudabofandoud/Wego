@@ -70,7 +70,7 @@ public class MappingProfile : Profile
 
         // خريطة بين LocationWithHotelsResponseDto و Location
         CreateMap<Location, LocationWithHotelsResponseDto>()
-            .ForMember(dest => dest.Airports, opt => opt.MapFrom(src => src.Airports))
+            //.ForMember(dest => dest.Airports, opt => opt.MapFrom(src => src.Airports))
             .ForMember(dest => dest.Hotels, opt => opt.MapFrom(src => src.Hotels));
 
         #endregion
@@ -132,13 +132,11 @@ public class MappingProfile : Profile
         CreateMap<AppUser, ProfileDto>()
             .ForMember(dest => dest.ProfileImageUrl, opt => opt.Ignore())
             .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
-            .ForMember(dest => dest.IsGuest, opt => opt.MapFrom(src => src.IsGuest)) 
             .ForMember(dest => dest.Nationality, opt => opt.MapFrom(src => src.Nationality));
 
         CreateMap<ProfileUpdateDto, AppUser>()
             .ForMember(dest => dest.ProfileImageUrl, opt => opt.Ignore())
             .ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => src.PhoneNumber))
-            .ForMember(dest => dest.PassportNumber, opt => opt.MapFrom(src => src.PassportNumber))
             .ForMember(dest => dest.DateOfBirth, opt => opt.MapFrom(src => src.DateOfBirth))
             .ForMember(dest => dest.Nationality, opt => opt.MapFrom(src => src.Nationality))
             .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
@@ -158,7 +156,7 @@ public class MappingProfile : Profile
                         .ForMember(dest => dest.IsGuest, opt => opt.MapFrom(src => src.IsGuest));
 
         CreateMap<AppUser, ProfileBookingDto>()
-            .ForMember(dest => dest.Nationality, opt => opt.MapFrom(src => src.Nationality.ToString()))
+            .ForMember(dest => dest.Nationality, opt => opt.MapFrom(src => src.Nationality))
             .ForMember(dest => dest.IsGuest, opt => opt.MapFrom(src => src.IsGuest ? "Yes" : "No"))
             .ForMember(dest => dest.TripPurpose, opt => opt.MapFrom(src => src.TripPurpose.HasValue ? src.TripPurpose.ToString() : null));
 
@@ -218,7 +216,7 @@ public class MappingProfile : Profile
             .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
             .ForMember(dest => dest.HotelId, opt => opt.MapFrom(src => src.HotelId))
             .ForMember(dest => dest.LocationId, opt => opt.MapFrom(src => src.LocationId))
-            //.ForMember(dest => dest.AirlineId, opt => opt.MapFrom(src => src.AirlineId))
+            .ForMember(dest => dest.AttractionId, opt => opt.MapFrom(src => src.AttractionId))
             .ReverseMap();
 
         #endregion

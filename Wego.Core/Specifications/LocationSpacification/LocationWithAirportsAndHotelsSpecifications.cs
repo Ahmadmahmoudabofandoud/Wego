@@ -57,7 +57,7 @@ namespace Wego.Core.Specifications.LocationSpacification
         private void AddIncludes()
         {
             Includes.Add(P => P.Hotels);
-            Includes.Add(P => P.Airports);
+            //Includes.Add(P => P.Airports);
      
         }
     }

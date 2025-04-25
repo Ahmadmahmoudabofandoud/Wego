@@ -42,7 +42,6 @@ namespace Wego.API.Controllers
 
             if (!await EntityExists(type, id)) return NotFound(new ApiResponse(404));
 
-            // Check if already favorited
             var existingFavorites = await _unitOfWork.Repository<Favorite>().GetAsync(f =>
                 f.UserId == currentUser.Id &&
                 ((type.ToLower() == "location" && f.LocationId == id) ||
@@ -60,31 +59,32 @@ namespace Wego.API.Controllers
             };
 
             await _unitOfWork.Repository<Favorite>().Add(favorite);
-            await _unitOfWork.CompleteAsync();
 
             if (type.ToLower() == "location")
             {
-                var spec = new LocationWithAirportsAndHotelsSpecification(id); 
-                var location = await _unitOfWork.Repository<Location>().GetEntityWithSpecAsync(spec);
+                var location = await _unitOfWork.Repository<Location>().GetByIdAsync(id);
                 var locationDto = _mapper.Map<LocationsDto>(location);
-                locationDto.IsFavorite = true;
-                return Ok(locationDto);
+                if (location != null)
+                {
+                    locationDto.IsFavorite = true;
+                    _unitOfWork.Repository<Location>().Update(location);
+                }
             }
-
-            if (type.ToLower() == "hotel")
+            else if (type.ToLower() == "hotel")
             {
-                var spec = new HotelWithDetailsSpecification(id); // Ensure this spec includes related data
-                var hotel = await _unitOfWork.Repository<Hotel>().GetEntityWithSpecAsync(spec);
+                var hotel = await _unitOfWork.Repository<Hotel>().GetByIdAsync(id);
                 var hotelDto = _mapper.Map<HotelDto>(hotel);
-                hotelDto.IsFavorite = true;
-                return Ok(hotelDto);
+                if (hotel != null)
+                {
+                    hotelDto.IsFavorite = true;
+                    _unitOfWork.Repository<Hotel>().Update(hotel);
+                }
             }
 
-            return BadRequest(new ApiResponse(400, "Invalid type."));
+            await _unitOfWork.CompleteAsync();
+
+            return Ok(new { message = $"{type} added to favorites successfully." });
         }
-
-
-
 
         [HttpDelete("{type}/{id}")]
         public async Task<ActionResult> RemoveFromFavorites(string type, int id)
@@ -100,33 +100,36 @@ namespace Wego.API.Controllers
             if (favorite == null) return NotFound(new ApiResponse(404));
 
             _unitOfWork.Repository<Favorite>().Delete(favorite);
-            await _unitOfWork.CompleteAsync();
 
-            // Get and return the unfavorited entity as response
             if (type.ToLower() == "location")
             {
-                var spec = new LocationWithAirportsAndHotelsSpecification(id);
-                var location = await _unitOfWork.Repository<Location>().GetEntityWithSpecAsync(spec);
+                var location = await _unitOfWork.Repository<Location>().GetByIdAsync(id);
                 var locationDto = _mapper.Map<LocationsDto>(location);
-                locationDto.IsFavorite = false;
-                return Ok(locationDto);
+                if (location != null)
+                {
+                    locationDto.IsFavorite = false;
+                    _unitOfWork.Repository<Location>().Update(location);
+                }
             }
-
-            if (type.ToLower() == "hotel")
+            else if (type.ToLower() == "hotel")
             {
-                var spec = new HotelWithDetailsSpecification(id);
-                var hotel = await _unitOfWork.Repository<Hotel>().GetEntityWithSpecAsync(spec);
+                var hotel = await _unitOfWork.Repository<Hotel>().GetByIdAsync(id);
                 var hotelDto = _mapper.Map<HotelDto>(hotel);
-                hotelDto.IsFavorite = false;
-                return Ok(hotelDto);
+                if (hotel != null)
+                {
+                    hotelDto.IsFavorite = false;
+                    _unitOfWork.Repository<Hotel>().Update(hotel);
+                }
             }
 
-            return BadRequest(new ApiResponse(400, "Invalid type."));
+            await _unitOfWork.CompleteAsync();
+
+            return Ok(new { message = $"{type} removed from favorites successfully." });
         }
 
 
-        [HttpGet("getFavorites")]
-        public async Task<ActionResult<List<object>>> GetFavorites()
+        [HttpGet("getFavorites/{type}")]
+        public async Task<ActionResult<List<object>>> GetFavorites(string type)
         {
             var currentUser = await _userManager.GetUserAsync(User);
             if (currentUser == null) return Unauthorized(new ApiResponse(401));
@@ -134,28 +137,44 @@ namespace Wego.API.Controllers
             var favorites = await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id);
             var results = new List<object>();
 
-            foreach (var fav in favorites)
+            switch (type?.ToLower())
             {
-                if (fav.LocationId.HasValue)
-                {
-                    var spec = new LocationWithAirportsAndHotelsSpecification(fav.LocationId.Value);
-                    var location = await _unitOfWork.Repository<Location>().GetEntityWithSpecAsync(spec);
-                    var dto = _mapper.Map<LocationsDto>(location);
-                    dto.IsFavorite = true;
-                    results.Add(dto);
-                }
-                else if (fav.HotelId.HasValue)
-                {
-                    var spec = new HotelWithDetailsSpecification(fav.HotelId.Value);
-                    var hotel = await _unitOfWork.Repository<Hotel>().GetEntityWithSpecAsync(spec);
-                    var dto = _mapper.Map<HotelDto>(hotel);
-                    dto.IsFavorite = true;
-                    results.Add(dto);
-                }
+                case "location":
+                    foreach (var fav in favorites.Where(f => f.LocationId.HasValue))
+                    {
+                        var spec = new LocationWithAirportsAndHotelsSpecification(fav.LocationId.Value);
+                        var location = await _unitOfWork.Repository<Location>().GetEntityWithSpecAsync(spec);
+                        if (location != null)
+                        {
+                            var dto = _mapper.Map<LocationsDto>(location);
+                            dto.IsFavorite = true;
+                            results.Add(dto);
+                        }
+                    }
+                    break;
+
+                case "hotel":
+                    foreach (var fav in favorites.Where(f => f.HotelId.HasValue))
+                    {
+                        var spec = new HotelWithDetailsSpecification(fav.HotelId.Value);
+                        var hotel = await _unitOfWork.Repository<Hotel>().GetEntityWithSpecAsync(spec);
+                        if (hotel != null)
+                        {
+                            var dto = _mapper.Map<HotelDto>(hotel);
+                            dto.IsFavorite = true;
+                            results.Add(dto);
+                        }
+                    }
+                    break;
+
+                
+                default:
+                    return BadRequest(new ApiResponse(400, "Invalid type specified."));
             }
 
             return Ok(results);
         }
+
 
 
         private async Task<bool> EntityExists(string type, int id)

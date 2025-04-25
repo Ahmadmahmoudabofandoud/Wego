@@ -101,11 +101,23 @@ namespace Wego.API.Controllers
             string projectName = "Stay Safe"; 
             string subject = $"{projectName} - Password Reset Request";
             string body = $@"
-                <p>Dear {user.UserName},</p>
+            <div style='font-family:Arial,sans-serif; max-width:600px; margin:auto; padding:20px; border:1px solid #eee; border-radius:10px;'>
+                <h2 style='color:#4CAF50;'>{projectName} - Password Reset</h2>
+    
+                <p>Dear <strong>{user.DisplayName}</strong>,</p>
+
                 <p>We received a request to reset your password for your {projectName} account.</p>
-                <p>Your password reset code is: <b>{code}</b></p>
+
+                <p>Your password reset code is:</p>
+                <div style='font-size:24px; font-weight:bold; color:#333; background:#f5f5f5; padding:10px 15px; width:max-content; border-radius:5px;'>
+                    {code}
+                </div>
+
                 <p>If you didn't request this, please ignore this email.</p>
-                <p><br>{projectName} App</p>";
+
+                <br />
+                <p style='color:gray; font-size:12px;'>{projectName} App Team</p>
+            </div>";
 
             await _emailService.SendEmailAsync(user.Email, subject, body, isBodyHTML: true);
 

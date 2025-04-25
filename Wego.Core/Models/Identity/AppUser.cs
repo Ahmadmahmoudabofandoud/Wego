@@ -10,7 +10,7 @@ namespace Wego.Core.Models.Identity
         public string DisplayName { get; set; }
         public string? PassportNumber { get; set; }
         public DateTime? DateOfBirth { get; set; }
-        public Nationality? Nationality { get; set; }
+        public string? Nationality { get; set; }
         public Gender? Gender { get; set; }
         public string? NationalId { get; set; }
         public TripPurpose? TripPurpose { get; set; }

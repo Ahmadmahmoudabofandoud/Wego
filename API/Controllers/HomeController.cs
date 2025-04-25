@@ -14,7 +14,7 @@ using Swashbuckle.AspNetCore.Annotations;
 using Wego.API.Models.DTOS;
 using Microsoft.AspNetCore.Identity;
 using Wego.Core.Models.Identity;
-using Wego.Core.Specifications.AirportSpecification;
+using Wego.API.Helpers;
 
 
 namespace Wego.API.Controllers
@@ -45,7 +45,7 @@ namespace Wego.API.Controllers
 
             var currentUser = await _userManager.GetUserAsync(User);
             var favoriteHotelIds = currentUser != null
-                ? (await _unitOfWork.Repository<Favorite>().GetUserIdAsync(currentUser.Id))
+                ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.HotelId != null))
                     .Select(f => f.HotelId)
                     .ToList()
                 : new List<int?>();
@@ -62,16 +62,46 @@ namespace Wego.API.Controllers
         }
 
         [HttpGet("nearby")]
-        public async Task<ActionResult<List<LocationWithHotelsResponseDto>>> GetNearbyLocations([FromQuery] AppSpecParamsNearby specParams)
+        public async Task<ActionResult<Pagination<LocationWithHotelsResponseDto>>> GetNearbyLocations([FromQuery] AppSpecParamsNearby specParams)
         {
             var nearbyLocations = await _locationService.GetNearbyLocationsAsync(specParams);
+            var totalCount = nearbyLocations.Count;
 
             if (nearbyLocations == null || !nearbyLocations.Any())
             {
                 return NotFound("No locations found within the specified distance.");
             }
 
+            var currentUser = await _userManager.GetUserAsync(User);
+            var favoriteLocationIds = currentUser != null
+                ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.LocationId != null))
+                    .Where(f => f.LocationId != null)
+                    .Select(f => f.LocationId)
+                    .ToList()
+                : new List<int?>();
+
+            var favoriteHotelIds = currentUser != null
+                ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.HotelId != null))
+                    .Where(f => f.HotelId != null)
+                    .Select(f => f.HotelId)
+                    .ToList()
+                : new List<int?>();
+
+            foreach (var locationDto in nearbyLocations)
+            {
+
+                locationDto.IsFavorite = favoriteLocationIds.Contains(locationDto.Id);
+
+                locationDto.Hotels = locationDto.Hotels.Select(hotel =>
+                {
+                    hotel.IsFavorite = favoriteHotelIds.Contains(hotel.Id);
+                    hotel.Images = hotel.Images.Select(image => string.IsNullOrEmpty(image) ? null : $"{Request.Scheme}://{Request.Host.Value}{image}").ToList();
+                    return hotel;
+                }).ToList();
+            }
+
             return Ok(nearbyLocations);
+            //return Ok(new Pagination<LocationWithHotelsResponseDto>(specParams.PageIndex, specParams.PageSize, totalCount, nearbyLocations));
         }
 
 
@@ -98,13 +128,10 @@ namespace Wego.API.Controllers
             };
 
             var hotelSpec = new HotelWithDetailsSpecification(hotelSpecParams);
-            var airportSpec = new AirportWithLocationSpecification(specParams);
 
             var hotels = await _unitOfWork.Repository<Hotel>()
                 .GetAllWithSpecAsync(hotelSpec);
 
-            var airports = await _unitOfWork.Repository<Airport>()
-                .GetAllWithSpecAsync(airportSpec);
 
             var locationSpec = new LocationWithAirportsAndHotelsSpecification(specParams);
 
@@ -118,11 +145,38 @@ namespace Wego.API.Controllers
 
             var locationDtos = _mapper.Map<List<LocationWithHotelsResponseDto>>(locations);
 
+            // Get current user and their favorites
+            var currentUser = await _userManager.GetUserAsync(User);
+
+            var favoriteLocationIds = currentUser != null
+                ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.LocationId != null))
+                    .Where(f => f.LocationId != null)
+                    .Select(f => f.LocationId)
+                    .ToList()
+                : new List<int?>();
+
+            var favoriteHotelIds = currentUser != null
+                ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.HotelId != null))
+                    .Where(f => f.HotelId != null)
+                    .Select(f => f.HotelId)
+                    .ToList()
+                : new List<int?>();
+
+            foreach (var locationDto in locationDtos)
+            {
+                locationDto.IsFavorite = favoriteLocationIds.Contains(locationDto.Id);
+
+                locationDto.Hotels = locationDto.Hotels.Select(hotel =>
+                {
+                    hotel.IsFavorite = favoriteHotelIds.Contains(hotel.Id);
+                    hotel.Images = hotel.Images.Select(image => string.IsNullOrEmpty(image) ? null : $"{Request.Scheme}://{Request.Host.Value}{image}").ToList();
+                    return hotel;
+                }).ToList();
+            }
+
             return Ok(locationDtos);
         }
 
-
-       
 
         [HttpGet("LocationWithHotelsResponse_ByLocationId")]
         [SwaggerOperation(Summary = "Get locations by ID", Description = "Retrieve hotels and airports within a specific location based on its ID.")]
@@ -141,17 +195,9 @@ namespace Wego.API.Controllers
             };
 
             var hotelSpec = new HotelWithDetailsSpecification(hotelSpecParams);
-            var airportSpec = new AirportWithLocationSpecification(new AppSpecParamsNearby
-            {
-                PageIndex = 1,
-                PageSize = 10
-            });
 
             var hotels = await _unitOfWork.Repository<Hotel>()
                 .GetAllWithSpecAsync(hotelSpec);
-
-            var airports = await _unitOfWork.Repository<Airport>()
-                .GetAllWithSpecAsync(airportSpec);
 
             var location = await _unitOfWork.Repository<Location>()
                 .GetByIdAsync(locationId);
@@ -161,13 +207,38 @@ namespace Wego.API.Controllers
                 return NotFound(new { message = "No location found with this ID." });
             }
 
+            var currentUser = await _userManager.GetUserAsync(User);
+
+            var favoriteHotelIds = currentUser != null
+                ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.HotelId != null))
+                    .Where(f => f.HotelId != null)
+                    .Select(f => f.HotelId)
+                    .ToList()
+                : new List<int?>();
+
+            var favoriteLocationIds = currentUser != null
+                ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.LocationId != null))
+                    .Where(f => f.LocationId != null)
+                    .Select(f => f.LocationId)
+                    .ToList()
+                : new List<int?>();
+
             var locationDto = _mapper.Map<LocationWithHotelsResponseDto>(location);
 
+            locationDto.IsFavorite = favoriteLocationIds.Contains(locationDto.Id);
+
             locationDto.Hotels = _mapper.Map<List<HotelDto>>(hotels);
-            locationDto.Airports = _mapper.Map<List<AirportDto>>(airports);
+
+            locationDto.Hotels = locationDto.Hotels.Select(hotel =>
+            {
+                hotel.IsFavorite = favoriteHotelIds.Contains(hotel.Id);
+                hotel.Images = hotel.Images.Select(image => string.IsNullOrEmpty(image) ? null : $"{Request.Scheme}://{Request.Host.Value}{image}").ToList();
+                return hotel;
+            }).ToList();
 
             return Ok(locationDto);
         }
+
 
 
         [HttpGet("popular-airlines")]
@@ -196,13 +267,15 @@ namespace Wego.API.Controllers
 
             var currentUser = await _userManager.GetUserAsync(User);
             var favoriteAttractionIds = currentUser != null
-                ? (await _unitOfWork.Repository<Favorite>().GetUserIdAsync(currentUser.Id))
-                    .Select(f => f.Id)
-                    .Cast<int?>()
+                ? (await _unitOfWork.Repository<Favorite>()
+                    .GetAsync(f => f.UserId == currentUser.Id && f.AttractionId != null))
+                    .Where(f => f.AttractionId != null)
+                    .Select(f => f.AttractionId)
                     .ToList()
                 : new List<int?>();
 
             var data = _mapper.Map<List<AttractionDto>>(attractions);
+
             data = data.Select(attr =>
             {
                 attr.IsFavorite = favoriteAttractionIds.Contains(attr.Id);
@@ -212,6 +285,7 @@ namespace Wego.API.Controllers
 
             return Ok(data);
         }
+
     }
 }
 

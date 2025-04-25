@@ -302,6 +302,9 @@ namespace Wego.Repository.Migrations
                     b.Property<int?>("AirlineId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("AttractionId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("HotelId")
                         .HasColumnType("int");
 
@@ -314,6 +317,8 @@ namespace Wego.Repository.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AirlineId");
+
+                    b.HasIndex("AttractionId");
 
                     b.HasIndex("HotelId");
 
@@ -707,8 +712,8 @@ namespace Wego.Repository.Migrations
                     b.Property<string>("NationalId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("Nationality")
-                        .HasColumnType("int");
+                    b.Property<string>("Nationality")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -1003,6 +1008,10 @@ namespace Wego.Repository.Migrations
                         .WithMany()
                         .HasForeignKey("AirlineId");
 
+                    b.HasOne("Wego.Core.Models.Hotels.Attraction", "Attraction")
+                        .WithMany()
+                        .HasForeignKey("AttractionId");
+
                     b.HasOne("Wego.Core.Models.Hotels.Hotel", "Hotel")
                         .WithMany()
                         .HasForeignKey("HotelId");
@@ -1016,6 +1025,8 @@ namespace Wego.Repository.Migrations
                         .HasForeignKey("UserId");
 
                     b.Navigation("Airline");
+
+                    b.Navigation("Attraction");
 
                     b.Navigation("Hotel");
 

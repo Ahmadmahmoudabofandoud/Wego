@@ -13,8 +13,8 @@ namespace Wego.API.Models.DTOS.Locations.Dtos
         public int? AverageRoomPrice { get; set; }
         public double? Latitude { get; set; }
         public double? Longitude { get; set; }
-        //public bool IsFavorite { get; set; } = false;
+        public bool IsFavorite { get; set; } = false;
         public List<HotelDto>? Hotels { get; set; } = new();
-        public List<AirportDto>? Airports { get; set; } = new();
+        //public List<AirportDto>? Airports { get; set; } = new();
     }
 }
