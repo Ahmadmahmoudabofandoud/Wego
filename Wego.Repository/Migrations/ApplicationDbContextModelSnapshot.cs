@@ -34,7 +34,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("AmenityHotelsId");
 
-                    b.ToTable("AmenityHotel");
+                    b.ToTable("AmenityHotel", (string)null);
                 });
 
             modelBuilder.Entity("AmenityRoom", b =>
@@ -49,7 +49,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("AmenityRoomsId");
 
-                    b.ToTable("AmenityRoom");
+                    b.ToTable("AmenityRoom", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -219,7 +219,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("FlightBookings");
+                    b.ToTable("FlightBookings", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Booking.HotelBooking", b =>
@@ -248,7 +248,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("HotelBookings");
+                    b.ToTable("HotelBookings", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Booking.RoomBooking", b =>
@@ -326,7 +326,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Favorites");
+                    b.ToTable("Favorites", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.Airline", b =>
@@ -354,7 +354,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Airlines");
+                    b.ToTable("Airlines", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.Airplane", b =>
@@ -384,7 +384,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("AirlineId");
 
-                    b.ToTable("Airplanes");
+                    b.ToTable("Airplanes", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.Airport", b =>
@@ -410,7 +410,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("LocationId");
 
-                    b.ToTable("Airports");
+                    b.ToTable("Airports", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.Flight", b =>
@@ -463,7 +463,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("DepartureAirportId");
 
-                    b.ToTable("Flights");
+                    b.ToTable("Flights", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Flights.SeatReservation", b =>
@@ -484,7 +484,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("FlightBookingId");
 
-                    b.ToTable("SeatReservations");
+                    b.ToTable("SeatReservations", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Hotels.Amenity", b =>
@@ -503,7 +503,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Amenities");
+                    b.ToTable("Amenities", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Hotels.Attraction", b =>
@@ -553,7 +553,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("LocationId");
 
-                    b.ToTable("Attractions");
+                    b.ToTable("Attractions", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Hotels.Hotel", b =>
@@ -585,7 +585,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("LocationId");
 
-                    b.ToTable("Hotels");
+                    b.ToTable("Hotels", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Hotels.Room", b =>
@@ -628,7 +628,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("HotelId");
 
-                    b.ToTable("Rooms");
+                    b.ToTable("Rooms", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Hotels.RoomOption", b =>
@@ -662,7 +662,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("RoomOptions");
+                    b.ToTable("RoomOptions", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Identity.AppUser", b =>
@@ -793,7 +793,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("Images");
+                    b.ToTable("Images", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Location", b =>
@@ -830,7 +830,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Locations");
+                    b.ToTable("Locations", (string)null);
                 });
 
             modelBuilder.Entity("Wego.Core.Models.Review", b =>
@@ -867,7 +867,7 @@ namespace Wego.Repository.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Reviews");
+                    b.ToTable("Reviews", (string)null);
                 });
 
             modelBuilder.Entity("AmenityHotel", b =>

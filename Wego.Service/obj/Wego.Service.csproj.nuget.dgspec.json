@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Service\\Wego.Service.csproj": {}
+    "E:\\Wego\\Wego.Service\\Wego.Service.csproj": {}
   },
   "projects": {
-    "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\Wego.Core.csproj": {
+    "E:\\Wego\\Wego.Core\\Wego.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\Wego.Core.csproj",
+        "projectUniqueName": "E:\\Wego\\Wego.Core\\Wego.Core.csproj",
         "projectName": "Wego.Core",
-        "projectPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\Wego.Core.csproj",
-        "packagesPath": "C:\\Users\\El-asdekaa\\.nuget\\packages\\",
-        "outputPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\obj\\",
+        "projectPath": "E:\\Wego\\Wego.Core\\Wego.Core.csproj",
+        "packagesPath": "C:\\Users\\Abdelrahman\\.nuget\\packages\\",
+        "outputPath": "E:\\Wego\\Wego.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\El-asdekaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Abdelrahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -81,27 +81,22 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
-        }
       }
     },
-    "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Repository\\Wego.Repository.csproj": {
+    "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Repository\\Wego.Repository.csproj",
+        "projectUniqueName": "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj",
         "projectName": "Wego.Repository",
-        "projectPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Repository\\Wego.Repository.csproj",
-        "packagesPath": "C:\\Users\\El-asdekaa\\.nuget\\packages\\",
-        "outputPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Repository\\obj\\",
+        "projectPath": "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj",
+        "packagesPath": "C:\\Users\\Abdelrahman\\.nuget\\packages\\",
+        "outputPath": "E:\\Wego\\Wego.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\El-asdekaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Abdelrahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -116,8 +111,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\Wego.Core.csproj": {
-                "projectPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\Wego.Core.csproj"
+              "E:\\Wego\\Wego.Core\\Wego.Core.csproj": {
+                "projectPath": "E:\\Wego\\Wego.Core\\Wego.Core.csproj"
               }
             }
           }
@@ -169,27 +164,22 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
-        }
       }
     },
-    "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Service\\Wego.Service.csproj": {
+    "E:\\Wego\\Wego.Service\\Wego.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Service\\Wego.Service.csproj",
+        "projectUniqueName": "E:\\Wego\\Wego.Service\\Wego.Service.csproj",
         "projectName": "Wego.Service",
-        "projectPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Service\\Wego.Service.csproj",
-        "packagesPath": "C:\\Users\\El-asdekaa\\.nuget\\packages\\",
-        "outputPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Service\\obj\\",
+        "projectPath": "E:\\Wego\\Wego.Service\\Wego.Service.csproj",
+        "packagesPath": "C:\\Users\\Abdelrahman\\.nuget\\packages\\",
+        "outputPath": "E:\\Wego\\Wego.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\El-asdekaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Abdelrahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -204,11 +194,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\Wego.Core.csproj": {
-                "projectPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\Wego.Core.csproj"
+              "E:\\Wego\\Wego.Core\\Wego.Core.csproj": {
+                "projectPath": "E:\\Wego\\Wego.Core\\Wego.Core.csproj"
               },
-              "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Repository\\Wego.Repository.csproj": {
-                "projectPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Repository\\Wego.Repository.csproj"
+              "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj": {
+                "projectPath": "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj"
               }
             }
           }
@@ -259,11 +249,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
         }
       }
     }

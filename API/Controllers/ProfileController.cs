@@ -13,6 +13,7 @@ using System.Security.Claims;
 using Newtonsoft.Json;
 using Wego.Core.Services.Contract;
 using Microsoft.AspNetCore.Authorization;
+using Wego.Service;
 
 namespace Wego.API.Controllers
 {
@@ -20,13 +21,15 @@ namespace Wego.API.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly IMapper _mapper;
+        private readonly IEncryptionService _encryptionService;
 
-        public ProfileController(UserManager<AppUser> userManager, IMapper mapper)
+        public ProfileController(UserManager<AppUser> userManager, IMapper mapper, IEncryptionService encryptionService)
         {
             _userManager = userManager;
             _mapper = mapper;
+            _encryptionService = encryptionService;
         }
-        [Authorize]
+        //[Authorize]
         [HttpPost("save-profile")]
         public async Task<ActionResult<ProfileBookingDto>> SaveProfile([FromBody] ProfilePostDto dto)
         {
@@ -49,9 +52,16 @@ namespace Wego.API.Controllers
                 currentUser.TripPurpose = dto.TripPurpose;
                 currentUser.SpecialNeeds = dto.SpecialNeeds;
 
+                // ✅ Encrypt the fields
+                var encryptionHelper = new AppUserEncryptionHelper(_encryptionService);
+                await encryptionHelper.EncryptAppUserAsync(currentUser);
+
                 var updateResult = await _userManager.UpdateAsync(currentUser);
                 if (!updateResult.Succeeded)
                     return BadRequest(new ApiResponse(400, "Failed to update user profile"));
+
+                // ✅ Optionally decrypt for returning to frontend
+                await encryptionHelper.DecryptAppUserAsync(currentUser);
 
                 var updatedDto = _mapper.Map<ProfileBookingDto>(currentUser);
                 return Ok(updatedDto);
@@ -72,27 +82,35 @@ namespace Wego.API.Controllers
                 IsGuest = true
             };
 
+            //  Encrypt guest profile
+            var guestEncryptionHelper = new AppUserEncryptionHelper(_encryptionService);
+            await guestEncryptionHelper.EncryptAppUserAsync(guest);
+
             var result = await _userManager.CreateAsync(guest);
             if (!result.Succeeded)
                 return BadRequest(new ApiResponse(400, "Failed to add guest profile"));
+
+            //  Optionally decrypt to return to frontend
+            await guestEncryptionHelper.DecryptAppUserAsync(guest);
 
             var guestDto = _mapper.Map<ProfileBookingDto>(guest);
             return Ok(guestDto);
         }
 
-
-
         [HttpGet("GetuserProfile")]
         public async Task<ActionResult<ProfileDto>> GetProfile()
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); 
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (string.IsNullOrEmpty(userId))
-            {
                 return Unauthorized(new ApiResponse(401, "User is not authenticated"));
-            }
 
             var user = await _userManager.FindByIdAsync(userId);
-            if (user == null) return NotFound(new ApiResponse(404, "User not found"));
+            if (user == null)
+                return NotFound(new ApiResponse(404, "User not found"));
+
+            //  Decrypt encrypted fields
+            var encryptionHelper = new AppUserEncryptionHelper(_encryptionService);
+            await encryptionHelper.DecryptAppUserAsync(user);
 
             var profileDto = _mapper.Map<ProfileDto>(user);
             profileDto.ProfileImageUrl = string.IsNullOrEmpty(user.ProfileImageUrl)
@@ -105,34 +123,35 @@ namespace Wego.API.Controllers
         [HttpPut("UpdateUserProfile")]
         public async Task<ActionResult<ProfileDto>> UpdateProfile([FromForm] ProfileUpdateDto dto)
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); 
-
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (string.IsNullOrEmpty(userId))
-            {
                 return Unauthorized(new ApiResponse(401, "User is not authenticated"));
-            }
+
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
-            {
                 return NotFound(new ApiResponse(404, "User not found"));
-            }
 
+            //  Decrypt user fields first (optional, for merging updates correctly)
+            var encryptionHelper = new AppUserEncryptionHelper(_encryptionService);
+            await encryptionHelper.DecryptAppUserAsync(user);
+
+            //  Apply updates
             _mapper.Map(dto, user);
             if (dto.ProfileImageUrl != null)
             {
                 user.ProfileImageUrl = await ProcessProfileImageAsync(dto.ProfileImageUrl, "profileImg", user.ProfileImageUrl);
             }
+
+            //  Encrypt fields before saving
+            await encryptionHelper.EncryptAppUserAsync(user);
+
             var result = await _userManager.UpdateAsync(user);
             if (!result.Succeeded)
-            {
                 return BadRequest(new ApiResponse(400, "Failed to update profile"));
-            }
 
+            //  Return decrypted profile
             return await GetProfile();
         }
-
-
-
         private async Task<string?> ProcessProfileImageAsync(IFormFile? imageFile, string folder, string? existingImage = null)
         {
             if (imageFile == null) return existingImage;

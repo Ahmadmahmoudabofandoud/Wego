@@ -40,7 +40,11 @@ namespace Wego.API
             builder.Services.AddIdentityConfiguration();
             builder.Services.AddJwtAuthentication(configuration);
             builder.Services.AddCorsPolicy();
-            builder.Services.AddSwaggerDocumentation(); 
+            builder.Services.AddSwaggerDocumentation();
+            builder.Services.AddHttpClient<IEncryptionService, EncryptionService>(client =>
+            {
+                client.BaseAddress = new Uri("http://localhost:8000"); // Your FastAPI base URL
+            });
 
             #endregion
 
