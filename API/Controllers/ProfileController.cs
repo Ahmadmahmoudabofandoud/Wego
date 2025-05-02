@@ -44,7 +44,7 @@ namespace Wego.API.Controllers
             if (!dto.IsGuest)
             {
                 currentUser.DisplayName = dto.DisplayName;
-                currentUser.PhoneNumber = dto.PhoneNumber;
+                //currentUser.PhoneNumber = dto.PhoneNumber;
                 currentUser.PassportNumber = dto.PassportNumber;
                 currentUser.Nationality = dto.Nationality;
                 currentUser.Gender = dto.Gender;

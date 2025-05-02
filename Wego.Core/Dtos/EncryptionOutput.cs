@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wego.Core.Dtos
 {
+    //Receives encrypted data
     public class EncryptionOutput
     {
         public List<CiphertextResult> Results { get; set; } = new();

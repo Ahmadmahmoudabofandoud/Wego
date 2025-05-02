@@ -20,6 +20,7 @@ namespace Wego.Service
             }
             //throw new Exception("Encryption service failed");
 
+
             var result = await response.Content.ReadFromJsonAsync<EncryptionOutput>();
             return result?.Results ?? new List<CiphertextResult>();
         }

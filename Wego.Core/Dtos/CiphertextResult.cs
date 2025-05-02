@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace Wego.Core.Dtos
 {
+    //Represents an encrypted string
     public class CiphertextResult
     {
-        [JsonPropertyName("ciphertext")]
-        public string Ciphertext { get; set; } = string.Empty;
+        // List
+        public string Ciphertext { get; set; } 
 
         public int pad { get; set; }
     }
