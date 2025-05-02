@@ -41,9 +41,12 @@ namespace Wego.API
             builder.Services.AddJwtAuthentication(configuration);
             builder.Services.AddCorsPolicy();
             builder.Services.AddSwaggerDocumentation();
+
             builder.Services.AddHttpClient<IEncryptionService, EncryptionService>(client =>
             {
-                client.BaseAddress = new Uri("http://localhost:8000"); // Your FastAPI base URL
+                client.BaseAddress = new Uri("https://glowing-space-lamp-wqrr454qv5xfggg4-8000.app.github.dev");
+
+                //client.BaseAddress = new Uri("http://localhost:8000"); // Your FastAPI base URL
             });
 
             #endregion

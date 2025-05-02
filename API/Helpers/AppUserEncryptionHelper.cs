@@ -74,7 +74,7 @@ namespace Wego.API.Helpers
         }
         private static string CombineEncrypted(CiphertextResult result)
         {
-            return $"{result.Ciphertext}|{result.Pad}";
+            return $"{result.Ciphertext}|{result.pad}";
         }
         private static CiphertextResult ParseEncrypted(string? value)
         {
@@ -83,7 +83,7 @@ namespace Wego.API.Helpers
             return new CiphertextResult
             {
                 Ciphertext = parts[0],
-                Pad = int.Parse(parts[1])
+                pad = int.Parse(parts[1])
             };
         }
         private async Task<string> DecryptField(CiphertextResult field)

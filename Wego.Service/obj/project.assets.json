@@ -3592,23 +3592,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Abdelrahman\\.nuget\\packages\\": {},
+    "C:\\Users\\El-asdekaa\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Wego\\Wego.Service\\Wego.Service.csproj",
+      "projectUniqueName": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Service\\Wego.Service.csproj",
       "projectName": "Wego.Service",
-      "projectPath": "E:\\Wego\\Wego.Service\\Wego.Service.csproj",
-      "packagesPath": "C:\\Users\\Abdelrahman\\.nuget\\packages\\",
-      "outputPath": "E:\\Wego\\Wego.Service\\obj\\",
+      "projectPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Service\\Wego.Service.csproj",
+      "packagesPath": "C:\\Users\\El-asdekaa\\.nuget\\packages\\",
+      "outputPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Abdelrahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\El-asdekaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3623,11 +3623,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\Wego\\Wego.Core\\Wego.Core.csproj": {
-              "projectPath": "E:\\Wego\\Wego.Core\\Wego.Core.csproj"
+            "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\Wego.Core.csproj": {
+              "projectPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\Wego.Core.csproj"
             },
-            "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj": {
-              "projectPath": "E:\\Wego\\Wego.Repository\\Wego.Repository.csproj"
+            "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Repository\\Wego.Repository.csproj": {
+              "projectPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Repository\\Wego.Repository.csproj"
             }
           }
         }

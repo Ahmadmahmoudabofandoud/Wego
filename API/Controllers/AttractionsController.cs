@@ -35,9 +35,9 @@ public class AttractionsController : BaseApiController
 
         var currentUser = await _userManager.GetUserAsync(User);
         var favoriteAttractionIds = currentUser != null
-            ? (await _unitOfWork.Repository<Favorite>().GetUserIdAsync(currentUser.Id))
-                .Select(f => f.Id)
-                .Cast<int?>()
+            ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.AttractionId != null))
+                .Where(f => f.AttractionId != null)
+                .Select(f => f.AttractionId)
                 .ToList()
             : new List<int?>();
 
@@ -52,6 +52,7 @@ public class AttractionsController : BaseApiController
         return Ok(new Pagination<AttractionDto>(specParams.PageIndex, specParams.PageSize, totalCount, data));
     }
 
+
     [HttpGet("{id}")]
     [ProducesResponseType(typeof(AttractionDto), 200)]
     [ProducesResponseType(typeof(ApiResponse), 404)]
@@ -62,17 +63,21 @@ public class AttractionsController : BaseApiController
         if (attraction == null) return NotFound(new ApiResponse(404));
 
         var currentUser = await _userManager.GetUserAsync(User);
-        var isFavorite = currentUser != null
-            ? (await _unitOfWork.Repository<Favorite>().GetUserIdAsync(currentUser.Id))
-                .Any(f => f.Id == id)
-            : false;
+        var favoriteAttractionIds = currentUser != null
+            ? (await _unitOfWork.Repository<Favorite>().GetAsync(f => f.UserId == currentUser.Id && f.AttractionId != null))
+                .Where(f => f.AttractionId != null)
+                .Select(f => f.AttractionId)
+                .ToList()
+            : new List<int?>();
 
         var res = _mapper.Map<AttractionDto>(attraction);
-        res.IsFavorite = isFavorite;
+        res.IsFavorite = favoriteAttractionIds.Contains(res.Id);
         res.Image = string.IsNullOrEmpty(res.Image) ? null : $"{Request.Scheme}://{Request.Host.Value}{res.Image}";
 
         return Ok(res);
     }
+
+
 
     [HttpPost]
     public async Task<ActionResult<AttractionDto>> AddAttraction([FromForm] AttractionPostDto dto)

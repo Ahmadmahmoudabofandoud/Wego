@@ -76,6 +76,39 @@ namespace Wego.API.Controllers
         public async Task<ActionResult<bool>> CheckEmailExists(string email)
              => await _userManager.FindByEmailAsync(email) is not null;
 
+        [Authorize]
+        [HttpPost("change-password")]
+        public async Task<ActionResult<ApiResponse>> ChangePassword(ChangePasswordDto model)
+        {
+            if (model.NewPassword != model.ConfirmNewPassword)
+                return BadRequest(new ApiResponse(400, "New passwords do not match"));
+
+            var user = await _userManager.GetUserAsync(User); 
+
+            if (user is null)
+                return Unauthorized(new ApiResponse(401, "User not found"));
+
+            var removePasswordResult = await _userManager.RemovePasswordAsync(user);
+
+            if (!removePasswordResult.Succeeded)
+            {
+                var errors = removePasswordResult.Errors.Select(e => e.Description).ToArray();
+                return BadRequest(new ApiValidationErrorResponse { Errors = errors });
+            }
+
+            var addPasswordResult = await _userManager.AddPasswordAsync(user, model.NewPassword);
+
+            if (!addPasswordResult.Succeeded)
+            {
+                var errors = addPasswordResult.Errors.Select(e => e.Description).ToArray();
+                return BadRequest(new ApiValidationErrorResponse { Errors = errors });
+            }
+
+            await _signInManager.RefreshSignInAsync(user);
+
+            return Ok(new ApiResponse(200, "Password changed successfully"));
+        }
+
 
         // POST: /api/account/logout
         [Authorize] // تأكد من أن المستخدم مسجّل الدخول

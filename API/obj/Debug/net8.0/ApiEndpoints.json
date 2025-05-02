@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "Wego.API.Controllers.AccountController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Account/change-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Wego.API.Models.DTOS.Identity.ChangePasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "API.Errors.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Wego.API.Controllers.AccountController",
     "Method": "DeleteUser",
     "RelativePath": "api/Account/delete/{email}",
     "HttpMethod": "DELETE",

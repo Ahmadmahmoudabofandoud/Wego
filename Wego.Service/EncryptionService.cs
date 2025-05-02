@@ -12,8 +12,13 @@ namespace Wego.Service
         {
             var request = new PlaintextInput { Plaintext = plaintexts };
             var response = await _httpClient.PostAsJsonAsync("/encrypt", request);
+
             if (!response.IsSuccessStatusCode)
-                throw new Exception("Encryption service failed");
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                throw new Exception($"Encryption service failed: {response.StatusCode} - {errorContent}");
+            }
+            //throw new Exception("Encryption service failed");
 
             var result = await response.Content.ReadFromJsonAsync<EncryptionOutput>();
             return result?.Results ?? new List<CiphertextResult>();

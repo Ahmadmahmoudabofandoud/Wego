@@ -1927,23 +1927,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Abdelrahman\\.nuget\\packages\\": {},
+    "C:\\Users\\El-asdekaa\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Wego\\Wego.Core\\Wego.Core.csproj",
+      "projectUniqueName": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\Wego.Core.csproj",
       "projectName": "Wego.Core",
-      "projectPath": "E:\\Wego\\Wego.Core\\Wego.Core.csproj",
-      "packagesPath": "C:\\Users\\Abdelrahman\\.nuget\\packages\\",
-      "outputPath": "E:\\Wego\\Wego.Core\\obj\\",
+      "projectPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\Wego.Core.csproj",
+      "packagesPath": "C:\\Users\\El-asdekaa\\.nuget\\packages\\",
+      "outputPath": "D:\\El-asdekaa\\Documents\\StaySafe_Project\\Wego\\Wego.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Abdelrahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\El-asdekaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
