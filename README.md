@@ -24,7 +24,7 @@ Secure hotel booking platform with encrypted data storage using **ASP.NET Core (
 
 ## Setup  
 ```bash
-git clone https://github.com/your-org/stay-safe.git
+git clone https://github.com/Ahmadmahmoudabofandoud/Wego
 cd stay-safe
 dotnet ef database update
 dotnet run
